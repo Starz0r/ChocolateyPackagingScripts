@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vcpkg</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Vcpkg (Install)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://github.com/Microsoft/vcpkg</projectUrl>
+    <copyright>2020</copyright>
+    <licenseUrl>https://github.com/Microsoft/vcpkg/blob/$tag/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Microsoft/vcpkg</projectSourceUrl>
+    <docsUrl>https://github.com/Microsoft/vcpkg/blob/$tag/docs/index.md</docsUrl>
+    <bugTrackerUrl>https://github.com/Microsoft/vcpkg/issues</bugTrackerUrl>
+    <tags>vcpkg c c++ programming package manager dependency dependencies conan library libraries</tags>
+    <description>
+	# Vcpkg
+Vcpkg helps you manage C and C++ libraries on Windows, Linux and MacOS. This tool and ecosystem are constantly evolving; your involvement is vital to its success!
+## Overview
+For short description of available commands, run `vcpkg help`.
+
+* Github: [https://github.com/microsoft/vcpkg](https://github.com/microsoft/vcpkg)
+* Slack: [https://cpplang.now.sh/](https://cpplang.now.sh/), the #vcpkg channel
+* Docs: [Documentation](docs/index.md)
+
+## Quick Start
+To hook up user-wide [integration](docs/users/integration.md), run (note: requires admin on first use)
+```
+PS> .\vcpkg integrate install
+Linux:~/$ ./vcpkg integrate install
+```
+
+Install any packages with
+```
+PS> .\vcpkg install sdl2 curl
+Linux:~/$ ./vcpkg install sdl2 curl
+```
+
+The best way to use installed libraries with CMake is via the toolchain file `scripts\buildsystems\vcpkg.cmake`. To use this file, you simply need to add it onto your CMake command line as `-DCMAKE_TOOLCHAIN_FILE=[vcpkg root]\scripts\buildsystems\vcpkg.cmake`.
+
+In Visual Studio, you can create a New Project (or open an existing one). All installed libraries are immediately ready to be `#include`'d and used in your project without additional configuration.
+
+For more information, see our [using a package](docs/examples/installing-and-using-packages.md) example for the specifics. If your library is not present in vcpkg catalog, you can open an [issue on the GitHub repo](https://github.com/microsoft/vcpkg/issues) where the dev team and the community can see it and potentially create the port file for this library.
+
+Additional notes on macOS and Linux support can be found in the [official announcement](https://blogs.msdn.microsoft.com/vcblog/2018/04/24/announcing-a-single-c-library-manager-for-linux-macos-and-windows-vcpkg/).
+	</description>
+    <dependencies>
+      <dependency id="visualstudio2019-workload-nativedesktop" version="1.0.0" />
+	  <dependency id="git.install" version="2.25.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
