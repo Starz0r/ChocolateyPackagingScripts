@@ -8,7 +8,6 @@
     <title>Vcpkg (Install)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://github.com/Microsoft/vcpkg</projectUrl>
-    <copyright>2020</copyright>
     <licenseUrl>https://github.com/Microsoft/vcpkg/blob/$tag/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Microsoft/vcpkg</projectSourceUrl>
