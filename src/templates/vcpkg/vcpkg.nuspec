@@ -48,6 +48,10 @@ Additional notes on macOS and Linux support can be found in the [official announ
     <dependencies>
       <dependency id="visualstudio2019-workload-nativedesktop" version="1.0.0" />
 	  <dependency id="git.install" version="2.25.1" />
+	  <dependency id="nuget.commandline" version="5.4.0" />
+	  <dependency id="7zip" version="19.0" />
+	  <dependency id="7zip.portable" version="19.0" />
+	  <dependency id="powershell-core" version="7.0.0" />
     </dependencies>
   </metadata>
   <files>
