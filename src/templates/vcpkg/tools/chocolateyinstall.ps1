@@ -7,7 +7,8 @@ $precompiled = Test-Path -Path "$installDir\vcpkg.exe" -PathType Leaf
 
 if ($preinstalled) {
 	Write-Host -ForegroundColor green "Vcpkg repository already exists, pulling new changes instead."
-	git pull -C $installDir
+	git -C $installDir pull
+	git -C $installDir checkout $tag
 } else {
 	Write-Host -ForegroundColor green "Cloning GitHub Repository"
 	git clone --single-branch --branch $tag https://github.com/Microsoft/vcpkg.git $installDir
