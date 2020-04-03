@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>rust-analyzer</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Rust Analyzer (Portable)</title>
+    <authors>Ferrous Systems</authors>
+	<iconUrl>https://raw.githubusercontent.com/rust-analyzer/rust-analyzer.github.io/src/assets/mstile-150x150.png</iconUrl>
+    <projectUrl>https://github.com/rust-analyzer/rust-analyzer</projectUrl>
+    <licenseUrl>https://github.com/rust-analyzer/rust-analyzer/blob/$tag/LICENSE-MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/rust-analyzer/rust-analyzer</projectSourceUrl>
+    <docsUrl>https://rust-analyzer.github.io/manual.html</docsUrl>
+    <bugTrackerUrl>https://github.com/rust-analyzer/rust-analyzer/issues</bugTrackerUrl>
+    <tags>rust programming language server protocol code analyzer linter ide rls</tags>
+    <description>
+rust-analyzer is an experimental modular compiler frontend for the Rust language. It is a part of a larger rls-2.0 effort to create excellent IDE support for Rust. 
+	</description>
+	<summary>
+	Language Server Protocol compatible compiler front-end for Rust.
+	</summary>
+	<dependencies>
+		<dependency id="vcredist140" version="14.20.27508.1" />
+	</dependencies>
+	<copyright>Copyright © 2017 - 2020 Ferrous Systems</copyright>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
