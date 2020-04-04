@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>alacritty.portable</id>
+    <version>$version</version>
+    <title>Alacritty</title>
+    <authors>Joe Wilm</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/alacritty/alacritty/blob/$tag/LICENSE-APACHE</licenseUrl>
+    <projectUrl>https://github.com/alacritty/alacritty</projectUrl>
+    <iconUrl>https://gist.githubusercontent.com/Starz0r/13dfbf8b1373144289617461e805c5cb/raw/3d093e40f84ce168008056e56a3d1624b676d4e6/alacritty.png</iconUrl>
+	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+	<projectSourceUrl>https://github.com/alacritty/alacritty/tree/$tag</projectSourceUrl>
+    <docsUrl>https://github.com/alacritty/alacritty/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/alacritty/alacritty/issues</bugTrackerUrl>
+    <description>Alacritty
+=========
+
+[![Travis build Status](https://travis-ci.org/jwilm/alacritty.svg?branch=master)](https://travis-ci.org/jwilm/alacritty)
+[![Appveyor build Status](https://ci.appveyor.com/api/projects/status/github/jwilm/alacritty?svg=true)](https://ci.appveyor.com/project/jwilm/alacritty)
+
+## About
+
+Alacritty is a terminal emulator with a strong focus on simplicity and
+performance. With such a strong focus on performance, included features are
+carefully considered and you can always expect Alacritty to be blazingly fast.
+By making sane choices for defaults, Alacritty requires no additional setup.
+However, it does allow [configuration](#configuration) of many aspects of the
+terminal.
+
+The software is considered to be at a **beta** level of readiness -- there are
+a few missing features and bugs to be fixed, but it is already used by many as
+a daily driver.
+
+## Further information
+
+- [Announcing Alacritty, a GPU-Accelerated Terminal Emulator](https://jwilm.io/blog/announcing-alacritty/) January 6, 2017
+- [A short talk about Alacritty at the Rust Meetup January 2017](https://air.mozilla.org/rust-meetup-january-2017/) (starts at 57:00)
+- [Alacritty Lands Scrollback, Publishes Benchmarks](https://jwilm.io/blog/alacritty-lands-scrollback/) September 17, 2018
+- [Version 0.3.0 Release Announcement](https://blog.christianduerr.com/alacritty_030_announcement) April 07, 2019
+
+On Windows, Alacritty also requires Microsoft's VC++ redistributable.
+
+For Windows versions older than Windows 10 (October 2018 Update), Alacritty
+requires winpty to emulate UNIX's PTY API. The agent is a single binary
+(`winpty-agent.exe`) which **must** be in the same directory as the Alacritty
+executable.
+
+## Configuration
+
+You can find the default configuration file with documentation for all available
+fields on the [GitHub releases page](https://github.com/alacritty/alacritty/releases) for each release.
+
+Alacritty looks for the configuration file at the following paths:
+
+1. `$XDG_CONFIG_HOME/alacritty/alacritty.yml`
+2. `$XDG_CONFIG_HOME/alacritty.yml`
+3. `$HOME/.config/alacritty/alacritty.yml`
+4. `$HOME/.alacritty.yml`
+
+### Windows
+
+On Windows the config file is located at:
+
+`%APPDATA%\alacritty\alacritty.yml`
+
+## Contributing
+
+A full guideline about contributing to Alacritty can be found in the
+[`CONTRIBUTING.md`](CONTRIBUTING.md) file.
+
+## Issues (known, unknown, feature requests, etc.)
+
+If you run into a problem with Alacritty, please file an issue. If you've got a
+feature request, feel free to ask about it. Please just keep in mind Alacritty
+is focused on simplicity and performance, and not all features are in line with
+that goal.
+
+Before opening a new issue, please check if it has already been reported.
+There's a chance someone else has already reported it, and you can subscribe to
+that issue to keep up on the latest developments.
+
+## FAQ
+
+**_Is it really the fastest terminal emulator?_**
+
+In the terminals we've [benchmarked](http://github.com/alacritty/vtebench),
+Alacritty is either faster or **way** faster than the others. If you've found a
+case where this isn't true, please report a bug.
+
+**_Why isn't feature X implemented?_**
+
+Alacritty has many great features, but not every feature from every other
+terminal. This could be for a number of reasons, but sometimes it's just not a
+good fit for Alacritty. This means you won't find things like tabs or splits
+(which are best left to a window manager or [terminal multiplexer][tmux]) nor
+niceties like a GUI config editor.
+
+## IRC
+
+Alacritty discussion can be found in `#alacritty` on freenode.
+
+## License
+
+Alacritty is released under the [Apache License, Version 2.0].
+
+[Apache License, Version 2.0]: https://github.com/alacritty/alacritty/blob/master/LICENSE-APACHE
+[tmux]: https://github.com/tmux/tmux</description>
+    <summary>A cross-platform, GPU-accelerated terminal emulator</summary>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+        <dependency id="vcredist140" version="14.20.27508.1" />
+    </dependencies> 
+    <copyright>Copyright (C) 2017 - 2020 Joe Wilm</copyright>
+    <tags>foss development cli shell bash powershell cmd posix unix linux gnu cygwin msys msys2 mingw graphical console emulator hardware gpu terminal admin</tags>
+  </metadata>
+</package>
