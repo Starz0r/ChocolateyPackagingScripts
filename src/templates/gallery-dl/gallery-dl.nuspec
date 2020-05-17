@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>gallery-dl</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>gallery-dl (Portable)</title>
+    <authors>Mike Fährmann</authors>
+    <projectUrl>https://github.com/mikf/gallery-dl</projectUrl>
+    <licenseUrl>https://github.com/mikf/gallery-dl/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/mikf/gallery-dl</projectSourceUrl>
+    <docsUrl>https://github.com/mikf/gallery-dl/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/mikf/gallery-dl/issues</bugTrackerUrl>
+    <tags>python gallery-dl youtube-dl ffmpeg foss cross-platform video multimedia pictures download imgur gfycat</tags>
+    <description>
+gallery-dl is a command-line program to download image-galleries and -collections from several image hosting sites. It is a cross-platform tool with many configuration options and powerful filenaming capabilities.
+
+# WARNING
+### Anti-virus or anti-malware tools and heuristic engines might catch and or label this tool as a virus. This is a false postive due to usage of [PyInstaller](https://www.pyinstaller.org/) to pack and ship this software as a single executable without a Python runtime dependency. As such I ask that you either disable your anti-virus or add an exception for this software.
+	</description>
+	<dependencies>
+		<dependency id="vcredist2010" version="10.0.40219.2" />
+	</dependencies>
+	<copyright>Copyright © 2014 - 2020 Mike Fährmann</copyright>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
