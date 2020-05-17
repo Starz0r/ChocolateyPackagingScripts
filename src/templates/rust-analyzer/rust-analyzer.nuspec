@@ -7,8 +7,8 @@
     <owners>Starz0r</owners>
     <title>Rust Analyzer (Portable)</title>
     <authors>Ferrous Systems</authors>
-	<iconUrl>https://raw.githubusercontent.com/rust-analyzer/rust-analyzer.github.io/src/assets/mstile-150x150.png</iconUrl>
-    <projectUrl>https://github.com/rust-analyzer/rust-analyzer</projectUrl>
+	<iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/29b2178/assets/rust-analyzer-logo.png</iconUrl>
+    <projectUrl>https://rust-analyzer.github.io/</projectUrl>
     <licenseUrl>https://github.com/rust-analyzer/rust-analyzer/blob/$tag/LICENSE-MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/rust-analyzer/rust-analyzer</projectSourceUrl>
