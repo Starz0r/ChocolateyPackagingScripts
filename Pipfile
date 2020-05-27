@@ -6,8 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-pygithub = "*"
-checksum = "*"
+pygithub = "==1.51"
+checksum = "==1.0.4"
+mypy     = "==0.770"
 
 [requires]
 python_version = "3.8"
