@@ -30,15 +30,21 @@ def find_and_replace_templates(package_name: str,
                                tag: str,
                                url: str,
                                checksum: str,
+                               fname: Optional[str],
                                url64: Optional[str],
-                               checksum64: Optional[str]) -> None:
+                               checksum64: Optional[str],
+                               fname64: Optional[str],
+                               notes: Optional[str]) -> None:
     os.mkdir(Path(directory)/"tools")
     d = dict(version=version,
              tag=tag,
              url=url,
              checksum=checksum,
+             fname=fname,
              url64=url64,
-             checksum64=checksum64)
+             checksum64=checksum64,
+             fname64=fname64,
+             notes=notes)
     basepath = Path(os.getcwd())/"src/templates/"/package_name
     templates = [
         package_name+".nuspec",
