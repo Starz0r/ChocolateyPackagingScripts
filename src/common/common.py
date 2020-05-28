@@ -51,12 +51,16 @@ def find_and_replace_templates(package_name: str,
         "tools/chocolateyinstall.ps1"]
 
     for template in templates:
-        with io.open(basepath/template, "r") as f:
-            contents = f.read()
-            temp = Template(contents).safe_substitute(d)
-            f = io.open(Path(directory)/template, "a+")
-            f.write(temp)
-            f.close()
+        try:
+            with io.open(basepath/template, "r") as f:
+                contents = f.read()
+                temp = Template(contents).safe_substitute(d)
+                f = io.open(Path(directory)/template, "a+")
+                f.write(temp)
+                f.close()
+        except FileNotFoundError as err:
+            print("Could not find file to be templated.")
+            print(err)
     return
 
 
