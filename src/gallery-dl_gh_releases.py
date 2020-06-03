@@ -5,6 +5,11 @@ import subprocess
 import checksum
 from pathlib import Path
 from string import Template
+
+from common.common import find_and_replace_templates
+from common.common import abort_on_nonzero
+from common.common import get_correct_release_asset
+
 from github import Github
 
 
@@ -16,7 +21,7 @@ def main():
         for _, line in enumerate(f):
             state.append(line)
     f = io.open("gallery-dl.ghstate", "a+")
-    # connect to github api 
+    # connect to github api
     gh = Github(os.environ['GH_TOKEN'])
     gallerydl = gh.get_repo("mikf/gallery-dl")
     for rel in gallerydl.get_releases():
@@ -28,12 +33,16 @@ def main():
             else:
                 continue
         if not pushed:
-            url, fname = get_correct_release_asset(rel.get_assets())
-            if (url is "") and (fname is ""):
+            asset = get_correct_release_asset(rel.get_assets(),
+                                              ".exe",
+                                              ".sig")
+            if asset is None:
                 print("no compatible releases, skipping...")
                 f.write(str(rel.id)+"\n")
                 f.flush()
                 continue
+            url = asset.browser_download_url
+            fname = asset.name
             subprocess.call(["wget",
                              url,
                              "--output-document",
@@ -41,13 +50,17 @@ def main():
             chksum = checksum.get_for_file("gallery-dl.exe", "sha512")
             os.remove("gallery-dl.exe")
             tempdir = tempfile.mkdtemp()
-            find_and_replace_templates(tempdir,
+            find_and_replace_templates("gallery-dl",
+                                       tempdir,
                                        rel.tag_name.strip("v")
                                                    .replace("-dev.1", "-dev1"),
                                        rel.tag_name,
                                        url,
                                        chksum,
                                        fname,
+                                       None,
+                                       None,
+                                       None,
                                        rel.body.replace("<", "&lt;")
                                                .replace(">", "&gt;"))
             abort_on_nonzero(subprocess.call(["choco",
@@ -59,47 +72,6 @@ def main():
             continue
 
     f.close()
-
-
-def get_correct_release_asset(assets):
-    for a in assets:
-        if ".exe" in a.name and not ".sig" in a.name:
-            return (a.browser_download_url, a.name)
-    return ("", "")
-
-
-def find_and_replace_templates(directory,
-                               version,
-                               tag,
-                               url,
-                               checksum,
-                               filename,
-                               notes):
-    os.mkdir(Path(directory)/"tools")
-    d = dict(version=version,
-             tag=tag,
-             url=url,
-             checksum=checksum,
-             filename=filename,
-             notes=notes)
-    basepath = Path(os.getcwd())/"src/templates/gallery-dl/"
-    templates = [
-            "gallery-dl.nuspec",
-            "tools/chocolateyinstall.ps1"]
-
-    for template in templates:
-        with io.open(basepath/template, "r") as f:
-            contents = f.read()
-            temp = Template(contents).safe_substitute(d)
-            f = io.open(Path(directory)/template, "a+")
-            f.write(temp)
-            f.close()
-    return
-
-
-def abort_on_nonzero(retcode):
-    if (retcode != 0):
-        os.exit(retcode)
 
 
 if __name__ == "__main__":
