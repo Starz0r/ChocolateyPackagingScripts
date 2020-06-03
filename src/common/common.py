@@ -48,7 +48,8 @@ def find_and_replace_templates(package_name: str,
     basepath = Path(os.getcwd())/"src/templates/"/package_name
     templates = [
         package_name+".nuspec",
-        "tools/chocolateyinstall.ps1"]
+        "tools/chocolateyinstall.ps1",
+        "tools/chocolateyuninstall.ps1"]
 
     for template in templates:
         try:
