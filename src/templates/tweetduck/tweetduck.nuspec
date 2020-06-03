@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tweetduck</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>TweetDuck</title>
+    <authors>Daniel Chýlek</authors>
+	<iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/8fe88d41/assets/tweetduck.png</iconUrl>
+    <projectUrl>https://tweetduck.chylex.com/</projectUrl>
+    <licenseUrl>https://github.com/chylex/TweetDuck/blob/$tag/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/chylex/TweetDuck/tree/$tag</projectSourceUrl>
+    <docsUrl>https://tweetduck.chylex.com/guide</docsUrl>
+    <bugTrackerUrl>https://github.com/chylex/TweetDuck/issues</bugTrackerUrl>
+    <tags>twitter tweet tweetdeck management foss free open source desktop client electron</tags>
+    <description>
+TweetDuck is an open source Windows client for Twitter utilizing TweetDeck.
+	</description>
+	<summary>
+	A Windows Client for TweetDeck.
+	</summary>
+	<releaseNotes>$notes</releaseNotes>
+	<dependencies>
+		<dependency id="tweetduck.install" version="[$version]" />
+	</dependencies>
+	<copyright>Copyright © 2016 - 2020 chylex; Copyright © 2006 - 2020 Twitter, Inc</copyright>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
