@@ -5,18 +5,18 @@ $PackageName = $env:ChocolateyPackageName.Split(".")[0]
 [array] $key = Get-UninstallRegistryKey "PackageName*"
 if ($key.Count -eq 1) {
     $key | ForEach-Object {
-        $packageArgs = @{
-            packageName            = $packageName
-            silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-            fileType               = 'EXE'
-            validExitCodes         = @(0)
-            file                   = "$($_.UninstallString.Replace(' /x86=0', ''))"
+        $PackageArgs = @{
+            PackageName            = $PackageName
+            SilentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+            FileType               = 'EXE'
+            ValidExitCodes         = @(0)
+            File                   = "$($_.UninstallString.Replace(' /x86=0', ''))"
         }
-        Uninstall-ChocolateyPackage @packageArgs
+        Uninstall-ChocolateyPackage @PackageArgs
     }
 }
 elseif ($key.Count -eq 0) {
-    Write-Warning "$packageName has already been uninstalled by other means."
+    Write-Warning "$PackageName has already been uninstalled by other means."
 }
 elseif ($key.Count -gt 1) {
     Write-Warning "$($key.Count) matches found!"

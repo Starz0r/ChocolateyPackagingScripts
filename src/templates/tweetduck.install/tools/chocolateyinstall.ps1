@@ -6,19 +6,19 @@ $InstallDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $stop_application = if (Get-Process -Name TweetDuck -ErrorAction SilentlyContinue) {$false} else {$true}
 
-$packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $installDir
-  fileType      = 'exe'
-  url           = $url32
+$PackageArgs = @{
+  PackageName   = $PackageName
+  UnzipLocation = $InstallDir
+  FileType      = 'exe'
+  Url           = "$url"
 
-  softwareName  = 'tweetduck*'
+  SoftwareName  = 'tweetduck*'
 
-  checksum      = "$checksum"
-  checksumType  = 'sha512'
+  Checksum      = "$checksum"
+  ChecksumType  = 'sha512'
   
-  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-  validExitCodes= @(0)
+  SilentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  ValidExitCodes= @(0)
 }
 
 
@@ -26,16 +26,7 @@ if ($stop_application -and (Get-Process -Name TweetDuck -ErrorAction SilentlyCon
     Stop-Process -processname TweetDuck
 }
 
-Install-ChocolateyPackage @packageArgs
-$installLocation = Get-AppInstallLocation "$packageName*"
+Install-ChocolateyPackage @PackageArgs
+$InstallLocation = Get-AppInstallLocation "$PackageName*"
 
-Install-BinFile $packageName "$installLocation\$packageName.exe"
-Register-Application "$installLocation\$packageName.exe"
-Write-Host "$packageName registered as $packageName"
-
-
-
-
-
-
-    
+Write-Host "$PackageName registered as $App"
