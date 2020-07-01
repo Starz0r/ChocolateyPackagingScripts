@@ -1,20 +1,20 @@
 $ErrorActionPreference = 'Stop'
 
-$packageArgs = @{
-  packageName    = 'imageglass'
-  fileType       = 'msi'
-  url            = '$url'
-  checksum       = '$checksum'
-  checksumType   = 'sha512'
-  url64          = '$url64'
-  checksum64     = '$checksum64'
-  checksumType64 = 'sha512'
-  silentArgs     = '/quiet /qn /norestart'
-  validExitCodes = @(0)
+$PackageArgs = @{
+  PackageName    = 'imageglass'
+  FileType       = 'msi'
+  Url            = '$url'
+  Checksum       = '$checksum'
+  ChecksumType   = 'sha512'
+  Url64          = '$url64'
+  Checksum64     = '$checksum64'
+  ChecksumType64 = 'sha512'
+  SilentArgs     = '/quiet /qn /norestart'
+  ValidExitCodes = @(0)
 }
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyPackage @PackageArgs
 
-$packageName = $packageArgs.packageName
-$installLocation = Get-AppInstallLocation $packageName
-if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
-Write-Host "$packageName installed to '$installLocation'"
+$PackageName = $PackageArgs.PackageName
+$InstallLocation = Get-AppInstallLocation $PackageName
+if (!$InstallLocation)  { Write-Warning "Can't find $PackageName install location"; return }
+Write-Host "$PackageName installed to '$InstallLocation'"
