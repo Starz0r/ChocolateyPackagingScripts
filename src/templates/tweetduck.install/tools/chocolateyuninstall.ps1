@@ -1,10 +1,8 @@
 $ErrorActionPreference = 'Stop'
 
-$packageName = $env:ChocolateyPackageName
+$PackageName = $env:ChocolateyPackageName.Split(".")[0]
 
-Uninstall-BinFile $packageName
-
-[array] $key = Get-UninstallRegistryKey "packageName*"
+[array] $key = Get-UninstallRegistryKey "PackageName*"
 if ($key.Count -eq 1) {
     $key | ForEach-Object {
         $packageArgs = @{

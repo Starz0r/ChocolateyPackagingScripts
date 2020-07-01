@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName  = $env:ChocolateyPackageName
-$installDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url32        = "$url"
+$PackageName  = $env:ChocolateyPackageName
+$App = $PackageName.Split(".")[0]
+$InstallDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $stop_application = if (Get-Process -Name TweetDuck -ErrorAction SilentlyContinue) {$false} else {$true}
 
