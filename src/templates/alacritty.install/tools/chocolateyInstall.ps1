@@ -1,6 +1,4 @@
 $packageName = "alacritty.install"
-$url64 = "$url"
-$checksum64 = "$checksum"
 $oldInstallDir = Join-Path $(Get-ToolsLocation) "alacritty"
 
 $preexisting = Test-Path -Path $oldInstallDir -PathType Container
@@ -19,8 +17,8 @@ $packageArgs = @{
     PackageName    = $packageName
     FileType       = "msi"
     SoftwareName   = "Alacritty"
-    Url64bit       = $url64
-	Checksum64     = $checksum64
+    Url64bit       = "$url"
+	Checksum64     = "$checksum"
 	ChecksumType64 = "sha512"
     SilentArgs     = "/qn /norestart"
     ValidExitCodes = @(0, 3010, 1641)
