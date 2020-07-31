@@ -4,8 +4,6 @@ $PackageName  = $env:ChocolateyPackageName
 $App = $PackageName.Split(".")[0]
 $InstallDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$stop_application = if (Get-Process -Name TweetDuck -ErrorAction SilentlyContinue) {$false} else {$true}
-
 $PackageArgs = @{
   PackageName   = $PackageName
   UnzipLocation = $InstallDir
@@ -19,11 +17,6 @@ $PackageArgs = @{
   
   SilentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   ValidExitCodes= @(0)
-}
-
-
-if ($stop_application -and (Get-Process -Name TweetDuck -ErrorAction SilentlyContinue)) {
-    Stop-Process -processname TweetDuck
 }
 
 Install-ChocolateyPackage @PackageArgs
