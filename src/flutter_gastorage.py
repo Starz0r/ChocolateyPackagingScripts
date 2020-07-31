@@ -69,7 +69,7 @@ def main():
             find_and_replace_templates(pkgname,
                                        tempdir,
                                        version,
-                                       rel["version"].replace("v", ""),
+                                       rel["version"].replace("v", "").replace("-de", "-dev"),
                                        url,
                                        chksum,
                                        None,
