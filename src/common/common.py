@@ -49,7 +49,8 @@ def find_and_replace_templates(package_name: str,
     templates = [
         package_name+".nuspec",
         "tools/chocolateyinstall.ps1",
-        "tools/chocolateyuninstall.ps1"]
+        "tools/chocolateyuninstall.ps1",
+        "tools/chocolateybeforemodify.ps1"]
 
     for template in templates:
         try:
