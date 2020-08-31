@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>flyingcarpet</id>
+    <version>$version</version>
+    <title>Flying Carpet</title>
+    <authors>Theron Spiegl</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/spieglt/FlyingCarpet/blob/$tag/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/spieglt/FlyingCarpet</projectUrl>
+    <iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/527a15a/assets/flyingcarpet.png</iconUrl>
+	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+	<projectSourceUrl>https://github.com/spieglt/FlyingCarpet/tree/$tag</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/spieglt/FlyingCarpet/issues</bugTrackerUrl>
+    <description>Wireless, encrypted file transfer over automatically configured ad hoc networking. No network infrastructure required (access point, router, switch). Just two laptops (Mac, Linux, and Windows supported) with wireless chips in close range.
+
+Don't have a flash drive? Don't have access to a wireless network or don't trust one? Need to move a file larger than 2GB between different filesystems but don't want to set up a file share? Try it out!
+
+# Screenshots:
+
+![Picture demonstration of the Windows version](https://raw.githubusercontent.com/spieglt/FlyingCarpet/c407983/pictures/winDemo.png) 
+![Picture demonstration of the macOS version](https://raw.githubusercontent.com/spieglt/FlyingCarpet/c407983/pictures/macDemo.png)
+![Picture demonstration of the GNU/Linux version](https://raw.githubusercontent.com/spieglt/FlyingCarpet/c407983/pictures/linuxDemo.png)
+
+# Features:
+
++ Cross-platform: Linux, Mac, and Windows.
++ Transfer multiple files at once, without losing progress if the transfer is interrupted or canceled.
++ Speeds over 120mbps (with laptops close together).
++ Does not use Bluetooth or your local network, just wireless chip to wireless chip.
++ Files encrypted in transit.
++ Large files supported (&lt;10MB RAM usage while transferring a 4.5GB file).
++ No installation required and no dependencies needed.
++ Interoperable GUI and CLI versions.
+
+# Restrictions:
+
++ The Mac version is a standard `.app` bundle, the Linux version is an executable that writes dependencies to a temp location and runs from there, and the Windows version is a `.zip` with an `.exe` and other dependencies inside. I'm working on a better solution for Windows. It was a standalone `.exe` when I was using wxWidgets but this has not been possible since moving to Qt. PRs welcome.
++ 64-bit only. Supported Operating Systems: macOS 10.12+, Windows 7+, and Linux Mint 18. I only have access to so many laptops, so if you've tried on other platforms please let me know whether it worked. 
++ Disables your wireless internet connection while in use (does not apply to Windows when receiving).
++ On Mac: You may have to right-click and select "Open" if your settings don't allow running unsigned applications. 
++ On Windows: Click "More info" and "Run anyway" if you receive a Windows SmartScreen prompt. You may also need to disable WiFi Sense.
++ I need help testing on Linux and supporting non-Debian-based distributions! Currently only confirmed to work on Mint 18, and only on wireless cards/drivers that support ad hoc networking with `nmcli`.
++ Flying Carpet should rejoin you to your previous wireless network after a completed or canceled transfer. This will not happen if the program freezes, crashes, or if the windows is closed during operation.
+
+# Planned features:
+
++ Drag and drop for sending files.
++ Folder upload.
++ Replace `netsh wlan` with Native WiFi API on Windows.
++ Mobile versions, integrating functionality from https://github.com/claudiodangelis/qr-filetransfer.
+
+Licenses for third-party tools and libraries used can be found in the "3rd_party_licenses" folder.</description>
+    <summary>A cross-platform, encryped file transfer bewteen two devices.</summary>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+        <dependency id="flyingcarpet.install" version="[$version]" />
+    </dependencies> 
+    <copyright>Copyright © 2017 - 2020 Theron Spiegl</copyright>
+    <tags>foss gui admin linux mac macos windows file transfer encrypted wifi ad-hoc qt</tags>
+  </metadata>
+</package>
