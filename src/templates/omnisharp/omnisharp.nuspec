@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>omnisharp</id>
+    <version>$version</version>
+    <title>OmniSharp - Roslyn-based C# Language Server</title>
+    <authors>OmniSharp &amp; .NET Foundation</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/OmniSharp/omnisharp-roslyn/blob/$tag/license.md</licenseUrl>
+    <projectUrl>https://www.omnisharp.net</projectUrl>
+    <iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/1ef60ec2/assets/omnisharp.png</iconUrl>
+	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+	<projectSourceUrl>https://github.com/OmniSharp/omnisharp-roslyn/tree/$tag</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/OmniSharp/omnisharp-roslyn/issues</bugTrackerUrl>
+    <description>
+[![Build Status](https://dev.azure.com/omnisharp/Builds/_apis/build/status/OmniSharp.omnisharp-roslyn?branchName=master)](https://dev.azure.com/omnisharp/Builds/_build/latest?definitionId=2&amp;branchName=master)
+
+## Introduction
+
+OmniSharp is a .NET development platform based on [Roslyn](https://github.com/dotnet/roslyn) workspaces. It provides project dependencies and C# language services to various IDEs and plugins.
+
+OmniSharp is built with the [.NET Core SDK](https://dot.net/) on Windows and [Mono](http://www.mono-project.com/) on OSX/Linux. It targets the _net472_ target framework. For platforms other than Windows, OmniSharp ships with an _embedded Mono_ which is based on version _5.18.0_, includes MSBuild _16.3.0_ and is provisioned during the build script. If _Mono_ is globally installed on the system, OmniSharp will prefer it over the embedded version, however version _>=6.4.0_ is required (the lowest version with at least MSBuild _16.3.0_).
+
+### Configuration
+
+OmniSharp provides a rich set of hierarchical configuration options, controlled via startup arguments, environment variables and `omnisharp.json` file. For more details please visit the [Configuration Options](https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options) section of the wiki.
+
+## License
+
+Copyright © .NET Foundation, and contributors.
+
+OmniSharp is provided as-is under the MIT license. For more information see [LICENSE](https://github.com/OmniSharp/omnisharp-roslyn/blob/master/license.md).
+
+## .NET Foundation
+
+This project is supported by the [.NET Foundation](http://www.dotnetfoundation.org).
+	</description>
+    <summary>C# Language Server based on Roslyn.</summary>
+	<dependencies>
+		<dependency id="cake.portable" version="0.38.0" />
+		<dependency id="nuget.commandline" version="5.7.0" />
+		<dependency id="dotnet4.7.2" version="4.7.2.20180712" />
+		<dependency id="dotnet4.6" version="4.6.00081.20150925" />
+	</dependencies>
+    <releaseNotes>$notes</releaseNotes>
+    <copyright>Copyright © 2015 - 2020 OmniSharp
+	Copyright © 2020 .NET Foundation</copyright>
+    <tags>lsp ls .net dotnet dotnetcore asp.net mono foss ide</tags>
+  </metadata>
+</package>
