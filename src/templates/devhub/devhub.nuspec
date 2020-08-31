@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>devhub</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>DevHub (Install)</title>
+    <authors>Bruno Lemos</authors>
+	<iconUrl>https://cdn.statically.io/gh/devhubapp/devhub/a8cdb0ff/landing/static/logo%403x.png</iconUrl>
+    <projectUrl>https://devhubapp.com/</projectUrl>
+    <licenseUrl>https://github.com/devhubapp/devhub/blob/$tag/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/devhubapp/devhub/tree/$tag</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/devhubapp/devhub/issues</bugTrackerUrl>
+    <tags>github notifications repository mobile twitter tweet tweetdeck management foss free open source desktop client electron</tags>
+    <description>
+**Manage GitHub Notifications** and stay on top of **repository activities**. Save **custom searches**, apply **filters** and don't miss anything important.
+
+
+## Screenshots
+
+### Desktop
+
+![DevHub Desktop](https://user-images.githubusercontent.com/619186/65840754-13491e00-e2f3-11e9-9c4b-70c29df181c9.jpg)
+
+
+#### Menubar
+
+![DevHub Menubar](https://cdn.statically.io/gh/devhubapp/devhub/a8cdb0ff/landing/static/screenshots/devhub-desktop-menubar-banner.jpg)
+
+### Mobile
+
+![DevHub Mobile - Notifications](https://cdn.statically.io/gh/devhubapp/devhub/a8cdb0ff/landing/static/screenshots/iphone-notifications-dark.jpg)
+![DevHub Mobile - Notification Filters](https://cdn.statically.io/gh/devhubapp/devhub/a8cdb0ff/landing/static/screenshots/iphone-notifications-filters-dark.jpg)
+![DevHub Mobile - Repository activity](https://cdn.statically.io/gh/devhubapp/devhub/a8cdb0ff/landing/static/screenshots/iphone-events-dark.jpg)
+	
+
+## Features
+
+- **Multi-column layout**: See at a quick glance everything that is going on (like TweetDeck!);
+- **Filters**: Apply different filters to each column, save your custom searches to make your life easier;
+- **Inbox Zero**: Mark columns as done and gain peace of mind;
+- **Notifications manager**: See all the relevant information before opening the notification, like comment content, issue/pull request status, release description, etc.;
+- **Repository watcher**: Keep up to date with repositories' activities without using the `watch` feature so your notifications don't get cluttered;
+- **User stalking**: Follow user activities without using the `follow` button; see activities that GitHub doesn't show on your feed, like their issue comments and pushed commits;
+- **Home/Dashboard**: See yours or other users' home screen (a.k.a. GitHub Dashboard), a great way to discover interesting repositories;
+- **Save for later**: Save any activity or notification for later, so you don't forget to get back to them;
+- **Keyboard shortcuts**: Do anything using only the keyboard (press Shift+? in the web or desktop app to see all available shortcuts);
+- **Theme support**: Choose between 6 light or dark themes; Automatically detect system preference;
+- **And more!**: Desktop apps, native mobile apps, open source, modern tech stack, ...
+	</description>
+	<summary>
+	GitHub Notifications &amp; Activities on the desktop.
+	</summary>
+	<releaseNotes>$notes</releaseNotes>
+	<dependencies></dependencies>
+	<copyright>
+	Copyright © 2017 - 2020 Bruno Lemos
+	Copyright © 2008 - 2020 GitHub, Inc
+	</copyright>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
