@@ -36,6 +36,7 @@ def find_and_replace_templates(package_name: str,
                                fname64: Optional[str],
                                notes: Optional[str]) -> None:
     os.mkdir(Path(directory)/"tools")
+    os.mkdir(Path(directory)/"legal")
     d = dict(version=version,
              tag=tag,
              url=url,
@@ -56,10 +57,11 @@ def find_and_replace_templates(package_name: str,
 
     for template in templates:
         try:
-            with io.open(basepath/template, "r") as f:
+            with io.open(basepath/template, "r", encoding="utf-8-sig") as f:
                 contents = f.read()
                 temp = Template(contents).safe_substitute(d)
-                f = io.open(Path(directory)/template, "a+")
+                f = io.open(Path(directory)/template, "a+",
+                            encoding="utf-8", errors="ignore")
                 f.write(temp)
                 f.close()
         except FileNotFoundError as err:
