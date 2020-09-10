@@ -60,7 +60,4 @@
 	Copyright © 2008 - 2020 GitHub, Inc
 	</copyright>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
