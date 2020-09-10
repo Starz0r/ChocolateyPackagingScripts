@@ -53,7 +53,9 @@ def find_and_replace_templates(package_name: str,
         "tools/chocolateyuninstall.ps1",
         "tools/chocolateybeforemodify.ps1",
         "legal/LICENSE.txt",
-        "legal/VERIFICATION.txt"]
+        "legal/VERIFICATION.txt",
+        "tools/LICENSE.txt",
+        "tools/VERIFICATION.txt"]
 
     for template in templates:
         try:
