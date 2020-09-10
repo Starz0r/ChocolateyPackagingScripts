@@ -46,9 +46,8 @@ def main():
             subprocess.call(["wget",
                              url,
                              "--output-document",
-                             "gallery-dl.exe"])
-            chksum = checksum.get_for_file("gallery-dl.exe", "sha512")
-            os.remove("gallery-dl.exe")
+                             fname])
+            chksum = checksum.get_for_file(fname, "sha512")
             tempdir = tempfile.mkdtemp()
             find_and_replace_templates("gallery-dl",
                                        tempdir,
@@ -63,6 +62,7 @@ def main():
                                        None,
                                        rel.body.replace("<", "&lt;")
                                                .replace(">", "&gt;"))
+            os.rename(fname, os.path.join(tempdir, "tools", fname))
             abort_on_nonzero(subprocess.call(["choco",
                                               "pack",
                                               Path(tempdir)/"gallery-dl.nuspec"]))
