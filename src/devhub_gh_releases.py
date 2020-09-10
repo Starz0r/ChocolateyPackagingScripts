@@ -38,9 +38,9 @@ def main():
             if asset is None:
                 continue
             url = asset.browser_download_url
-            subprocess.call(["wget", url, "--output-document", "dh.exe"])
-            chksum = checksum.get_for_file("dh.exe", "sha512")
-            os.remove("dh.exe")
+            fname = asset.name
+            subprocess.call(["wget", url, "--output-document", fname])
+            chksum = checksum.get_for_file(fname, "sha512")
             tempdir = tempfile.mkdtemp()
             print(tempdir)
             relnotes = rel.body
@@ -50,9 +50,10 @@ def main():
                 relnotes = relnotes.replace("<", "&lt;").replace(">", "&gt;").replace(
                     "&", "&amp;").replace("\u200b", "")  # zero-width space
             find_and_replace_templates(pkgname, tempdir, rel.title,
-                                       rel.tag_name, url, chksum, None, None,
+                                       rel.tag_name, url, chksum, fname, None,
                                        None, None,
                                        relnotes)
+            os.rename(fname, os.path.join(tempdir, "tools", fname))
             abort_on_nonzero(
                 subprocess.call(
                     ["choco", "pack",
