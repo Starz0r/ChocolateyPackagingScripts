@@ -39,12 +39,12 @@ def main():
             if asset is None:
                 continue
             url = asset.browser_download_url
+            fname = "rust-analyzer.exe"  # override file name
             subprocess.call(["wget",
                              url,
                              "--output-document",
-                             "rustlsp.exe"])
-            chksum = checksum.get_for_file("rustlsp.exe", "sha512")
-            os.remove("rustlsp.exe")
+                             fname])
+            chksum = checksum.get_for_file(fname, "sha512")
             tempdir = tempfile.mkdtemp()
             if "nightly" in rel.title:
                 t = rel.published_at
@@ -56,7 +56,7 @@ def main():
                                            rel.tag_name,
                                            url,
                                            chksum,
-                                           None,
+                                           fname,
                                            None,
                                            None,
                                            None,
@@ -68,11 +68,12 @@ def main():
                                            rel.tag_name,
                                            url,
                                            chksum,
-                                           None,
+                                           fname,
                                            None,
                                            None,
                                            None,
                                            None)
+            os.rename(fname, os.path.join(tempdir, "tools", fname))
             abort_on_nonzero(subprocess.call(["choco",
                                               "pack",
                                               Path(tempdir)/"rust-analyzer.nuspec"]))
