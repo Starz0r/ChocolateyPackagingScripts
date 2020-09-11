@@ -26,7 +26,4 @@ rust-analyzer is an experimental modular compiler frontend for the Rust language
 	</dependencies>
 	<copyright>Copyright © 2017 - 2020 Ferrous Systems</copyright>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
