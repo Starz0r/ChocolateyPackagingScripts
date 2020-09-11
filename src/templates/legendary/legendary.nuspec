@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>legendary</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Legendary (Portable)</title>
+    <authors>derrod</authors>
+	<iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/2055976c/assets/legendary.png</iconUrl>
+    <projectUrl>https://github.com/derrod/legendary</projectUrl>
+    <licenseUrl>https://github.com/derrod/legendary/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/derrod/legendary</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/derrod/legendary/issues</bugTrackerUrl>
+    <tags>cli python gaming</tags>
+    <description>
+Legendary is an open-source game launcher that can download and install games from the Epic Games platform on Linux and Windows.
+It's name as a tongue-in-cheek play on tiers of [item rarity in many MMORPGs](https://wow.gamepedia.com/Quality).
+
+Right now Legendary is in beta and not feature-complete. You might run into some bugs or issues.
+If you do please [create an issue on GitHub](https://github.com/derrod/legendary/issues/new) so we can fix it.
+
+**What works:**
+ - Authenticating with Epic's service
+ - Downloading and installing your games and their DLC
+ - Delta patching/updating of installed games
+ - Launching games with online authentication (for multiplayer/DRM)
+ - Syncing cloud saves (compatible with EGL)
+ - Running games with WINE on Linux
+ - Importing/Exporting installed games from/to the Epic Games Launcher
+
+**Planned:**
+ - Simple GUI for managing/launching games
+ - Better interfaces for other developers to use Legendary in their projects
+ - Lots and lots of bug fixes, optimizations, and refactoring...
+	</description>
+	<summary>
+	Free and open-source Epic Games Launcher alternative
+	</summary>
+	<releaseNotes>$notes</releaseNotes>
+	<copyright>Copyright © 2020 derrod;
+	
+	
+	Copyright © 1991-2020 Epic Games, Inc.</copyright>
+  </metadata>
+</package>
