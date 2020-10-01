@@ -38,10 +38,8 @@ This project is supported by the [.NET Foundation](http://www.dotnetfoundation.o
 	</description>
     <summary>C# Language Server based on Roslyn.</summary>
 	<dependencies>
-		<dependency id="cake.portable" version="0.38.0" />
 		<dependency id="nuget.commandline" version="5.7.0" />
 		<dependency id="dotnet4.7.2" version="4.7.2.20180712" />
-		<dependency id="dotnet4.6" version="4.6.00081.20150925" />
 	</dependencies>
     <releaseNotes>$notes</releaseNotes>
     <copyright>Copyright © 2015 - 2020 OmniSharp
