@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tokei</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Tokei</title>
+    <authors>Erin Power</authors>
+    <projectUrl>https://github.com/XAMPPRocky/tokei</projectUrl>
+    <licenseUrl>https://github.com/XAMPPRocky/tokei/blob/$tag/LICENCE-MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/XAMPPRocky/tokei</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/XAMPPRocky/tokei/issues</bugTrackerUrl>
+    <tags>clock sloc cloc code rusty</tags>
+    <description>
+[![Mean Bean CI](https://github.com/XAMPPRocky/tokei/workflows/Mean%20Bean%20CI/badge.svg)](https://github.com/XAMPPRocky/tokei/actions?query=workflow%3A%22Mean+Bean+CI%22)
+[![crates.io](https://img.shields.io/crates/d/tokei.svg)](https://crates.io/crates/tokei)
+[![Help Wanted](https://img.shields.io/github/issues/XAMPPRocky/tokei/help%20wanted?color=green)](https://github.com/XAMPPRocky/tokei/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+[![Lines Of Code](https://tokei.rs/b1/github/XAMPPRocky/tokei?category=code)](https://github.com/XAMPPRocky/tokei)
+[![Documentation](https://docs.rs/tokei/badge.svg)](https://docs.rs/tokei/)
+
+Tokei is a program that displays statistics about your code. Tokei will show the number of files, total lines within those files and code, comments, and blanks grouped by language.
+
+## Example
+```console
+===============================================================================
+ Language            Files        Lines         Code     Comments       Blanks
+===============================================================================
+ BASH                    4           49           30           10            9
+ JSON                    1         1332         1332            0            0
+ Shell                   1           49           38            1           10
+ TOML                    2           77           64            4            9
+-------------------------------------------------------------------------------
+ Markdown                5         1355            0         1074          281
+ |- JSON                 1           41           41            0            0
+ |- Rust                 2           53           42            6            5
+ |- Shell                1           22           18            0            4
+ (Total)                           1471          101         1080          290
+-------------------------------------------------------------------------------
+ Rust                   19         3416         2840          116          460
+ |- Markdown            12          351            5          295           51
+ (Total)                           3767         2845          411          511
+===============================================================================
+ Total                  32         6745         4410         1506          829
+===============================================================================
+```
+
+
+## Features
+
+- Tokei is **very fast**, and is able to count millions of lines of code in seconds.
+  Check out our [latest release](https://github.com/XAMPPRocky/tokei/releases/latest)
+  to see how Tokei's speed compares to others.
+
+- Tokei is **accurate**, Tokei correctly handles multi line comments,
+  nested comments, and not counting comments that are in strings. Providing an
+  accurate code statistics.
+
+- Tokei has huge range of languages, supporting over **150** languages, and
+  their various extensions.
+
+- Tokei can output in multiple formats(**CBOR**, **JSON**, **TOML**, **YAML**)
+  allowing Tokei's output to be easily stored, and reused. These can also be
+  reused in tokei combining a previous run's statistics with another set.
+
+- Tokei is available on **Mac**, **Linux**, and **Windows**. See [installation
+  instructions](#installation) for how to get Tokei on your platform.
+
+- Tokei is also a **library** allowing you to easily integrate it with other
+  projects.
+	</description>
+	<summary>A program that allows you to count your code, quickly</summary>
+    <releaseNotes>$notes</releaseNotes>
+	<dependencies>
+		<dependency id="vcredist140" version="14.20.27508.1" />
+	</dependencies>
+	<copyright>Copyright © 2015 - 2020 Erin Power and contributors</copyright>
+  </metadata>
+</package>
