@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>dust</id>
+    <version>$version</version>
+    <title>Dust</title>
+    <authors>Andy Boot</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/bootandy/dust/blob/$tag/LICENSE</licenseUrl>
+	<projectUrl>https://github.com/bootandy/dust</projectUrl>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bootandy/dust/tree/$tag</projectSourceUrl>
+	<bugTrackerUrl>https://github.com/bootandy/dust/issues</bugTrackerUrl>
+    <description>## Package Parameters
+* `/GNU` - Install GNU ABI executable instead of native MSVC ABI.
+
+[![Build Status](https://travis-ci.org/bootandy/dust.svg?branch=master)](https://travis-ci.org/bootandy/dust)
+
+du + rust = dust. Like du but more intuitive.
+
+# Demo
+![Example](https://cdn.statically.io/gh/bootandy/dust/1d018bc8/media/snap.png)
+
+## Overview
+
+Dust is meant to give you an instant overview of which directories are using disk space without requiring sort or head. Dust will print a maximum of one 'Did not have permissions message'.
+
+Dust will list a slightly-less-than-the-terminal-height number of the biggest subdirectories or files and will smartly recurse down the tree to find the larger ones. There is no need for a '-d' flag or a '-h' flag. The largest subdirectories will be colored.
+
+## Usage
+
+```
+Usage: dust
+Usage: dust &lt;dir&gt;
+Usage: dust &lt;dir&gt;  &lt;another_dir&gt; &lt;and_more&gt;
+Usage: dust -p &lt;dir&gt;  (full-path - does not shorten the path of the subdirectories)
+Usage: dust -s &lt;dir&gt;  (apparent-size - shows the length of the file as opposed to the amount of disk space it uses)
+Usage: dust -n 30  &lt;dir&gt;  (shows 30 directories instead of the default)
+Usage: dust -d 3  &lt;dir&gt;  (shows 3 levels of subdirectories)
+Usage: dust -r  &lt;dir&gt;  (reverse order of output, with root at the lowest)
+Usage: dust -x  &lt;dir&gt;  (only show directories on the same filesystem)
+Usage: dust -X ignore  &lt;dir&gt;  (ignore all files and directories with the name 'ignore')
+Usage: dust -b &lt;dir&gt;  (do not show percentages or draw ASCII bars)
+```
+
+Note: Apparent-size is calculated slightly differently in dust to gdu. In dust each hard link is counted as using file_length space. In gdu only the first entry is counted.</description>
+    <summary>A more intuitive version of du in rust</summary>
+    <tags>gnu du unix cli foss</tags>
+    <dependencies>
+        <dependency id="chocolatey-core.extension" version="1.3.5.1" />
+		<dependency id="vcredist140" version="14.20.27508.1" />
+    </dependencies>
+	<copyright>Copyright © 2018-2020 Andy Boot</copyright>
+  </metadata>
+</package>
