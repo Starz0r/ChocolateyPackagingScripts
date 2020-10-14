@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>led</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>L-Ed</title>
+    <authors>Sébastien Bénard &amp; Deepnight Games</authors>
+    <projectUrl>https://deepnight.net/tools/led-2d-level-editor/</projectUrl>
+    <licenseUrl>https://github.com/deepnight/led/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/deepnight/led/tree/$tag</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/deepnight/led/issues</bugTrackerUrl>
+    <tags>level-editor 2d game-development haxe gaming</tags>
+    <description>
+L-Ed is a **modern**, **lightweight** and **open-source** 2D level editor.
+
+Links: [Official website](https://deepnight.net/tools/led-2d-level-editor/) | [Haxe API (on GitHub)](https://github.com/deepnight/led-haxe-api)
+
+[![Build Status](https://travis-ci.com/deepnight/led.svg?branch=master)](https://travis-ci.com/deepnight/led)
+	</description>
+	<summary>
+	Modern, lightweight and efficient 2D level editor
+	</summary>
+	<releaseNotes>$notes</releaseNotes>
+	<dependencies></dependencies>
+	<copyright>
+	Copyright © 2020 Sébastien Bénard &amp; Deepnight Games
+	</copyright>
+  </metadata>
+</package>
