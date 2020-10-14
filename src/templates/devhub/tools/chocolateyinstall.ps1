@@ -1,9 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
-
-$PackageName  = $env:ChocolateyPackageName
-$App = $PackageName.Split(".")[0]
-$InstallDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ToolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
+$PackageName           = $env:ChocolateyPackageName;
+$App                   = $PackageName.Split(".")[0];
+$InstallDir            = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)";
+$ToolsDir              = Split-Path -parent $MyInvocation.MyCommand.Definition;
 
 $PackageArgs = @{
   PackageName     = $PackageName
