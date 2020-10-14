@@ -23,7 +23,7 @@
 ![image](https://raw.githubusercontent.com/Peltoche/lsd/assets/screen_lsd.png)
 
 ## Package Parameters
-* `/GNU` - Install GNU ABI executable instead of native MSVC ABI.
+* `/GNU` - Install GNU ABI flavored executable variant instead of native MSVC ABI.
 
 ### Prerequisites
 
