@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>emulsion</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Emulsion</title>
+    <authors>Artúr Kovács</authors>
+    <projectUrl>https://arturkovacs.github.io/emulsion-website/</projectUrl>
+	<iconUrl>https://cdn.statically.io/gh/ArturKovacs/emulsion/a724bde5/resource_dev/emulsion.svg</iconUrl>
+    <licenseUrl>https://github.com/ArturKovacs/emulsion/blob/$tag/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ArturKovacs/emulsion/tree/$tag</projectSourceUrl>
+	<docsUrl>https://arturkovacs.github.io/emulsion-website/configuration.html</docsUrl>
+    <bugTrackerUrl>https://github.com/ArturKovacs/emulsion/issues</bugTrackerUrl>
+    <tags>images photos gui programmable rust foss</tags>
+    <description>## Package Parameters
+* `/DesktopShortcut` - Place a shortcut to the application on the desktop.
+* `/AddToPath` - Add the application's install folder to System PATH.
+
+## About
+
+Emulsion is a image viewer with the focus on the following features:
+* Fast
+* Light and Dark interface modes
+* Cursor Anchored Zoom
+* Pixel Art Friendly
+* Seconds To Install
+
+Refer to the [website](https://arturkovacs.github.io/emulsion-website/) for a more in-depth overview.
+
+Emulsion is targeting Windows, Mac, and Linux although it is currently only being tested on Linux and Windows. A note for Linux users: Wayland support is limited, so for example expect high CPU usage and the title text not being shown. However X is fully supported.
+
+To build the software, obtain the latest stable release of [Rust](https://www.rust-lang.org/) and after navigating to the source directory simply run the command `cargo build --release` using your preferred command line interface.
+
+Contribution is welcome. Feel free to post feature requests, bug reports, and make pull requests.
+
+## Notes on cargo features
+
+All packages on the website come with avif support; however it is not a default feature as the dependecies are not trivial to set up. If you are bulding from source (eg using `cargo install`) and would like emulsion to open avif files, I recommend taking a look at the [release workflow](.github/workflows/release-packages.yml) for steps to install the avif development dependencies.
+
+When installing Emulsion through the Windows installer, Emulsion will have networking enabled and will by default check for updates. However none of the other versions have networking and neither does the default feature-set. This also means that Emulsion will not have networking dependent capabilities when invoking
+```
+cargo install emulsion
+```
+
+To enable such features when installing with cargo, run
+```
+cargo install emulsion --features=networking
+```
+
+## Reporting bugs
+
+If Emulsion closed unexpectedly please locate the `"panic.txt"` file at `%localappdata%\emulsion\data`
+
+When posting a bug report please upload the contents of this file to GitHub. If you deem it too large just paste the last panic entry between the rows of equal signs. If there's no `"panic.txt"` file, describe the scenario in which you experienced the faulty behaviour, and steps to reproduce it if you believe that could help.
+	</description>
+	<summary>
+	A fast and minimalistic image viewer 
+	</summary>
+	<releaseNotes>$notes</releaseNotes>
+	<dependencies>
+		<dependency id="vcredist140" version="14.20.27508.1" />
+	</dependencies>
+	<copyright>
+	Copyright © 2018-2020 Artúr Kovács; Copyright © 2020 The Emulsion Contributors
+	</copyright>
+  </metadata>
+</package>
