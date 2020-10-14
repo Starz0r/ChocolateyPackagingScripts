@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>nyrna</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Nyrna</title>
+    <authors>Merritt</authors>
+	<iconUrl>https://cdn.statically.io/gh/Merrit/nyrna/19b993b3/icons/nyrna.ico</iconUrl>
+    <projectUrl>https://github.com/Merrit/nyrna</projectUrl>
+    <licenseUrl>https://github.com/Merrit/nyrna/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Merrit/nyrna/tree/$tag</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/Merrit/nyrna/issues</bugTrackerUrl>
+    <tags>systray foss suspend gaming tool</tags>
+    <description>
+**Nyrna allows the user to pause any game or application on their PC.**
+
+The reason for this project is to have a function on PC similar to the incredibly useful sleep/suspend function found in consoles like the Nintendo Switch and Sony PlayStation; suspend your game (and its resource usage) at any time, and resume whenever you wish - at the push of a button.
+
+That said this can be used to pause normal, non-game applications as well. For example: while doing a long 3D render, or maybe a video encoding job, the CPU and GPU resources are being hogged by said task - maybe for hours - when you would like to use the system for something else. With Nyrna you can pause that program, freeing up the CPU and GPU resources (not RAM) until the process is resumed, without losing where you were.
+
+Nyrna works on Linux with X11 and Microsoft Windows (tested on Windows 10).
+
+# Usage
+
+- Press the `Pause` key on your keyboard to suspend the active, foreground application. Press again to resume the same application regardless of the current focus.
+
+![Demo of Nyrna running as a Tray Icon](https://cdn.statically.io/gh/Merrit/nyrna/19b993b3/images/demo_nyrna_tray.png)
+
+- To change the hotkey: Right click tray icon -&gt; `Change Hotkey`
+
+# Disclaimer
+
+I have not had any issues using Nyrna, however keep in mind it is possible something could go wrong with a suspend. So please remember to always save your work and games.
+
+# In case of issue
+
+I haven't seen this issue, however if at any time the hotkey isn't working to resume, you can always manually find your process in task manager and resume or send signal SIGCONT / CONT:
+
+![How to manually resume](https://cdn.statically.io/gh/Merrit/nyrna/19b993b3/images/demo_manual_resume.jpg)
+	</description>
+	<summary>
+	Suspend any game or application.
+	</summary>
+	<releaseNotes>$notes</releaseNotes>
+	<copyright>Copyright © 2020 Merritt</copyright>
+  </metadata>
+</package>
