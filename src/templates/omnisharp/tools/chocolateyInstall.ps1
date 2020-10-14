@@ -1,11 +1,10 @@
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
-$InstallDir = Join-Path $(Get-ToolsLocation) "omnisharp"
 
 $PackageArgs = @{
 	PackageName = "omnisharp"
 	FileFullPath = Get-Item $ToolsPath\*-win-x86*.zip
 	FileFullPath64 = Get-Item $ToolsPath\*-win-x64*.zip
-	Destination = $InstallDir
+	Destination = $ToolsPath
 }
 Get-ChildItem $ToolsPath\* | Where-Object { $_.PSISContainer } | Remove-Item -Recurse -Force #remove older package dirs
 New-Item -Type Directory $ToolsPath\MSBuild\ -EA 0
