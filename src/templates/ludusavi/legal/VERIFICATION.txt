@@ -1,0 +1,28 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Go to https://github.com/mtkennerly/ludusavi, enter to releases and download from there.
+
+   i686:          $url
+   x86_64:        $url64
+   i686+opengl:   $alturl
+   x86_64+opengl: $alturl64
+
+   to download the zip files. You may wish to rename one of the files.
+
+2. You can use one of the following methods to obtain the SHA512 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   checksum:          $checksum
+   checksum64:        $checksum64
+   checksumopengl:    $altchecksum
+   checksumopengl64:  $altchecksum64
+
+File 'LICENSE.txt' obtained from:
+   https://github.com/mtkennerly/ludusavi/blob/$tag/LICENSE
+and
+   https://github.com/mtkennerly/ludusavi/releases/download/$tag/ludusavi-$tag-legal.txt
