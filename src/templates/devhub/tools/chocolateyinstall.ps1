@@ -17,6 +17,7 @@ $PackageArgs = @{
   
   SilentArgs      = "/S", "/SILENT", "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/SP-", "/LOG"
   ValidExitCodes  = @(0)
-}
+};
 
-Install-ChocolateyPackage @PackageArgs
+Install-ChocolateyPackage @PackageArgs;
+Remove-Item $(Get-Item $(Join-Path $ToolsDir "$fname"));
