@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gotop</id>
+    <version>$version</version>
+    <title>gotop</title>
+    <authors>Caleb Bassi &amp; Sean E. Russell</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/xxxserxxx/gotop/blob/$tag/LICENSE</licenseUrl>
+	<projectUrl>https://github.com/xxxserxxx/gotop</projectUrl>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <projectSourceUrl>https://github.com/xxxserxxx/gotop/tree/$tag</projectSourceUrl>
+	<docsUrl>https://github.com/xxxserxxx/gotop/wiki</docsUrl>
+    <iconUrl>https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/logo/logo.png</iconUrl>
+	<bugTrackerUrl>https://github.com/xxxserxxx/gotop/issues</bugTrackerUrl>
+    <description>Another terminal based graphical activity monitor, inspired by [gtop](https://github.com/aksakalli/gtop) and [vtop](https://github.com/MrRio/vtop), this time written in [Go](https://golang.org/)!
+
+Join us in [\#gotop:matrix.org](https://riot.im/app/#/room/#gotop:matrix.org) ([matrix clients](https://matrix.to/#/#gotop:matrix.org)).
+
+![](https://github.com/xxxserxxx/gotop/workflows/Build%20Go%20binaries/badge.svg)
+![](https://github.com/xxxserxxx/gotop/workflows/Create%20pre-release/badge.svg)
+
+See the [mini-blog](https://github.com/xxxserxxx/gotop/wiki/Micro-Blog) for updates on the build status, and the [change log](/CHANGELOG.md) for release updates.
+
+![demonstration](https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/screenshots/demo.gif)
+
+## Installation
+
+If you install gotop by hand, or you download or create new layouts or colorschemes, you will need to put the layout files where gotop can find them.  To see the list of directories gotop looks for files, run `gotop -h`.  The first directory is always the directory from which gotop is run.
+
+### Extension builds
+
+An evolving mechanism in gotop are extensions. This is designed to allow gotop to support feature sets that are not universally needed without blowing up the application for average users with usused features.  Examples are support for specific hardware sets like video cards, or things that are just obviously not a core objective of the application, like remote server monitoring.
+
+The path to these extensions is a tool called [gotop-builder](https://github.com/xxxserxxx/gotop-builder). It is easy to use and depends only on having Go installed.  You can read more about it on the project page, where you can also find binaries for Linux that have *all* extensions built in. If you want less than an all-inclusive build, or one for a different OS/architecture, you can use gotop-builder itself to create your own.
+
+
+### Console Users
+
+gotop requires a font that has braille and block character Unicode code points; some distributions do not provide this.  In the gotop repository is a `pcf` font that has these points, and setting this font may improve how gotop renders in your console.  To use this, run these commands:
+
+```shell
+curl -O -L https://raw.githubusercontent.com/xxxserxxx/gotop/master/fonts/Lat15-VGA16-braille.psf
+setfont Lat15-VGA16-braille.psf
+```
+
+## Usage
+
+Run with `-h` to get an extensive list of command line arguments.  Many of these can be configured by creating a configuration file; see the next section for more information.  Key bindings can be viewed while gotop is running by pressing the `?` key, or they can be printed out by using the `--list keys` command.
+
+In addition to the key bindings, the mouse can be used to control the process list:
+
+- click to select process
+- mouse wheel to scroll through processes
+
+For more information on other topics, see:
+
+- [Layouts](https://github.com/xxxserxxx/gotop/blob/f9f330a9/docs/layouts.md)
+- [Configuration](https://github.com/xxxserxxx/gotop/blob/f9f330a9/docs/configuration.md)
+- [Color schemes](https://github.com/xxxserxxx/gotop/blob/f9f330a9/docs/colorschemes.md)
+- [Device filtering](https://github.com/xxxserxxx/gotop/blob/f9f330a9/docs/devices.md)
+- [Extensions](https://github.com/xxxserxxx/gotop/blob/f9f330a9/docs/extensions.md)
+
+
+## More screen shots
+
+#### '-l kitchensink' + colorscheme
+![kitchensink layout and colorscheme](https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/screenshots/kitchensink.gif)
+
+#### "-l battery"
+![battery layout](https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/screenshots/battery.png)
+
+#### "-l minimal"
+![minimal layout](https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/screenshots/minimal.png)
+
+#### Custom (layouts/procs)
+![custom procs lookalike layout](https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/screenshots/procs.png)</description>
+    <summary>A terminal based graphical activity monitor inspired by gtop and vtop</summary>
+    <tags>top system process unix cli foss</tags>
+    <dependencies>
+        <dependency id="chocolatey-core.extension" version="1.3.5.1" />
+    </dependencies>
+	<copyright>Copyright © 2018-2020 Caleb Bassi; Copyright © 2020 Sean E. Russell</copyright>
+  </metadata>
+</package>
