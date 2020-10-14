@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop';
-$ToolsPath             = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$installDir            = $env:ChocolateyToolsLocation # Dangerous but appending -SpecificFolder to Install-ChocolateyZipPackage doesn't work
+$ToolsPath             = Split-Path -Parent $MyInvocation.MyCommand.Definition;
+$InstallDir            = Get-ToolsLocation; # Dangerous but appending -SpecificFolder to Install-ChocolateyZipPackage doesn't work
 
-Install-ChocolateyZipPackage $env:ChocolateyPackageName "$url" $installDir -checksum '$checksum' -checksumType 'sha256'
-Install-ChocolateyPath "$installDir\bin"
+Install-ChocolateyZipPackage $env:ChocolateyPackageName "$url" $InstallDir -checksum '$checksum' -checksumType 'sha256';
+Install-ChocolateyPath "$InstallDir\bin";
