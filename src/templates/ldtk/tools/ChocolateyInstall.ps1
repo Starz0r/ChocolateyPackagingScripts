@@ -8,7 +8,7 @@ $PackageArgs = @{
   FileType        = 'exe'
   File64          = Get-Item $(Join-Path $ToolsDir "$fname")
 
-  SoftwareName    = 'led*'
+  SoftwareName    = 'ldtk*'
   
   SilentArgs      = "/S"
   ValidExitCodes  = @(0,3010)

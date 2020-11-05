@@ -12,10 +12,10 @@ from common.common import find_and_replace_templates_new
 
 
 def main():
-    logger = logging.getLogger('L-Ed GitHub Releases')
+    logger = logging.getLogger('LDtk GitHub Releases')
     logger.setLevel(logging.DEBUG)
 
-    for rel in on_new_git_release("led", "deepnight/led"):
+    for rel in on_new_git_release("ldtk", "deepnight/ldtk"):
         # correlate assets
         asset = get_correct_release_asset(rel.get_assets(), ".exe",
                                           ".blockmap")
@@ -53,11 +53,11 @@ def main():
 
         # template and pack
         tmpdir = tempfile.mkdtemp()
-        find_and_replace_templates_new("led", tmpdir, d)
+        find_and_replace_templates_new("ldtk", tmpdir, d)
         os.rename(fname, os.path.join(tmpdir, "tools", fname))
         abort_on_nonzero(
             subprocess.call(["choco", "pack",
-                             Path(tmpdir) / "led.nuspec"]))
+                             Path(tmpdir) / "ldtk.nuspec"]))
 
 
 if __name__ == "__main__":
