@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>youtube-dlc</id>
+    <version>$version</version>
+    <title>youtube-dlc</title>
+    <authors>Ricardo Garcia, Tom-Oliver Heidel, and others</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/blackjack4494/youtube-dlc/blob/$tag/LICENSE</licenseUrl>
+    <projectUrl>https://blackjack4494.github.io/youtube-dlc/</projectUrl>
+	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <projectSourceUrl>https://github.com/blackjack4494/youtube-dlc/tree/$tag</projectSourceUrl>
+	<bugTrackerUrl>https://github.com/blackjack4494/youtube-dlc/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/f55a85c30/assets/youtube-dlc.png</iconUrl>
+    <description>youtube-dlc is a **community** maintained fork of the original youtube-dl small command-line program to download videos from YouTube.com and a few more sites. It is written in Python and it's not platform specific. It should work in your Unix box, in Windows or in Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
+
+## Notes
+
+- Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction and conversion support)</description>
+    <summary>Command-line program to download various media from YouTube.com and other sites.</summary>
+    <releaseNotes>$notes</releaseNotes>
+    <copyright>Copyright © 2006-2020 Ricardo Garcia Gonzalez; Copyright © 2020 Tom-Oliver Heidel</copyright>
+    <language>en-US</language>
+    <tags>youtube-dl fork cli foss cross-platform video multimedia ffmpeg youtube download</tags>
+    <dependencies>
+      <dependency id="vcredist2010" version="10.0.40219.2" />
+    </dependencies>
+  </metadata>
+</package>
