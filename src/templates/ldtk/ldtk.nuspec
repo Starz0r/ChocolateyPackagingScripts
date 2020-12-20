@@ -7,7 +7,8 @@
     <owners>Starz0r</owners>
     <title>Level Designer Toolkit</title>
     <authors>Sébastien Bénard &amp; Deepnight Games</authors>
-    <projectUrl>https://deepnight.net/tools/ldtk-2d-level-editor/</projectUrl>
+    <projectUrl>https://ldtk.io</projectUrl>
+	<iconUrl>https://cdn.statically.io/gh/deepnight/ldtk/f502451c/art/logo/LDtk-vector-assets/LDtk-2048.png</iconUrl>
     <licenseUrl>https://github.com/deepnight/ldtk/blob/$tag/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/deepnight/ldtk/tree/$tag</projectSourceUrl>
