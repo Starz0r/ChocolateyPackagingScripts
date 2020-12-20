@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>neovide</id>
+    <version>$version</version>
+    <title>Neovide</title>
+    <authors>Keith Simmons</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/Kethku/neovide/blob/$tag/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Kethku/neovide</projectUrl>
+	<iconUrl>https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/nvim.ico</iconUrl>
+	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+	<projectSourceUrl>https://github.com/Kethku/neovide/tree/$tag</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/Kethku/neovide/issues</bugTrackerUrl>
+    <description>[![Gitter](https://badges.gitter.im/neovide/community.svg)](https://gitter.im/neovide/community?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge)
+
+This is a simple graphical user interface for Neovim. Where possible there are some graphical improvements, but it should act functionally like the terminal UI.
+
+![Basic Screen Cap](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/BasicScreenCap.png)
+
+## Features
+
+Should be a standard full features Neovim GUI. Beyond that there are some visual niceties:
+
+### Ligatures
+
+Supports ligatures and full [HarfBuzz](https://www.freedesktop.org/wiki/Software/HarfBuzz/) backed font shaping.
+
+![Ligatures](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/Ligatures.png)
+
+### Animated Cursor
+
+Cursor animates into position with a smear effect to improve tracking of cursor position.
+
+![Animated Cursor](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/AnimatedCursor.gif)
+
+### Emoji Support
+
+Font fallback supports rendering of emoji not contained in the configured font.
+
+![Emoji](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/Emoji.png)
+
+### Some Nonsense ;)
+
+```
+let g:neovide_cursor_vfx_mode = "railgun"
+```
+
+![Railgun](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/Railgun.gif)
+
+## Configuration
+
+Configuration is done almost completely via global neovide variables in your vim config and can be manipulated live at runtime. Details can be found [here](https://github.com/Kethku/neovide/wiki/Configuration).
+
+## Building
+
+Building instructions are somewhat limited at the moment. All the libraries I use are cross platform and should have
+support for Windows, Mac, and Linux. The rendering however is Vulkan-based, so driver support for Vulkan will be
+necessary. On Windows this should be enabled by default if you have a relatively recent system.
+
+Note: Neovide requires neovim version 0.4 or greater.
+
+1. Install the latest version of Rust. I recommend &lt;https://rustup.rs/&gt;
+2. Install CMake. I use chocolatey: `choco install cmake --installargs '"ADD_CMAKE_TO_PATH=System"' -y`
+3. Install LLVM. I use chocolatey: `choco install llvm -y`
+4. Ensure graphics libraries are up to date.
+5. `git clone https://github.com/Kethku/neovide`
+6. `cd neovide`
+7. `cargo build --release`
+8. Copy `./target/release/neovide.exe` to a known location and enjoy.
+
+If you see an error complaining about DRI3 settings, links in this issue may help:
+&lt;https://github.com/Kethku/neovide/issues/44#issuecomment-578618052&gt;.
+
+Note: If you run into libsndio errors, try building without default features which will disable static linking of the SDL
+library.</description>
+    <summary>No Nonsense Neovim Client in Rust</summary>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+		<dependency id="neovim" version="0.4.2" />
+		<dependency id="vcredist140" version="14.20.27508.1" />
+    </dependencies>
+    <copyright>Copyright © 2019 - 2020 Keith Simmons</copyright>
+    <tags>neovim vim rust vulkan skia</tags>
+  </metadata>
+</package>
