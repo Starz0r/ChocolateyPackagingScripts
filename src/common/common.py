@@ -31,6 +31,8 @@ def find_and_replace_templates(package_name: str, directory: str, version: str,
                                fname64: Optional[str],
                                notes: Optional[str]) -> None:
     os.mkdir(Path(directory) / "tools")
+    os.mkdir(Path(directory) / "tools/x86")
+    os.mkdir(Path(directory) / "tools/x64")
     os.mkdir(Path(directory) / "legal")
     d = dict(version=version,
              tag=tag,
