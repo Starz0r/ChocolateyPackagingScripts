@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>modernflyouts</id>
+    <version>$version</version>
+    <title>ModernFlyouts</title>
+    <authors>ShankarBUS</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/ShankarBUS/ModernFlyouts/blob/$tag/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ShankarBUS/ModernFlyouts</projectUrl>
+	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <projectSourceUrl>https://github.com/ShankarBUS/ModernFlyouts/tree/$tag</projectSourceUrl>
+	<docsUrl>https://github.com/ShankarBUS/ModernFlyouts/wiki</docsUrl>
+	<bugTrackerUrl>https://github.com/ShankarBUS/ModernFlyouts/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/ModernFlyouts/Assets/Images/ModernFlyouts_1024.png</iconUrl>
+    <description>### A modern replacement for existing flyouts in Windows
+
+## Overview
+
+**Default Flyout vs New Flyout:**
+
+![Overview](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Overview.png)
+
+This application will replace the default audio/airplane/brightness flyouts found in Windows shown when the volume or brightness changes or when airplane mode key is pressed with a new modern UI. The project also includes a flyout for lock keys (caps lock, scroll lock, num lock &amp; insert key).
+
+&gt; Note : The native flyout is not permanently closed but will be hidden when this flyout is shown
+&gt; Thus, users have the freedom to choose between the windows default one, this modern one or none.
+
+## Features
+- Fluent UI
+- Follows system Light/Dark theme
+- Media session controls have additional features such as **Shuffle**, **Repeat**, **Stop** and **Timeline Info**
+- AirplaneMode, LockKeys, and Brightness Module
+- Each Module can be disabled separately
+- Can Choose either Windows Default Flyout, ModernFlyouts or None
+- TopBar can be unpinned
+- **Draggable** and autosaves the position
+- **Alignable to a default position** (can be modified in the settings)
+- Smooth **Animations** &amp; **Transitions**
+
+## Screenshots
+
+### Audio Flyout
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Dark.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Light.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Light_NoTop.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Old_Session.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Session_Music_NoTop.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Session_Music_NoTop_More.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Session_Music_NoTop_NoAlbumArt.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Session_Video.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Old.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Dark.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Dark_NoTop.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Light.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Light_NoTop.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Airplane_On_Dark.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Airplane_On_Dark_NoTop.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Airplane_On_Light.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Airplane_On_Light_NoTop.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Dark.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Dark_NoTop.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Light.png)
+
+![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Light_NoTop.png)</description>
+	<summary>A modern replacement for existing flyouts in Windows.</summary>
+    <releaseNotes>$notes</releaseNotes>
+    <copyright>Copyright © 2020 ShankarBUS</copyright>
+    <language>en-US</language>
+    <tags>uwp fluent-design xaml winui modern flyouts replacement foss</tags>
+  </metadata>
+</package>

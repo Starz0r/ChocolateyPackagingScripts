@@ -1,0 +1,1 @@
+Get-AppxPackage -Name "32669SamG.ModernFlyouts" | Remove-AppxPackage
