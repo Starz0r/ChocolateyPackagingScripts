@@ -1,6 +1,9 @@
+$ErrorActionPreference = 'SilentlyContinue';
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition;
 
 Remove-Item $(Get-Item $(Join-Path $ToolsPath 'tokei.exe')) -EA 0;
+
+$ErrorActionPreference = 'Stop';
 
 # Only One Can Survive
 if (Get-OSArchitectureWidth -Compare 32)
