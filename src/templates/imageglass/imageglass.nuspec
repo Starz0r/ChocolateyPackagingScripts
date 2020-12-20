@@ -8,10 +8,10 @@
     <owners>kkzinger</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://raw.githubusercontent.com/d2phap/ImageGlass/$tag/LICENSE</licenseUrl>
-    <projectUrl>http://imageglass.org/support</projectUrl>
+    <projectUrl>https://imageglass.org/support</projectUrl>
 	<projectSourceUrl>https://github.com/d2phap/ImageGlass/tree/$tag</projectSourceUrl>
 	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
-    <iconUrl>https://raw.githubusercontent.com/d2phap/ImageGlass/0eb0b34e74a3d429338df32114d02d5fe1527079/Assets/Logo/2019/PNG/1024.png</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/d2phap/ImageGlass/develop/Assets/Logo/2021%20-%20Maroon/256.min.svg</iconUrl>
     <description>ImageGlass is a simple picture viewer with which you will be able to display your image collection in a very similar way to the one that Windows provides by default, but with some additional functions. This application will allow you to better manage your pictures thanks to the options it includes and the extension it enables to install for adding more functions and widening its possibilities. 
 
 #### Documentation
@@ -22,13 +22,14 @@
 #### Community
 * [Facebook](https://www.facebook.com/ImageGlass)
 * [Google+](https://plus.google.com/+ImageglassOrg)</description>
-    <summary>A lightweight, versatile image viewer</summary>
+    <summary>⛰ A lightweight, versatile image viewer</summary>
     <releaseNotes>$notes</releaseNotes>
     <copyright>Copyright (C) 2010 - 2020 Duong Dieu Phap</copyright>
     <tags>image viewer admin foss</tags>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="dotnet4.7.1" version="4.7.2558" />
+      <dependency id="dotnetfx" version="4.8.0.20190930" />
+	  <dependency id="exiftool" version="12.11" />
     </dependencies>
   </metadata>
 </package>
