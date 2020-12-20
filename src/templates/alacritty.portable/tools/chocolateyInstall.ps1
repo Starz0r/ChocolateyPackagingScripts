@@ -1,20 +1,16 @@
 $PackageName = 'alacritty.portable'
-$Url64 = '$url'
-$Checksum64 = '$checksum'
-$ChecksumType64 = 'sha512'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$InstallDir = Join-Path $(Get-ToolsLocation) "alacritty"
+$OldInstallDir = Join-Path $(Get-ToolsLocation) "alacritty"
+$Desktop = [System.Environment]::GetFolderPath("Desktop")
+$ChocoBin = "C:\ProgramData\chocolatey\bin"
 
-$desktop = [System.Environment]::GetFolderPath("Desktop")
-
-$PackageArgs = @{
-	PackageName = $PackageName
-	Url64 = $Url64
-	Checksum64 = $Checksum64
-	ChecksumType64 = $ChecksumType64
-	UnzipLocation = $InstallDir
+$Preexisting = Test-Path -Path $OldInstallDir -PathType Container
+if ($Preexisting) {
+	Write-Host -ForegroundColor yellow "WARNING: Old Alacritty Portable detected."
+	Write-Host -ForegroundColor yellow "If you installed a previous version of this package the semantics have changed."
+	Write-Host -ForegroundColor yellow "The previous install folder located at: $OldInstallDir ..."
+	Write-Host -ForegroundColor yellow "is no longer in use, and is recommended that you delete or move that folder ..."
+	Write-Host -ForegroundColor yellow "to prevent conflicts in the future."
 }
-Install-ChocolateyZipPackage @PackageArgs
 
-Install-BinFile alacritty -path "$InstallDir\alacritty.exe" -UseStart
-Install-ChocolateyShortcut -ShortcutFilePath "$desktop\Alacritty.lnk" -TargetPath "$InstallDir\alacritty.exe" -WorkingDirectory "$InstallDir" -WindowStyle 1
+Install-ChocolateyShortcut -ShortcutFilePath "$Desktop\Alacritty.lnk" -TargetPath "$ChocoBin\alacritty.exe" -WindowStyle 1
