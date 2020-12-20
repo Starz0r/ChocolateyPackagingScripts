@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>hyperfine</id>
+    <version>$version</version>
+    <title>hyperfine</title>
+    <authors>David Peter</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/sharkdp/hyperfine/blob/$tag/LICENSE-MIT</licenseUrl>
+	<projectUrl>https://github.com/sharkdp/hyperfine</projectUrl>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <projectSourceUrl>https://github.com/sharkdp/hyperfine/tree/$tag</projectSourceUrl>
+	<bugTrackerUrl>https://github.com/sharkdp/hyperfine/issues</bugTrackerUrl>
+    <description>[![Build Status](https://travis-ci.org/sharkdp/hyperfine.svg?branch=master)](https://travis-ci.org/sharkdp/hyperfine)
+[![Build status](https://ci.appveyor.com/api/projects/status/pdqq5frgkcj0smrs/branch/master?svg=true)](https://ci.appveyor.com/project/sharkdp/hyperfine/branch/master)
+
+A command-line benchmarking tool.
+
+**Demo**: Benchmarking [`fd`](https://github.com/sharkdp/fd) and
+[`find`](https://www.gnu.org/software/findutils/):
+
+![hyperfine](https://i.imgur.com/z19OYxE.gif)
+
+## Features
+
+* Statistical analysis across multiple runs.
+* Support for arbitrary shell commands.
+* Constant feedback about the benchmark progress and current estimates.
+* Warmup runs can be executed before the actual benchmark.
+* Cache-clearing commands can be set up before each timing run.
+* Statistical outlier detection to detect interference from other programs and caching effects.
+* Export results to various formats: CSV, JSON, Markdown, AsciiDoc.
+* Parameterized benchmarks (e.g. vary the number of threads).
+* Cross-platform
+
+## Usage
+
+### Basic benchmark
+
+To run a benchmark, you can simply call `hyperfine &lt;command&gt;...`. The argument(s) can be any
+shell command. For example:
+``` bash
+hyperfine 'sleep 0.3'
+```
+
+Hyperfine will automatically determine the number of runs to perform for each command. By default,
+it will perform *at least* 10 benchmarking runs. To change this, you can use the `-m`/`--min-runs`
+option:
+``` bash
+hyperfine --min-runs 5 'sleep 0.2' 'sleep 3.2'
+```
+
+### Warmup runs and preparation commands
+
+If the program execution time is limited by disk I/O, the benchmarking results can be heavily
+influenced by disk caches and whether they are cold or warm.
+
+If you want to run the benchmark on a warm cache, you can use the `-w`/`--warmup` option to perform
+a certain number of program executions before the actual benchmark:
+``` bash
+hyperfine --warmup 3 'grep -R TODO *'
+```
+
+Conversely, if you want to run the benchmark for a cold cache, you can use the `-p`/`--prepare`
+option to run a special command before *each* timing run. For example, to clear harddisk caches
+on Linux, you can run
+``` bash
+sync; echo 3 | sudo tee /proc/sys/vm/drop_caches
+```
+To use this specific command with Hyperfine, call `sudo -v` to temporarily gain sudo permissions
+and then call:
+``` bash
+hyperfine --prepare 'sync; echo 3 | sudo tee /proc/sys/vm/drop_caches' 'grep -R TODO *'
+```
+
+### Parameterized benchmarks
+
+If you want to run a benchmark where only a single parameter is varied (say, the number of
+threads), you can use the `-P`/`--parameter-scan` option and call:
+``` bash
+hyperfine --prepare 'make clean' --parameter-scan num_threads 1 12 'make -j {num_threads}'
+```
+This also works with decimal numbers. The `-D`/`--parameter-step-size` option can be used
+to control the step size:
+``` bash
+hyperfine --parameter-scan delay 0.3 0.7 -D 0.2 'sleep {delay}'
+```
+This runs `sleep 0.3`, `sleep 0.5` and `sleep 0.7`.
+
+### Export results
+
+Hyperfine has multiple options for exporting benchmark results: CSV, JSON, Markdown (see `--help`
+text for details). To export results to Markdown, for example, you can use the `--export-markdown`
+option that will create tables like this:
+
+| Command | Mean [s] | Min [s] | Max [s] | Relative |
+|:---|---:|---:|---:|---:|
+| `find . -iregex '.*[0-9]\.jpg$'` | 2.275 ± 0.046 | 2.243 | 2.397 | 9.79 ± 0.22 |
+| `find . -iname '*[0-9].jpg'` | 1.427 ± 0.026 | 1.405 | 1.468 | 6.14 ± 0.13 |
+| `fd -HI '.*[0-9]\.jpg$'` | 0.232 ± 0.002 | 0.230 | 0.236 | 1.00 |
+
+The JSON output is useful if you want to analyze the benchmark results in more detail. See the
+[`scripts/`](https://github.com/sharkdp/hyperfine/tree/master/scripts) folder for some examples.</description>
+    <summary>A command-line benchmarking tool</summary>
+    <tags>command-line tool benchmark rust cli terminal foss</tags>
+    <dependencies>
+        <dependency id="chocolatey-core.extension" version="1.3.5.1" />
+		<dependency id="vcredist140" version="14.20.27508.1" />
+    </dependencies>
+	<copyright>Copyright © 2018-2020 David Peter &amp; The hyperfine developers</copyright>
+  </metadata>
+</package>
