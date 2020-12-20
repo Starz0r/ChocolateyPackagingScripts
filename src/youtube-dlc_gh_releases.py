@@ -15,7 +15,7 @@ def main():
     logger = logging.getLogger('youtube-dlc GitHub Releases')
     logger.setLevel(logging.DEBUG)
 
-    for rel in on_new_git_release("youtube-dlc", "blackjack4494/youtube-dlc"):
+    for rel in on_new_git_release("youtube-dlc", "blackjack4494/yt-dlc"):
         # correlate assets
         asset = get_correct_release_asset(rel.get_assets(),
                                           "youtube-dlc_x86.exe", None)
@@ -65,8 +65,11 @@ def main():
         # template and pack
         tmpdir = tempfile.mkdtemp()
         find_and_replace_templates_new("youtube-dlc", tmpdir, d)
-        os.rename(fname, os.path.join(tmpdir, "tools", fname))
-        os.rename(fname64, os.path.join(tmpdir, "tools", fname64))
+		# HACK: Python is dumb and won't recursively create directories sometimes, why...
+        os.mkdir(Path(tmpdir) / "tools/x86")
+        os.mkdir(Path(tmpdir) / "tools/x64")
+        os.rename(fname, os.path.join(tmpdir, "tools", "x86", "youtube-dlc.exe"))
+        os.rename(fname64, os.path.join(tmpdir, "tools", "x64", "youtube-dlc.exe"))
         abort_on_nonzero(
             subprocess.call(
                 ["choco", "pack",

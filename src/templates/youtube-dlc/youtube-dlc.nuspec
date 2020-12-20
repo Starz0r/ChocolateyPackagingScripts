@@ -3,15 +3,15 @@
   <metadata>
     <id>youtube-dlc</id>
     <version>$version</version>
-    <title>youtube-dlc</title>
+    <title>YouTube DL - Community Edition</title>
     <authors>Ricardo Garcia, Tom-Oliver Heidel, and others</authors>
     <owners>Starz0r</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://github.com/blackjack4494/youtube-dlc/blob/$tag/LICENSE</licenseUrl>
-    <projectUrl>https://blackjack4494.github.io/youtube-dlc/</projectUrl>
+    <licenseUrl>https://github.com/blackjack4494/yt-dlc/blob/$tag/LICENSE</licenseUrl>
+    <projectUrl>https://blackjack4494.github.io/yt-dlc/</projectUrl>
 	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
-    <projectSourceUrl>https://github.com/blackjack4494/youtube-dlc/tree/$tag</projectSourceUrl>
-	<bugTrackerUrl>https://github.com/blackjack4494/youtube-dlc/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/blackjack4494/yt-dlc/tree/$tag</projectSourceUrl>
+	<bugTrackerUrl>https://github.com/blackjack4494/yt-dlc/issues</bugTrackerUrl>
     <iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/f55a85c30/assets/youtube-dlc.png</iconUrl>
     <description>youtube-dlc is a **community** maintained fork of the original youtube-dl small command-line program to download videos from YouTube.com and a few more sites. It is written in Python and it's not platform specific. It should work in your Unix box, in Windows or in Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
 
