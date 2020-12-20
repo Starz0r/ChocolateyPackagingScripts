@@ -21,12 +21,12 @@ Install-ChocolateyInstallPackage @PackageArgs;
 
 if ($PkgParams.DesktopShortcut)
 {
-	Install-ChocolateyShortcut -ShortcutFilePath "$Desktop\Emulsion.lnk" -TargetPath "$PrgmFiles\Emulsion\Emulsion.exe" -WorkingDirectory "$PrgmFiles\Emulsion" -WindowStyle 1
+	Install-ChocolateyShortcut -ShortcutFilePath "$Desktop\Emulsion.lnk" -TargetPath "$PrgmFiles\Emulsion\Emulsion.exe" -WorkingDirectory "$PrgmFiles\Emulsion" -WindowStyle 1;
 }
 
 if ($PkgParams.AddToPath)
 {
-	Install-ChocolateyPath -PathToInstall "$PrgmFiles\Emulsion" -PathType 'Machine'
+	Install-ChocolateyPath -PathToInstall "$PrgmFiles\Emulsion" -PathType 'Machine';
 }
 
 Remove-Item $(Get-Item $(Join-Path $ToolsDir "$fname"));
