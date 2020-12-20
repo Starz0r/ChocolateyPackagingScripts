@@ -1,0 +1,1 @@
+Get-AppxPackage -Name "49306atecsolution.FilesUWP" | Remove-AppxPackage
