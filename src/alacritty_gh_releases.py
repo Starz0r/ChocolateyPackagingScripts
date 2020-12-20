@@ -34,7 +34,7 @@ def main():
                 continue
         if not pushed:
             asset = get_correct_release_asset(rel.get_assets(),
-                                              "windows-installer",
+                                              ".msi",
                                               None)
             if asset == None:
                 print("no compatible releases, skipping...")
