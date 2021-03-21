@@ -42,8 +42,8 @@ This project is supported by the [.NET Foundation](http://www.dotnetfoundation.o
 		<dependency id="dotnet4.7.2" version="4.7.2.20180712" />
 	</dependencies>
     <releaseNotes>$notes</releaseNotes>
-    <copyright>Copyright © 2015 - 2020 OmniSharp
-	Copyright © 2020 .NET Foundation</copyright>
+    <copyright>Copyright © 2015 - 2021 OmniSharp
+	Copyright © 2020 - 2021 .NET Foundation</copyright>
     <tags>lsp ls .net dotnet dotnetcore asp.net mono foss ide</tags>
   </metadata>
 </package>
