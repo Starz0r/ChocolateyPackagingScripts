@@ -12,7 +12,12 @@
 	<projectSourceUrl>https://github.com/d2phap/ImageGlass/tree/$tag</projectSourceUrl>
 	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
     <iconUrl>https://cdn.statically.io/gh/d2phap/ImageGlass/develop/Assets/Logo/2021%20-%20Maroon/256.min.svg</iconUrl>
-    <description>ImageGlass is a simple picture viewer with which you will be able to display your image collection in a very similar way to the one that Windows provides by default, but with some additional functions. This application will allow you to better manage your pictures thanks to the options it includes and the extension it enables to install for adding more functions and widening its possibilities. 
+    <description>
+	[![Website](https://img.shields.io/badge/www-imageglass.org-0099BC.svg?maxAge=3600)](https://imageglass.org)
+	[![GPL Licence](https://img.shields.io/badge/license-GPLv3-green.svg?maxAge=3600)](https://github.com/d2phap/ImageGlass/blob/master/LICENSE)
+	[![Crowdin](https://d322cqt584bo4o.cloudfront.net/imageglass/localized.svg)](https://crowdin.com/project/imageglass)
+	
+	ImageGlass is a simple picture viewer with which you will be able to display your image collection in a very similar way to the one that Windows provides by default, but with some additional functions. This application will allow you to better manage your pictures thanks to the options it includes and the extension it enables to install for adding more functions and widening its possibilities. 
 
 #### Documentation
 * [Screenshots](http://www.imageglass.org/download#Screenshots)
@@ -21,7 +26,8 @@
 
 #### Community
 * [Facebook](https://www.facebook.com/ImageGlass)
-* [Google+](https://plus.google.com/+ImageglassOrg)</description>
+* [Google+](https://plus.google.com/+ImageglassOrg)
+* [Discord](https://imageglass.org/docs/ui-shortcuts-reference)</description>
     <summary>⛰ A lightweight, versatile image viewer</summary>
     <releaseNotes>$notes</releaseNotes>
     <copyright>Copyright (C) 2010 - 2021 Duong Dieu Phap</copyright>
