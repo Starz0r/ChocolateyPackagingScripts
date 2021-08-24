@@ -8,8 +8,6 @@ Package can be verified like this:
 
    i686:          $url
    x86_64:        $url64
-   i686+opengl:   $alturl
-   x86_64+opengl: $alturl64
 
    to download the zip files. You may wish to rename one of the files.
 
@@ -19,8 +17,6 @@ Package can be verified like this:
 
    checksum:          $checksum
    checksum64:        $checksum64
-   checksumopengl:    $altchecksum
-   checksumopengl64:  $altchecksum64
 
 File 'LICENSE.txt' obtained from:
    https://github.com/mtkennerly/ludusavi/blob/$tag/LICENSE

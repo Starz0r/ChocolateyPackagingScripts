@@ -13,9 +13,7 @@
     <projectSourceUrl>https://github.com/mtkennerly/ludusavi/tree/$tag</projectSourceUrl>
     <iconUrl>https://cdn.statically.io/gh/mtkennerly/ludusavi/23ab8165/assets/icon.svg</iconUrl>
 	<bugTrackerUrl>https://github.com/mtkennerly/ludusavi/issues</bugTrackerUrl>
-    <description>## Package Parameters
-* `/OpenGL` - Install OpenGL flavored support variant instead of native DirectX support.
-
+    <description>
 [![Version](https://img.shields.io/crates/v/ludusavi)](https://crates.io/crates/ludusavi)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
