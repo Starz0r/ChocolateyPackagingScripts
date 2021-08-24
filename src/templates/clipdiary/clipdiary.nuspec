@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>clipdiary</id>
+    <version>5.51</version>
+    <title>Clipdiary (Install)</title>
+    <authors>Softvoile</authors>
+    <owners>Starz0r</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://clipdiary.com/register.php</licenseUrl>
+    <projectUrl>http://clipdiary.com/</projectUrl>
+    <iconUrl>https://gist.githubusercontent.com/Starz0r/ba4bf18e142c0a94f216c25c13a44d3e/raw/f43d227ed9afef1074418e7aea038343ef36571d/clipdiary.png</iconUrl>
+    <description>Clipdiary is a powerful clipboard manager, which records every piece of data that goes to the Windows clipboard, meaning that you can easily retrieve any information that was once copied to the clipboard.</description>
+    <summary>Clipboard management for Windows</summary>
+    <tags>clipdiary admin clipboard manangement trial</tags>
+  </metadata>
+</package>
