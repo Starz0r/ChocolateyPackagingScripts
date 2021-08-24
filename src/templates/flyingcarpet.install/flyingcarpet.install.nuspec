@@ -54,7 +54,7 @@ Don't have a flash drive? Don't have access to a wireless network or don't trust
 Licenses for third-party tools and libraries used can be found in the "3rd_party_licenses" folder.</description>
     <summary>A cross-platform, encryped file transfer bewteen two devices.</summary>
     <releaseNotes>$notes</releaseNotes>
-    <copyright>Copyright © 2017 - 2020 Theron Spiegl</copyright>
+    <copyright>Copyright © 2017 - 2021 Theron Spiegl</copyright>
     <tags>foss gui admin linux mac macos windows file transfer encrypted wifi ad-hoc qt</tags>
   </metadata>
 </package>

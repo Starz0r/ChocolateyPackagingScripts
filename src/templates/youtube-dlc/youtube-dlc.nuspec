@@ -20,7 +20,7 @@
 - Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction and conversion support)</description>
     <summary>Command-line program to download various media from YouTube.com and other sites.</summary>
     <releaseNotes>$notes</releaseNotes>
-    <copyright>Copyright © 2006-2020 Ricardo Garcia Gonzalez; Copyright © 2020 Tom-Oliver Heidel</copyright>
+    <copyright>Copyright © 2006-2021 Ricardo Garcia Gonzalez; Copyright © 2020-2021 Tom-Oliver Heidel</copyright>
     <language>en-US</language>
     <tags>youtube-dl fork cli foss cross-platform video multimedia ffmpeg youtube download</tags>
     <dependencies>

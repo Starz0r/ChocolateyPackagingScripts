@@ -81,7 +81,7 @@ library.</description>
 		<dependency id="neovim" version="0.4.2" />
 		<dependency id="vcredist140" version="14.20.27508.1" />
     </dependencies>
-    <copyright>Copyright © 2019 - 2020 Keith Simmons</copyright>
+    <copyright>Copyright © 2019 - 2021 Keith Simmons</copyright>
     <tags>neovim vim rust vulkan skia</tags>
   </metadata>
 </package>

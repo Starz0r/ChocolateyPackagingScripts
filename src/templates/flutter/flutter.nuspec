@@ -19,6 +19,6 @@
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>
-	<copyright>Copyright © 2014 - 2020 Google</copyright>
+	<copyright>Copyright © 2014 - 2021 Google</copyright>
   </metadata>
 </package>

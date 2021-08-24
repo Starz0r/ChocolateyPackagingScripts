@@ -23,6 +23,6 @@ gallery-dl is a command-line program to download image-galleries and -collection
 	<dependencies>
 		<dependency id="vcredist2010" version="10.0.40219.2" />
 	</dependencies>
-	<copyright>Copyright © 2014 - 2020 Mike Fährmann</copyright>
+	<copyright>Copyright © 2014 - 2021 Mike Fährmann</copyright>
   </metadata>
 </package>

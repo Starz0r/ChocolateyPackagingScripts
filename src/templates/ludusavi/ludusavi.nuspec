@@ -76,6 +76,6 @@ using the CLI exclusively, then you'll need to edit `config.yaml` yourself.</des
     <dependencies>
 		<dependency id="vcredist140" version="14.20.27508.1" />
     </dependencies>
-	<copyright>Copyright © 2020 Matthew T. Kennerly</copyright>
+	<copyright>Copyright © 2020-2021 Matthew T. Kennerly</copyright>
   </metadata>
 </package>

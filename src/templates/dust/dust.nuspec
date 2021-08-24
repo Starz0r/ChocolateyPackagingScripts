@@ -51,6 +51,6 @@ Note: Apparent-size is calculated slightly differently in dust to gdu. In dust e
         <dependency id="chocolatey-core.extension" version="1.3.5.1" />
 		<dependency id="vcredist140" version="14.20.27508.1" />
     </dependencies>
-	<copyright>Copyright © 2018-2020 Andy Boot</copyright>
+	<copyright>Copyright © 2018-2021 Andy Boot</copyright>
   </metadata>
 </package>

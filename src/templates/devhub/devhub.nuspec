@@ -56,8 +56,8 @@
 	<releaseNotes>$notes</releaseNotes>
 	<dependencies></dependencies>
 	<copyright>
-	Copyright © 2017 - 2020 Bruno Lemos
-	Copyright © 2008 - 2020 GitHub, Inc
+	Copyright © 2017 - 2021 Bruno Lemos
+	Copyright © 2008 - 2021 GitHub, Inc
 	</copyright>
   </metadata>
 </package>

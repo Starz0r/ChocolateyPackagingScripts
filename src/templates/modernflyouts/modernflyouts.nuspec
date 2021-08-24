@@ -86,7 +86,7 @@ This application will replace the default audio/airplane/brightness flyouts foun
 ![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Light_NoTop.png)</description>
 	<summary>A modern replacement for existing flyouts in Windows.</summary>
     <releaseNotes>$notes</releaseNotes>
-    <copyright>Copyright © 2020 ShankarBUS</copyright>
+    <copyright>Copyright © 2020-2021 ShankarBUS</copyright>
     <language>en-US</language>
     <tags>uwp fluent-design xaml winui modern flyouts replacement foss</tags>
   </metadata>

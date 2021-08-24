@@ -45,6 +45,9 @@ I haven't seen this issue, however if at any time the hotkey isn't working to re
 	Suspend any game or application.
 	</summary>
 	<releaseNotes>$notes</releaseNotes>
-	<copyright>Copyright © 2020 Merritt</copyright>
+    <dependencies>
+        <dependency id="chocolatey-core.extension" version="1.3.5.1" />
+    </dependencies>
+	<copyright>Copyright © 2020-2021 Merritt</copyright>
   </metadata>
 </package>

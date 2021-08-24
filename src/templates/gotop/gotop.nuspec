@@ -81,6 +81,6 @@ For more information on other topics, see:
     <dependencies>
         <dependency id="chocolatey-core.extension" version="1.3.5.1" />
     </dependencies>
-	<copyright>Copyright © 2018-2020 Caleb Bassi; Copyright © 2020 Sean E. Russell</copyright>
+	<copyright>Copyright © 2018-2021 Caleb Bassi; Copyright © 2020-2021 Sean E. Russell</copyright>
   </metadata>
 </package>

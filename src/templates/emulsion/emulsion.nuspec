@@ -64,7 +64,7 @@ When posting a bug report please upload the contents of this file to GitHub. If 
 		<dependency id="vcredist140" version="14.20.27508.1" />
 	</dependencies>
 	<copyright>
-	Copyright © 2018-2020 Artúr Kovács; Copyright © 2020 The Emulsion Contributors
+	Copyright © 2018-2021 Artúr Kovács; Copyright © 2020-2021 The Emulsion Contributors
 	</copyright>
   </metadata>
 </package>

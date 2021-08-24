@@ -24,8 +24,8 @@
 * [Google+](https://plus.google.com/+ImageglassOrg)</description>
     <summary>⛰ A lightweight, versatile image viewer</summary>
     <releaseNotes>$notes</releaseNotes>
-    <copyright>Copyright (C) 2010 - 2020 Duong Dieu Phap</copyright>
-    <tags>image viewer admin foss</tags>
+    <copyright>Copyright (C) 2010 - 2021 Duong Dieu Phap</copyright>
+    <tags>image viewer admin foss photo picture image-processing photo-browser image-viewer photo-viewer</tags>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="dotnetfx" version="4.8.0.20190930" />
