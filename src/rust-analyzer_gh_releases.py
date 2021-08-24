@@ -5,6 +5,7 @@ import subprocess
 import checksum
 from pathlib import Path
 from string import Template
+from shutil import unpack_archive
 
 from common.common import find_and_replace_templates
 from common.common import abort_on_nonzero
@@ -34,17 +35,19 @@ def main():
                 continue
         if not pushed:
             asset = get_correct_release_asset(rel.get_assets(),
-                                              "windows",
+                                              "x86_64-pc-windows-msvc.gz",
                                               None)
             if asset is None:
                 continue
             url = asset.browser_download_url
-            fname = "rust-analyzer.exe"  # override file name
             subprocess.call(["wget",
-                             url,
-                             "--output-document",
-                             fname])
-            chksum = checksum.get_for_file(fname, "sha512")
+                             url])
+            chksum = checksum.get_for_file(asset.name, "sha512")
+            abort_on_nonzero(subprocess.call(["7z", "e", asset.name]))
+            os.remove(asset.name)
+            fname = "rust-analyzer.exe"  # override file name
+            os.rename(asset.name.split(".")[0], fname)
+
             tempdir = tempfile.mkdtemp()
             if "nightly" in rel.title:
                 t = rel.published_at
