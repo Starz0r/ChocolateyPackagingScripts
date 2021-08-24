@@ -62,7 +62,7 @@ def main():
             chksum64 = checksum.get_for_file(fname64, "sha512")
             find_and_replace_templates("fvim",
                                        tempdir,
-                                       rel.tag_name.replace("v", "").replace("-", ".", 1),
+                                       rel.tag_name.strip("v").split("+")[0],
                                        rel.tag_name,
                                        url,
                                        chksum,
