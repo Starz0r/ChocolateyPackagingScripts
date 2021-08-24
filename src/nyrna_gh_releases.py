@@ -3,6 +3,7 @@ import subprocess
 import checksum
 import tempfile
 import os
+from shutil import unpack_archive
 from pathlib import Path
 
 from common.common import abort_on_nonzero
@@ -17,7 +18,7 @@ def main():
 
     for rel in on_new_git_release("nyrna", "merrit/nyrna"):
         # correlate assets
-        asset = get_correct_release_asset(rel.get_assets(), "nyrna.exe", None)
+        asset = get_correct_release_asset(rel.get_assets(), "windows-installer.exe", ".zip")
 
         if asset is None:
             logger.warn(
@@ -31,6 +32,7 @@ def main():
         abort_on_nonzero(
             subprocess.call(["wget", url, "--output-document", fname]))
         chksum = checksum.get_for_file(fname, "sha512")
+        fname = asset.name
 
         # assemble information
         relnotes = rel.body
