@@ -8,7 +8,7 @@
     <owners>Starz0r</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/files-community/Files/blob/$tag/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/files-community/Files</projectUrl>
+    <projectUrl>https://files-community.github.io/</projectUrl>
 	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
     <projectSourceUrl>https://github.com/files-community/Files/tree/$tag</projectSourceUrl>
 	<bugTrackerUrl>https://github.com/files-community/Files/issues</bugTrackerUrl>
