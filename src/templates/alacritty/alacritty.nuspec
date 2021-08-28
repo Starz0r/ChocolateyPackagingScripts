@@ -98,7 +98,7 @@ Alacritty discussions can be found in `#alacritty` on freenode.</description>
     <dependencies>
         <dependency id="alacritty.install" version="[$version]" />
     </dependencies> 
-    <copyright>Copyright (C) 2017 - 2021 Joe Wilm</copyright>
+    <copyright>Copyright © 2017 - 2021 Joe Wilm</copyright>
     <tags>foss development cli shell bash powershell cmd posix unix linux gnu cygwin msys msys2 mingw graphical console emulator hardware gpu terminal admin</tags>
   </metadata>
 </package>
