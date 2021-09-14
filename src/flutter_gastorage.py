@@ -21,7 +21,7 @@ def main():
     f = io.open(pkgname+".gasstate", "a+")
     # connect to github api
     req = requests.get(
-        "https://storage.googleapis.com/flutter_infra/releases/releases_windows.json")
+        "https://storage.googleapis.com/flutter_infra_release/releases/releases_windows.json")
     repo = req.json()
     for rel in repo["releases"]:
         pushed = False
@@ -32,7 +32,7 @@ def main():
             else:
                 continue
         if not pushed:
-            url = "https://storage.googleapis.com/flutter_infra/releases/" + \
+            url = "https://storage.googleapis.com/flutter_infra_release/releases/" + \
                 rel["archive"]
             chksum = rel["sha256"]
             tempdir = tempfile.mkdtemp()
