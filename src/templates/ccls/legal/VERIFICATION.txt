@@ -1,0 +1,28 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+1. Go to https://github.com/MaskRay/ccls/tree/$tag
+
+2. Clone or download the repository
+
+3. Install Visual Studio 2019 + C/C++ Build Tools, CMake, and optionally LLVM for the LLD linker and Ninja.
+	My build environment used:
+		Visual Studio 2019 16.10.2
+		Microsoft Visual Studio Compiler v142
+		CMake 3.21.1
+		LLVM 12.0.1
+		Ninja 1.10.2
+	
+	If you choose to not install LLVM and prefer using the native system linker, remember to remove `-DCMAKE_LINKER="lld-link"` from the CMake command.
+	Same with ninja, you can just remove `-G Ninja`, and CMake will default to using Visual Studio.
+	
+4. Make a new folder in the project root called `build` and enter it.
+
+5. Download https://ziglang.org/deps/llvm+clang-7.0.0-win64-msvc-release.tar.xz and unarchive it in that folder.
+
+6. Run `cmake .. -BRelease -DCMAKE_BUILD_TYPE=Release -G Ninja -DCMAKE_PREFIX_PATH=<replace with project root>\build\llvm+clang-7.0.0-win64-msvc-release -DCMAKE_C_COMPILER="cl.exe" -DCMAKE_CXX_COMPILER="cl.exe" -DCMAKE_LINKER="lld-link"`
+
+7. Enter the `Release` folder.
+
+8. Build the application by running `ninja`.
