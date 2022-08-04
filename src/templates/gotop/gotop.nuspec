@@ -33,7 +33,7 @@ If you install gotop by hand, or you download or create new layouts or colorsche
 
 An evolving mechanism in gotop are extensions. This is designed to allow gotop to support feature sets that are not universally needed without blowing up the application for average users with usused features.  Examples are support for specific hardware sets like video cards, or things that are just obviously not a core objective of the application, like remote server monitoring.
 
-The path to these extensions is a tool called [gotop-builder](https://github.com/xxxserxxx/gotop-builder). It is easy to use and depends only on having Go installed.  You can read more about it on the project page, where you can also find binaries for Linux that have *all* extensions built in. If you want less than an all-inclusive build, or one for a different OS/architecture, you can use gotop-builder itself to create your own.
+The path to these extensions is a tool called [gotop-builder](https://github.com/xxxserxxx/gotop-builder). It is easy to use and depends only on having Go installed.  You can read more about it on the project page. If you want less than an all-inclusive build, or one for a different OS/architecture, you can use gotop-builder itself to create your own.
 
 
 ### Console Users
@@ -75,7 +75,10 @@ For more information on other topics, see:
 ![minimal layout](https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/screenshots/minimal.png)
 
 #### Custom (layouts/procs)
-![custom procs lookalike layout](https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/screenshots/procs.png)</description>
+![custom procs lookalike layout](https://cdn.statically.io/gh/xxxserxxx/gotop/f9f330a9/assets/screenshots/procs.png)
+
+
+#### Maintainer warning: UPX usage might cause anti-viruses to falsely flag this program.</description>
     <summary>A terminal based graphical activity monitor inspired by gtop and vtop</summary>
     <tags>top system process unix cli foss</tags>
     <dependencies>

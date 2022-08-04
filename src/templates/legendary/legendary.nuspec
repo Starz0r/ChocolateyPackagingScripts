@@ -7,13 +7,13 @@
     <owners>Starz0r</owners>
     <title>Legendary (Portable)</title>
     <authors>derrod</authors>
-	<iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/2055976c/assets/legendary.png</iconUrl>
+	<iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/94d6eabf4bafdd0b9196d5c439e5c5dfa9a8f46d/assets/legendary.min.svg</iconUrl>
     <projectUrl>https://github.com/derrod/legendary</projectUrl>
     <licenseUrl>https://github.com/derrod/legendary/blob/$tag/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/derrod/legendary</projectSourceUrl>
     <bugTrackerUrl>https://github.com/derrod/legendary/issues</bugTrackerUrl>
-    <tags>cli python gaming</tags>
+    <tags>cli python gaming epic-games epicgames-launcher epic-games-launcher epic-games-client</tags>
     <description>
 Legendary is an open-source game launcher that can download and install games from the Epic Games platform on Linux and Windows.
 It's name as a tongue-in-cheek play on tiers of [item rarity in many MMORPGs](https://wow.gamepedia.com/Quality).
@@ -34,14 +34,17 @@ If you do please [create an issue on GitHub](https://github.com/derrod/legendary
  - Simple GUI for managing/launching games
  - Better interfaces for other developers to use Legendary in their projects
  - Lots and lots of bug fixes, optimizations, and refactoring...
+ 
+## Maintainer Notice
+Anti-virus, anti-malware, and heuristic engines might catch and label this software as a threat. While I retain the notion that this is indeed a false positive caused by [PyInstaller](https://www.pyinstaller.org/), this is a proper warning given ahead-of-time. If you use any of these security products then you'd would likely need to disable them temporarily to allow install, or add an exception for the software.
 	</description>
 	<summary>
 	Free and open-source Epic Games Launcher alternative
 	</summary>
 	<releaseNotes>$notes</releaseNotes>
-	<copyright>Copyright © 2020-2021 derrod;
+	<copyright>Copyright © 2020-2022 derrod;
 	
 	
-	Copyright © 1991-2021 Epic Games, Inc.</copyright>
+	Copyright © 1991-2022 Epic Games, Inc.</copyright>
   </metadata>
 </package>

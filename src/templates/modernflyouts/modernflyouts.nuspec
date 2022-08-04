@@ -4,19 +4,26 @@
     <id>modernflyouts</id>
     <version>$version</version>
     <title>ModernFlyouts</title>
-    <authors>ShankarBUS</authors>
+    <authors>The ModernFlyouts Community, ShankarBUS, ADeltaX, Samuel12321, Prakhar B</authors>
     <owners>Starz0r</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://github.com/ShankarBUS/ModernFlyouts/blob/$tag/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/ShankarBUS/ModernFlyouts</projectUrl>
+    <licenseUrl>https://github.com/ModernFlyouts-Community/ModernFlyouts/blob/$tag/LICENSE</licenseUrl>
+    <projectUrl>https://modernflyouts-community.github.io/</projectUrl>
 	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
-    <projectSourceUrl>https://github.com/ShankarBUS/ModernFlyouts/tree/$tag</projectSourceUrl>
-	<docsUrl>https://github.com/ShankarBUS/ModernFlyouts/wiki</docsUrl>
-	<bugTrackerUrl>https://github.com/ShankarBUS/ModernFlyouts/issues</bugTrackerUrl>
-    <iconUrl>https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/ModernFlyouts/Assets/Images/ModernFlyouts_1024.png</iconUrl>
-    <description>### A modern replacement for existing flyouts in Windows
+    <projectSourceUrl>https://github.com/ModernFlyouts-Community/ModernFlyouts/tree/$tag</projectSourceUrl>
+	<docsUrl>https://github.com/ModernFlyouts-Community/ModernFlyouts/wiki</docsUrl>
+	<bugTrackerUrl>https://github.com/ModernFlyouts-Community/ModernFlyouts/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.statically.io/gh/ModernFlyouts-Community/ModernFlyouts/e93fb0b42b/ModernFlyouts/Assets/Images/ModernFlyouts_1024.png</iconUrl>
+    <description>![ModernFlyouts](https://cdn.statically.io/gh/ModernFlyouts-Community/ModernFlyouts/e93fb0b42b/ModernFlyouts/Assets/Images/Readme_Banner.png)
 
-## Overview
+#### An open source, modern, **Fluent Design-based** set of flyouts for Windows.
+
+[![Telegram](https://img.shields.io/badge/Telegram-channel-blue?style=flat&amp;logo=telegram)](https://t.me/modernflyouts)
+[![Discord](https://discordapp.com/api/guilds/772367965307404298/widget.png)](https://discord.gg/TcYskeyaYE)
+
+------------------------
+
+## Overview 👀
 
 **Default Flyout vs New Flyout:**
 
@@ -27,67 +34,63 @@ This application will replace the default audio/airplane/brightness flyouts foun
 &gt; Note : The native flyout is not permanently closed but will be hidden when this flyout is shown
 &gt; Thus, users have the freedom to choose between the windows default one, this modern one or none.
 
-## Features
-- Fluent UI
-- Follows system Light/Dark theme
-- Media session controls have additional features such as **Shuffle**, **Repeat**, **Stop** and **Timeline Info**
-- AirplaneMode, LockKeys, and Brightness Module
-- Each Module can be disabled separately
-- Can Choose either Windows Default Flyout, ModernFlyouts or None
-- TopBar can be unpinned
-- **Draggable** and autosaves the position
-- **Alignable to a default position** (can be modified in the settings)
-- Smooth **Animations** &amp; **Transitions**
+------------------------
 
-## Screenshots
+## Features ✨
+
+- Fluent Design based UI.
+- Supports **Light** and **Dark** mode.
+- Redesigned **Volume + Media**, **Brightness** and **Airplane mode** flyouts.
+- Media Controls have support for (not all app support the whole feature set. [More on this](https://github.com/ModernFlyouts-Community/ModernFlyouts/blob/$tag/docs/GSMTC-Support-And-Popular-Apps.md))
+  - **Shuffle**,
+  - **Repeat**,
+  - **Stop**
+  - and **Timeline Info**.
+- Additional flyouts **Lock keys** and **Insert/Overtype**.
+- Each module can be **disabled individually**.
+- Fully customizable layout settings, i.e.
+  - Auto or Manual Placement mode,
+  - Flyout Alignment,
+  - Flyout content stacking direction.
+- Flyout's TopBar can be pinned, unpinned or hidden.
+- Flyout is **Draggable** and autosaves the position. It also has feature for default position. (Check out the settings)
+- Supports multi-monitor setup and users can select which monitor to show the flyout on.
+- Smooth **Animations** &amp; **Transitions**.
+- **Opacity** of the background of flyouts can be changed.
+- **Timeout** of flyouts is customizable.
+
+------------------------
+
+## System Requirements  🖥️
+- **Windows 11**
+- **Windows 10 1809 and above** 
+&gt; older versions such as [v0.3](https://github.com/ModernFlyouts-Community/ModernFlyouts/releases/tag/v0.3.0) and below support Windows 10 1803 downlevel till Windows 8, however v0.4 and above won't.
+
+------------------------
+
+## Screenshots 📸
 
 ### Audio Flyout
 
 ![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Dark.png)
 
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Light.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Light_NoTop.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Old_Session.png)
-
 ![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Session_Music_NoTop.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Session_Music_NoTop_More.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Session_Music_NoTop_NoAlbumArt.png)
 
 ![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Audio_Session_Video.png)
 
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Old.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Dark.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Dark_NoTop.png)
-
 ![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Light.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Brightness_Light_NoTop.png)
 
 ![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Airplane_On_Dark.png)
 
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Airplane_On_Dark_NoTop.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Airplane_On_Light.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/Airplane_On_Light_NoTop.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Dark.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Dark_NoTop.png)
-
-![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Light.png)
-
 ![i](https://cdn.statically.io/gh/ShankarBUS/ModernFlyouts/0.7.0/docs/images/LockKey_Caps_Light_NoTop.png)</description>
-	<summary>A modern replacement for existing flyouts in Windows.</summary>
+	<summary>A modern Fluent Design replacement for the old Metro themed flyouts present in Windows.</summary>
     <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+        <dependency id="dotnet" version="6.0.0-rc2214805" />
+		<dependency id="dotnet-6.0-runtime" version="6.0.0-rc2214805" />
+    </dependencies> 
     <copyright>Copyright © 2020-2021 ShankarBUS</copyright>
     <language>en-US</language>
-    <tags>uwp fluent-design xaml winui modern flyouts replacement foss</tags>
+    <tags>uwp fluent-design xaml winui modern flyouts replacement foss audio metro media brightness airplane-mode fluent lock-keys</tags>
   </metadata>
 </package>
