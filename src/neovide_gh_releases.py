@@ -3,6 +3,7 @@ import subprocess
 import checksum
 import tempfile
 import os
+import zipfile
 from pathlib import Path
 
 from common.common import abort_on_nonzero
@@ -17,8 +18,8 @@ def main():
 
     for rel in on_new_git_release("neovide", "kethku/neovide"):
         # correlate assets
-        asset = get_correct_release_asset(rel.get_assets(), "neovide.exe",
-                                          ".app.zip")
+        asset = get_correct_release_asset(rel.get_assets(), "neovide-windows",
+                                          ".tar.gz")
 
         if asset is None:
             logger.warn(
@@ -31,6 +32,11 @@ def main():
         fname = asset.name
         abort_on_nonzero(
             subprocess.call(["wget", url, "--output-document", fname]))
+        f = zipfile.ZipFile(fname)
+        f.extractall()
+        fname = f.namelist()[0]
+        f.close()
+        os.remove(asset.name)
         chksum = checksum.get_for_file(fname, "sha512")
 
         # assemble information
