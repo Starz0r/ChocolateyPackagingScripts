@@ -18,7 +18,7 @@ def main():
 
     for rel in on_new_git_release("nyrna", "merrit/nyrna"):
         # correlate assets
-        asset = get_correct_release_asset(rel.get_assets(), "windows-installer.exe", ".zip")
+        asset = get_correct_release_asset(rel.get_assets(), "Windows-Installer.exe", ".zip")
 
         if asset is None:
             logger.warn(
