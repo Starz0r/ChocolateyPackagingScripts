@@ -34,10 +34,10 @@ def main():
                 continue
         if not pushed:
             asset = get_correct_release_asset(rel.get_assets(),
-                                              "fvim-win7-x64.zip",
+                                              "fvim-win7-x64",
                                               None)
             asset64 = get_correct_release_asset(rel.get_assets(),
-                                                "fvim-win-x64.zip",
+                                                "fvim-win-x64",
                                                 None)
             if asset == None or asset64 == None:
                 print("no compatible releases, skipping...")
