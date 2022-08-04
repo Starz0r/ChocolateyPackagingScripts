@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>go-task</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Task - Build System for Go</title>
+    <authors>Andrey Nering</authors>
+    <projectUrl>https://taskfile.dev/</projectUrl>
+    <iconUrl>https://cdn.statically.io/gh/go-task/task/6c73ab82/docs/Logo.png</iconUrl>
+    <copyright>Copyright © 2016 - 2021 Andrey Nering</copyright>
+    <licenseUrl>https://github.com/go-task/task/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/go-task/task</projectSourceUrl>
+    <docsUrl>https://taskfile.dev/#/</docsUrl>
+    <bugTrackerUrl>https://github.com/go-task/task/issues</bugTrackerUrl>
+    <tags>go-task task golang build devops go makefile task-runner build-tool make taskfile</tags>
+    <summary>A task runner / simpler Make alternative written in Go</summary>
+    <description>Task is a task runner / build tool that aims to be simpler and easier to use than, for example, [GNU Make](https://www.gnu.org/software/make/).</description>
+    <releaseNotes>$notes</releaseNotes>
+  </metadata>
+</package>
