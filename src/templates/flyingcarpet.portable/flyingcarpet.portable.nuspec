@@ -19,9 +19,9 @@ Don't have a flash drive? Don't have access to a wireless network or don't trust
 
 # Screenshots:
 
-![Picture demonstration of the Windows version](https://raw.githubusercontent.com/spieglt/FlyingCarpet/c407983/pictures/winDemo.png) 
-![Picture demonstration of the macOS version](https://raw.githubusercontent.com/spieglt/FlyingCarpet/c407983/pictures/macDemo.png)
-![Picture demonstration of the GNU/Linux version](https://raw.githubusercontent.com/spieglt/FlyingCarpet/c407983/pictures/linuxDemo.png)
+![Picture demonstration of the Windows version](https://cdn.statically.io/gh/spieglt/FlyingCarpet/c407983/pictures/winDemo.png) 
+![Picture demonstration of the macOS version](https://cdn.statically.io/gh/spieglt/FlyingCarpet/c407983/pictures/macDemo.png)
+![Picture demonstration of the GNU/Linux version](https://cdn.statically.io/gh/spieglt/FlyingCarpet/c407983/pictures/linuxDemo.png)
 
 # Features:
 
@@ -46,15 +46,12 @@ Don't have a flash drive? Don't have access to a wireless network or don't trust
 
 # Planned features:
 
-+ Drag and drop for sending files.
-+ Folder upload.
-+ Replace `netsh wlan` with Native WiFi API on Windows.
 + Mobile versions, integrating functionality from https://github.com/claudiodangelis/qr-filetransfer.
 
 Licenses for third-party tools and libraries used can be found in the "3rd_party_licenses" folder.</description>
-    <summary>A cross-platform, encryped file transfer bewteen two devices.</summary>
+    <summary>Encrypted file transfer over ad hoc WiFi. No network infrastructure required, just two laptops in close range. Linux, Mac, and Windows.</summary>
     <releaseNotes>$notes</releaseNotes>
     <copyright>Copyright © 2017 - 2021 Theron Spiegl</copyright>
-    <tags>foss cli admin linux mac macos windows file transfer encrypted wifi ad-hoc</tags>
+    <tags>foss cli admin linux mac macos windows encrypted wifi ad-hoc go qt cross-platform wireless file-transfer</tags>
   </metadata>
 </package>

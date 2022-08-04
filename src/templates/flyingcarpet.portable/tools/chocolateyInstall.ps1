@@ -1,16 +1,8 @@
-$PackageName = 'flyingcarpet.portable'
-$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$InstallDir = Join-Path $(Get-ToolsLocation) $PackageName
+$PackageName = 'flyingcarpet.portable';
+$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition;
+$OldInstallDir = Join-Path $(Get-ToolsLocation) "flyingcarpet.portable";
 
-$desktop = [System.Environment]::GetFolderPath("Desktop")
-
-$PackageArgs = @{
-	PackageName = $PackageName
-	Url64 = '$url'
-	Checksum64 = '$checksum'
-	ChecksumType64 = 'sha512'
-	UnzipLocation = $InstallDir
-}
-Install-ChocolateyZipPackage @PackageArgs
-
-Install-BinFile flyingcarpet -path "$InstallDir\flyingcarpet.exe" -UseStart
+if (Test-Path -Path $OldInstallDir -PathType Container) {
+	Write-Warning "This package no longer installs Flying Carpet (Portable) at $OldInstallDir. Please delete that directory at your nearest convenience.";
+	Uninstall-BinFile flyingcarpet -path "$OldInstallDir\flyingcarpet.exe";
+};

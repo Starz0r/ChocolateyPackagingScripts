@@ -1,16 +1,11 @@
-$PackageName = 'flyingcarpet.install'
-$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$InstallDir = Join-Path $(Get-ToolsLocation) "flyingcarpet"
+$PackageName = 'flyingcarpet.install';
+$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition;
+$OldInstallDir = Join-Path $(Get-ToolsLocation) "flyingcarpet";
+$Desktop = [System.Environment]::GetFolderPath("Desktop");
 
-$desktop = [System.Environment]::GetFolderPath("Desktop")
+if (Test-Path -Path $OldInstallDir -PathType Container) {
+	Write-Warning "This package no longer installs Flying Carpet at $OldInstallDir. Please delete that directory at your nearest convenience.";
+	Remove-Item -Force "$Desktop\Flying Carpet.lnk" -EA 0;
+};
 
-$PackageArgs = @{
-	PackageName = $PackageName
-	Url64 = '$url'
-	Checksum64 = '$checksum'
-	ChecksumType64 = 'sha512'
-	UnzipLocation = $InstallDir
-}
-Install-ChocolateyZipPackage @PackageArgs
-
-Install-ChocolateyShortcut -ShortcutFilePath "$desktop\Flying Carpet.lnk" -TargetPath "$InstallDir\flyingcarpet.exe" -WorkingDirectory "$InstallDir" -WindowStyle 1
+Install-ChocolateyShortcut -ShortcutFilePath "$Desktop\Flying Carpet.lnk" -TargetPath "$ToolsPath\x64\flyingcarpetw.exe" -WorkingDirectory "$InstallDir" -WindowStyle 1;
