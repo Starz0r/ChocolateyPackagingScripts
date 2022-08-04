@@ -7,81 +7,114 @@
     <authors>Keith Simmons</authors>
     <owners>Starz0r</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://github.com/Kethku/neovide/blob/$tag/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/Kethku/neovide</projectUrl>
-	<iconUrl>https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/nvim.ico</iconUrl>
+    <licenseUrl>https://github.com/neovide/neovide/blob/$tag/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/neovide/neovide</projectUrl>
+	<iconUrl>https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/neovide.svg</iconUrl>
 	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
-	<projectSourceUrl>https://github.com/Kethku/neovide/tree/$tag</projectSourceUrl>
-    <bugTrackerUrl>https://github.com/Kethku/neovide/issues</bugTrackerUrl>
-    <description>[![Gitter](https://badges.gitter.im/neovide/community.svg)](https://gitter.im/neovide/community?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge)
+	<projectSourceUrl>https://github.com/neovide/neovide/tree/$tag</projectSourceUrl>
+	<docsUrl>https://github.com/neovide/neovide/wiki/Configuration</docsUrl>
+    <bugTrackerUrl>https://github.com/neovide/neovide/issues</bugTrackerUrl>
+    <description>This is a simple graphical user interface for [Neovim](https://github.com/neovim/neovim) (an aggressively refactored and updated
+Vim editor). Where possible there are some graphical improvements, but functionally it should act like the terminal UI.
 
-This is a simple graphical user interface for Neovim. Where possible there are some graphical improvements, but it should act functionally like the terminal UI.
-
-![Basic Screen Cap](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/BasicScreenCap.png)
+![Basic Screen Cap](https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/BasicScreenCap.png)
 
 ## Features
 
-Should be a standard full features Neovim GUI. Beyond that there are some visual niceties:
+Should be a standard fully featured Neovim GUI. Beyond that there are some visual niceties:
 
 ### Ligatures
 
-Supports ligatures and full [HarfBuzz](https://www.freedesktop.org/wiki/Software/HarfBuzz/) backed font shaping.
+Supports ligatures and font shaping.
 
-![Ligatures](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/Ligatures.png)
+![Ligatures](https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/Ligatures.png)
 
 ### Animated Cursor
 
 Cursor animates into position with a smear effect to improve tracking of cursor position.
 
-![Animated Cursor](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/AnimatedCursor.gif)
+![Animated Cursor](https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/AnimatedCursor.gif)
+
+### Smooth Scrolling
+
+Scroll operations on buffers in neovim will be animated smoothly pixel wise rather than line by line at a time. Note, multigrid must be
+enabled for this to work.
+https://github.com/neovide/neovide/wiki/Configuration#multigrid
+
+![Smooth Scrolling](https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/SmoothScrolling.gif)
+
+### Animated Windows
+
+Windows animate into position when they are moved making it easier to see how layout changes happen. Note, multigrid must be enabled for
+this to work.
+https://github.com/neovide/neovide/wiki/Configuration#multigrid
+
+![Animated Windows](https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/AnimatedWindows.gif)
+
+### Blurred Floating Windows
+
+The backgrounds of floating windows are blurred improving the visual separation between foreground and background from
+built in window transparency. Note, multigrid must be enabled for this to work.
+https://github.com/neovide/neovide/wiki/Configuration#multigrid
+
+![Blurred Floating Windows](https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/BlurredFloatingWindows.png)
 
 ### Emoji Support
 
 Font fallback supports rendering of emoji not contained in the configured font.
 
-![Emoji](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/Emoji.png)
+![Emoji](https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/Emoji.png)
+
+### WSL Support
+
+Neovide supports displaying a full gui window from inside wsl via the `--wsl` command argument. Communication is passed via standard io into the wsl copy of neovim providing identical experience similar to visual studio code's remote editing https://code.visualstudio.com/docs/remote/remote-overview.
+
+### Remote TCP Support
+
+Neovide supports connecting to a remote instance of Neovim over a TCP socket via the `--remote-tcp` command argument. This would allow you to run Neovim on a remote machine and use the GUI on your local machine, connecting over the network.
+
+Launch Neovim as a TCP server (on port 6666) by running:
+
+```sh
+nvim --headless --listen localhost:6666
+```
+
+And then connect to it using:
+
+```sh
+/path/to/neovide --remote-tcp=localhost:6666
+```
+
+By specifying to listen on localhost, you only allow connections from your local computer. If you are actually doing this over a network you will want to use SSH port forwarding for security, and then connect as before.
+
+```sh
+ssh -L 6666:localhost:6666 ip.of.other.machine nvim --headless --listen localhost:6666
+```
+
+Finally, if you would like to leave the neovim server running, close the neovide application window instead of issuing a `:q` command.
 
 ### Some Nonsense ;)
 
-```
+```vim
 let g:neovide_cursor_vfx_mode = "railgun"
 ```
 
-![Railgun](https://cdn.statically.io/gh/Kethku/neovide/b3729681/assets/Railgun.gif)
+![Railgun](https://cdn.statically.io/gh/neovide/neovide/e2088c5/assets/Railgun.gif)
+
+### More to Come
+
+We've got more ideas for simple unobtrusive improvements. More to come.
 
 ## Configuration
 
-Configuration is done almost completely via global neovide variables in your vim config and can be manipulated live at runtime. Details can be found [here](https://github.com/Kethku/neovide/wiki/Configuration).
-
-## Building
-
-Building instructions are somewhat limited at the moment. All the libraries I use are cross platform and should have
-support for Windows, Mac, and Linux. The rendering however is Vulkan-based, so driver support for Vulkan will be
-necessary. On Windows this should be enabled by default if you have a relatively recent system.
-
-Note: Neovide requires neovim version 0.4 or greater.
-
-1. Install the latest version of Rust. I recommend &lt;https://rustup.rs/&gt;
-2. Install CMake. I use chocolatey: `choco install cmake --installargs '"ADD_CMAKE_TO_PATH=System"' -y`
-3. Install LLVM. I use chocolatey: `choco install llvm -y`
-4. Ensure graphics libraries are up to date.
-5. `git clone https://github.com/Kethku/neovide`
-6. `cd neovide`
-7. `cargo build --release`
-8. Copy `./target/release/neovide.exe` to a known location and enjoy.
-
-If you see an error complaining about DRI3 settings, links in this issue may help:
-&lt;https://github.com/Kethku/neovide/issues/44#issuecomment-578618052&gt;.
-
-Note: If you run into libsndio errors, try building without default features which will disable static linking of the SDL
-library.</description>
+Configuration is done almost completely via global neovide variables in your vim config and can be manipulated live at runtime. Details can be found [here](https://github.com/neovide/neovide/wiki/Configuration).</description>
     <summary>No Nonsense Neovim Client in Rust</summary>
     <releaseNotes>$notes</releaseNotes>
     <dependencies>
-		<dependency id="neovim" version="0.4.2" />
+		<dependency id="neovim" version="0.7.0" />
 		<dependency id="vcredist140" version="14.20.27508.1" />
     </dependencies>
-    <copyright>Copyright © 2019 - 2021 Keith Simmons</copyright>
-    <tags>neovim vim rust vulkan skia</tags>
+    <copyright>Copyright © 2019 - 2022 Keith Simmons</copyright>
+    <tags>neovim vim rust vulkan skia gpu neovim-guis</tags>
   </metadata>
 </package>
