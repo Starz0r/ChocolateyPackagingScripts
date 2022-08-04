@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>gdu</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Go Disk Usage</title>
+    <authors>Daniel Milde</authors>
+    <projectUrl>https://github.com/dundee/gdu</projectUrl>
+    <copyright>Copyright © 2020 - 2021 Daniel Milde</copyright>
+    <licenseUrl>https://github.com/dundee/gdu/blob/$tag/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/dundee/gdu/tree/$tag</projectSourceUrl>
+    <docsUrl>https://github.com/dundee/gdu/blob/$tag/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/dundee/gdu/issues</bugTrackerUrl>
+    <tags>gdu disk-usage disk hdd ssd foss</tags>
+    <summary>Disk usage analyzer with console interface written in Go</summary>
+    <description>[![Build Status](https://travis-ci.com/dundee/gdu.svg?branch=master)](https://travis-ci.com/dundee/gdu)
+[![Coverage Status](https://coveralls.io/repos/github/dundee/gdu/badge.svg?branch=master)](https://coveralls.io/github/dundee/gdu?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dundee/gdu)](https://goreportcard.com/report/github.com/dundee/gdu)
+[![Maintainability](https://api.codeclimate.com/v1/badges/30d793274607f599e658/maintainability)](https://codeclimate.com/github/dundee/gdu/maintainability)
+[![CodeScene Code Health](https://codescene.io/projects/13129/status-badges/code-health)](https://codescene.io/projects/13129)
+
+Pretty fast disk usage analyzer written in Go.
+
+Gdu is intended primarily for SSD disks where it can fully utilize parallel processing.
+However HDDs work as well, but the performance gain is not so huge.
+
+[![asciicast](https://asciinema.org/a/382738.svg)](https://asciinema.org/a/382738)</description>
+    <releaseNotes>$notes</releaseNotes>
+  </metadata>
+</package>
