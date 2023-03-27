@@ -41,7 +41,7 @@ The path to these extensions is a tool called [gotop-builder](https://github.com
 gotop requires a font that has braille and block character Unicode code points; some distributions do not provide this.  In the gotop repository is a `pcf` font that has these points, and setting this font may improve how gotop renders in your console.  To use this, run these commands:
 
 ```shell
-curl -O -L https://raw.githubusercontent.com/xxxserxxx/gotop/master/fonts/Lat15-VGA16-braille.psf
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/xxxserxxx/gotop/master/fonts/Lat15-VGA16-braille.psf -OutFile Lat15-VGA16-braille.psf
 setfont Lat15-VGA16-braille.psf
 ```
 
