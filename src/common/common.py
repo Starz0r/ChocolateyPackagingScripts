@@ -1,13 +1,13 @@
-from github.PaginatedList import PaginatedList
-from github.GitReleaseAsset import GitReleaseAsset
-from github import Github
-
-from typing import Optional, Dict
-from pathlib import Path
+import io
 import os
 import sys
-import io
+from pathlib import Path
 from string import Template
+from typing import Dict, Iterable, List, Optional
+
+from github.GitReleaseAsset import GitReleaseAsset
+from github.PaginatedList import PaginatedList
+from jenkinsapi.artifact import Artifact
 
 
 def get_correct_release_asset(
@@ -19,8 +19,39 @@ def get_correct_release_asset(
                 return asset
     else:
         for asset in assets:
-            if (include in asset.name) and not (exclude in asset.name):
+            if (include in asset.name) and exclude not in asset.name:
                 return asset
+    return None
+
+
+def get_correct_release_artifact(
+    assets: Iterable[Artifact], include: str, exclude: Optional[str]
+) -> Optional[Artifact]:
+    if exclude is None:
+        for asset in assets:
+            if include in asset.url:
+                return asset
+    else:
+        for asset in assets:
+            if (include in asset.url) and exclude not in asset.url:
+                return asset
+    return None
+
+
+def get_correct_release_artifact_exclist(
+    assets: Iterable[Artifact], include: str, exclude: Optional[List[str]]
+) -> Optional[Artifact]:
+    if exclude is None:
+        for asset in assets:
+            if include in asset.url:
+                return asset
+    else:
+        for asset in assets:
+            if include in asset.url:
+                for exclusion in exclude:
+                    if exclusion in asset.url:
+                        break
+                    return asset
     return None
 
 
@@ -41,17 +72,17 @@ def find_and_replace_templates(
     os.mkdir(Path(directory) / "tools/x86")
     os.mkdir(Path(directory) / "tools/x64")
     os.mkdir(Path(directory) / "legal")
-    d = dict(
-        version=version,
-        tag=tag,
-        url=url,
-        checksum=checksum,
-        fname=fname,
-        url64=url64,
-        checksum64=checksum64,
-        fname64=fname64,
-        notes=notes,
-    )
+    d = {
+        "version": version,
+        "tag": tag,
+        "url": url,
+        "checksum": checksum,
+        "fname": fname,
+        "url64": url64,
+        "checksum64": checksum64,
+        "fname64": fname64,
+        "notes": notes,
+    }
     basepath = Path(os.getcwd()) / "src/templates/" / package_name
     templates = [
         package_name + ".nuspec",
