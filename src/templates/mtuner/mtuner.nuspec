@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mtuner</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>MTuner - advanced C/C++ memory profiler</title>
+    <authors>Milos Tosic</authors>
+    <projectUrl>https://milostosic.github.io/MTuner/</projectUrl>
+    <iconUrl>https://cdn.statically.io/gh/milostosic/MTuner/371e39ed/resources/icons/Icon256.ico</iconUrl>
+    <copyright>Copyright © 2017-2022 Milos Tosic</copyright>
+    <licenseUrl>https://github.com/milostosic/MTuner/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/milostosic/MTuner/tree/$tag</projectSourceUrl>
+    <docsUrl>https://milostosic.github.io/MTuner/overview/</docsUrl>
+    <bugTrackerUrl>https://github.com/milostosic/MTuner/issues</bugTrackerUrl>
+    <tags>mtuner memory profiler c c++ tool optimization performance-analysis memory-profiler profiling playstation3 memory-leak-finder playstation4 android</tags>
+    <summary>MTuner is a C/C++ memory profiler and memory leak finder for Windows, PlayStation 4 and 3, Android and other platforms.</summary>
+    <description>[![Build Status](https://travis-ci.org/milostosic/MTuner.svg?branch=master)](https://travis-ci.org/milostosic/MTuner)
+[![Build status](https://ci.appveyor.com/api/projects/status/fo9uy9h3bcka20kk?svg=true)](https://ci.appveyor.com/project/milostosic/MTuner)
+[![License](https://img.shields.io/badge/license-BSD--2%20clause-blue.svg)](https://github.com/milostosic/MTuner/blob/master/LICENSE)
+
+**MTuner** is a C/C++ memory profiler and memory leak finder for Windows, PlayStation 4 and 3, Android and other platforms.
+
+**MTuner** utilizes a novel approach to memory profiling and analysis, keeping entire time-based history of memory operations. This gives an unique insight in memory related behavior of your software by making queries over the entire data set.
+
+While **MTuner** was created for profiling C/C++ applications, it is possible to profile memory for programs written in other languages as long as there is corresponding debug symbol information. Users can convert DMD CodeView/DWARF debug symbols to PDB format using [cv2pdb](https://github.com/rainers/cv2pdb).
+
+![MTuner screenshot](https://cdn.statically.io/gh/milostosic/MTuner/371e39ed/img/mtuner_screenshot.png)</description>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+		<dependency id="vcredist140" version="14.20.27508.1" />
+    </dependencies>
+  </metadata>
+</package>
