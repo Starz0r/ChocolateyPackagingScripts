@@ -125,3 +125,14 @@ def find_and_replace_templates_new(
 def abort_on_nonzero(retcode):
     if retcode != 0:
         sys.exit(retcode)
+
+
+def escape_text(text: str) -> str:
+    return (
+        text.replace('"', "&quot;")
+        .replace("'", "&apos;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace("&", "&amp;")
+        .replace("\u200b", "")
+    )
