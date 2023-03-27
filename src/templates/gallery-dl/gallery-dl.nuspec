@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gallery-dl</id>
@@ -15,7 +15,102 @@
     <bugTrackerUrl>https://github.com/mikf/gallery-dl/issues</bugTrackerUrl>
     <tags>python gallery-dl youtube-dl ffmpeg foss cross-platform video multimedia pictures download imgur gfycat</tags>
     <description>
-gallery-dl is a command-line program to download image-galleries and -collections from several image hosting sites. It is a cross-platform tool with many configuration options and powerful filenaming capabilities.
+*gallery-dl* is a command-line program to download image galleries and
+collections from several image hosting sites (see [Supported
+Sites](https://github.com/mikf/gallery-dl/blob/master/docs/supportedsites.md)).
+It is a cross-platform tool with many configuration options and powerful
+[filenaming
+capabilities](https://github.com/mikf/gallery-dl/blob/master/docs/formatting.md).
+
+[![pypi](https://img.shields.io/pypi/v/gallery-dl.svg)](https://pypi.org/project/gallery-dl/)
+[![build](https://github.com/mikf/gallery-dl/workflows/tests/badge.svg)](https://github.com/mikf/gallery-dl/actions)
+[![gitter](https://badges.gitter.im/gallery-dl/main.svg)](https://gitter.im/gallery-dl/main)
+
+## Optional
+
+-   [FFmpeg](https://www.ffmpeg.org/): Pixiv Ugoira to WebM conversion
+-   [yt-dlp](https://github.com/yt-dlp/yt-dlp) or
+    [youtube-dl](https://ytdl-org.github.io/youtube-dl/): Video
+    downloads
+	
+# Usage
+
+To use *gallery-dl* simply call it with the URLs you wish to download
+images from:
+
+``` bash
+gallery-dl [OPTION]... URL...
+```
+
+See also `gallery-dl --help`.
+
+## Examples
+
+Download images; in this case from danbooru via tag search for
+\'bonocho\':
+
+``` bash
+gallery-dl "https://danbooru.donmai.us/posts?tags=bonocho"
+```
+
+Get the direct URL of an image from a site supporting authentication
+with username &amp; password:
+
+``` bash
+gallery-dl -g -u "&lt;username&gt;" -p "&lt;password&gt;" "https://twitter.com/i/web/status/604341487988576256"
+```
+
+Filter manga chapters by chapter number and language:
+
+``` bash
+gallery-dl --chapter-filter "10 &lt;= chapter &lt; 20" -o "lang=fr" "https://mangadex.org/title/59793dd0-a2d8-41a2-9758-8197287a8539"
+```
+
+| Search a remote resource for URLs and download images from them:
+| (URLs for which no extractor can be found will be silently ignored)
+
+``` bash
+gallery-dl "r:https://pastebin.com/raw/FLwrCYsT"
+```
+
+If a site\'s address is nonstandard for its extractor, you can prefix
+the URL with the extractor\'s name to force the use of a specific
+extractor:
+
+``` bash
+gallery-dl "tumblr:https://sometumblrblog.example"
+```
+
+# Configuration
+
+Configuration files for *gallery-dl* use a JSON-based file format.
+
+| For a (more or less) complete example with options set to their
+  default values, see
+  [gallery-dl.conf](https://github.com/mikf/gallery-dl/blob/master/docs/gallery-dl.conf).
+| For a configuration file example with more involved settings and
+  options, see
+  [gallery-dl-example.conf](https://github.com/mikf/gallery-dl/blob/master/docs/gallery-dl-example.conf).
+| A list of all available configuration options and their descriptions
+  can be found in
+  [configuration.rst](https://github.com/mikf/gallery-dl/blob/master/docs/configuration.rst).
+| 
+
+*gallery-dl* searches for configuration files in the following places:
+
+:   -   `%APPDATA%\gallery-dl\config.json`
+    -   `%USERPROFILE%\gallery-dl\config.json`
+    -   `%USERPROFILE%\gallery-dl.conf`
+
+    (`%USERPROFILE%` usually refers to the user\'s home directory, i.e.
+    `C:\Users\&lt;username&gt;\`)
+	
+Values in later configuration files will override previous ones.
+
+Command line options will override all related settings in the
+configuration file(s), e.g. using `--write-metadata` will enable writing
+metadata using the default values for all `postprocessors.metadata.*`
+settings, overriding any specific settings in configuration files.
 
 # WARNING
 ### Anti-virus or anti-malware tools and heuristic engines might catch and or label this tool as a virus. This is a false postive due to usage of [PyInstaller](https://www.pyinstaller.org/) to pack and ship this software as a single executable without a Python runtime dependency. As such I ask that you either disable your anti-virus or add an exception for this software.
@@ -23,6 +118,6 @@ gallery-dl is a command-line program to download image-galleries and -collection
 	<dependencies>
 		<dependency id="vcredist2010" version="10.0.40219.2" />
 	</dependencies>
-	<copyright>Copyright © 2014 - 2021 Mike Fährmann</copyright>
+	<copyright>Copyright © 2014 - 2022 Mike Fährmann</copyright>
   </metadata>
 </package>
