@@ -4,11 +4,11 @@ in verifying that this package's contents are trustworthy.
 
 Package can be verified like this:
 
-1. Go to https://github.com/files-community/Files/releases/$tag, and download from there.
+1. Go to https://github.com/neovide/neovide/releases/$tag, and download from there.
 
    AnyArch: $url
 
-   to download the MSIX bundle. You may wish to rename the file.
+   to download the archive. Unarchive the file to extract the MSI inside. You may wish to rename the file.
 
 2. You can use one of the following methods to obtain the SHA512 checksum:
    - Use powershell function 'Get-FileHash'
@@ -17,4 +17,4 @@ Package can be verified like this:
    checksum: $checksum
 
 File 'LICENSE.txt' obtained from:
-   https://github.com/files-community/Files/blob/$tag/LICENSE
+   https://github.com/neovide/neovide/blob/$tag/LICENSE

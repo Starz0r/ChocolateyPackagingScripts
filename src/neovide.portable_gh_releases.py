@@ -16,10 +16,10 @@ def main():
     logger = logging.getLogger('Neovide GitHub Releases')
     logger.setLevel(logging.DEBUG)
 
-    for rel in on_new_git_release("neovide", "kethku/neovide"):
+    for rel in on_new_git_release("neovide.portable", "kethku/neovide"):
         # correlate assets
-        asset = get_correct_release_asset(rel.get_assets(), "neovide-windows-installer",
-                                          ".tar.gz")
+        asset = get_correct_release_asset(rel.get_assets(), "neovide-windows",
+                                          "installer")
 
         if asset is None:
             logger.warn(
@@ -32,8 +32,12 @@ def main():
         fname = asset.name
         abort_on_nonzero(
             subprocess.call(["wget", url, "--output-document", fname]))
+        f = zipfile.ZipFile(fname)
+        f.extractall()
+        fname = f.namelist()[0]
+        f.close()
+        os.remove(asset.name)
         chksum = checksum.get_for_file(fname, "sha512")
-        os.remove(fname)
 
         # assemble information
         relnotes = rel.body
@@ -55,10 +59,12 @@ def main():
 
         # template and pack
         tmpdir = tempfile.mkdtemp()
-        find_and_replace_templates_new("neovide", tmpdir, d)
+        find_and_replace_templates_new("neovide.portable", tmpdir, d)
+        os.mkdir(Path(tmpdir) / "tools/x64")
+        os.rename(fname, os.path.join(tmpdir, "tools/x64", fname))
         abort_on_nonzero(
             subprocess.call(["choco", "pack",
-                             Path(tmpdir) / "neovide.nuspec"]))
+                             Path(tmpdir) / "neovide.portable.nuspec"]))
 
 
 if __name__ == "__main__":

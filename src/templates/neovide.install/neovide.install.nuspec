@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>neovide</id>
+    <id>neovide.install</id>
     <version>$version</version>
-    <title>Neovide</title>
+    <title>Neovide (Install)</title>
     <authors>Keith Simmons</authors>
     <owners>Starz0r</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -111,7 +111,8 @@ Configuration is done almost completely via global neovide variables in your vim
     <summary>No Nonsense Neovim Client in Rust</summary>
     <releaseNotes>$notes</releaseNotes>
     <dependencies>
-		<dependency id="neovide.install" version="$version" />
+		<dependency id="neovim" version="0.8.0" />
+		<dependency id="vcredist140" version="14.20.27508.1" />
     </dependencies>
     <copyright>Copyright © 2019 - 2022 Keith Simmons</copyright>
     <tags>neovim vim rust vulkan skia gpu neovim-guis</tags>
