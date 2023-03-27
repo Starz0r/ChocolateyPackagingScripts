@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>et</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>erdtree</title>
+    <authors>Benjamin Nguyen</authors>
+    <projectUrl>https://github.com/solidiquis/erdtree</projectUrl>
+    <copyright>2023 © Benjamin Nguyen</copyright>
+    <licenseUrl>https://github.com/solidiquis/erdtree/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/solidiquis/erdtree/tree/$tag</projectSourceUrl>
+    <docsUrl>https://github.com/solidiquis/erdtree/blob/$tag/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/solidiquis/erdtree/issues</bugTrackerUrl>
+    <tags>et rust cli tree command command-line dust command-line-tool commandline-interface du tree</tags>
+    <summary>A multi-threaded file-tree visualizer and disk usage analyzer.</summary>
+    <description>[![Build status](https://github.com/solidiquis/erdtree/actions/workflows/ci.yml/badge.svg)](https://github.com/solidiquis/erdtree/actions)
+[![Crates.io](https://img.shields.io/crates/v/erdtree.svg)](https://crates.io/crates/erdtree)
+
+A modern, vibrant, and multi-threaded file-tree visualizer and disk usage analyzer that respects hidden files and `.gitignore` rules by default - basically if [tree](https://en.wikipedia.org/wiki/Tree_(command)) and [du](https://en.wikipedia.org/wiki/Du_(Unix)) had a baby.
+
+![Example Usage](https://cdn.statically.io/gh/solidiquis/erdtree/v1.3.0/assets/demo.png)
+
+## Usage
+```
+erdtree (et) is a multi-threaded filetree visualizer and disk usage analyzer.
+
+Usage: et [OPTIONS] [DIR]
+
+Arguments:
+  [DIR]  Root directory to traverse; defaults to current working directory
+
+Options:
+  -d, --disk-usage &lt;DISK_USAGE&gt;  Print physical or logical file size [default: logical] [possible values: logical, physical]
+  -g, --glob &lt;GLOB&gt;              Include or exclude files using glob patterns
+      --iglob &lt;IGLOB&gt;            Include or exclude files using glob patterns; case insensitive
+      --glob-case-insensitive    Process all glob patterns case insensitively
+  -H, --hidden                   Show hidden files; disabled by default
+      --ignore-git               Disable traversal of .git directory when traversing hidden files; disabled by default
+  -I, --icons                    Display file icons; disabled by default
+  -i, --ignore-git-ignore        Ignore .gitignore; disabled by default
+  -l, --level &lt;NUM&gt;              Maximum depth to display
+  -n, --scale &lt;NUM&gt;              Total number of digits after the decimal to display for disk usage [default: 2]
+  -s, --sort &lt;SORT&gt;              Sort-order to display directory content [default: none] [possible values: name, size, size-rev, none]
+      --dirs-first               Always sorts directories above files
+  -S, --follow-links             Traverse symlink directories and consider their disk usage; disabled by default
+  -t, --threads &lt;THREADS&gt;        Number of threads to use [default: 4]
+  -h, --help                     Print help (see more with '--help')
+  -V, --version                  Print version
+```
+
+For more information visit the [GitHub](https://github.com/solidiquis/erdtree) repository.</description>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+		<dependency id="vcredist140" version="14.20.27508.1" />
+    </dependencies> 
+  </metadata>
+</package>
