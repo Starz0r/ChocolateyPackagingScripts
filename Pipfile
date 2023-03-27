@@ -6,9 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-pygithub = "==1.51"
+pygithub = "==1.52"
 checksum = "==1.0.4"
-semver = "==3.0.0.dev3"
+semver = "==3.0.0.dev4"
 jenkinsapi = "==0.3.13"
 
 [requires]

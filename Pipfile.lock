@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "184e8d74c7afbb2ae3f28dd18c090a0c1a12dbcf45e9c5b5eae2b3565aa8926c"
+            "sha256": "01434b3e1cf4ecc4f2eda14f148e80e420dc67a150a5949b19ec840ae6e89741"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -140,11 +140,11 @@
         },
         "pygithub": {
             "hashes": [
-                "sha256:8375a058ec651cc0774244a3bc7395cf93617298735934cdd59e5bcd9a1df96e",
-                "sha256:d2d17d1e3f4474e070353f201164685a95b5a92f5ee0897442504e399c7bc249"
+                "sha256:371d17e855a2fd7a9ea1a9c71fd1d5d3e805369b60ce21121dd2931e5fbfc4e7",
+                "sha256:fc11a182ca3d88dde6ab2fbbd07e3441685cc8b738f7813fcbfc18be28c1d8ed"
             ],
             "index": "pypi",
-            "version": "==1.51"
+            "version": "==1.52"
         },
         "pyjwt": {
             "hashes": [
@@ -171,11 +171,11 @@
         },
         "semver": {
             "hashes": [
-                "sha256:10651d0dacffdce7a2f0658e58894b138f52c2a080f7d69aa999810ebfc1f97d",
-                "sha256:7175229bdcf96a6702b077e30226f041ce112057146ae81e84b51df08a8a75cf"
+                "sha256:5a47cea48ac895de2524528e1585c7d7b2775369a37dd51764db197898ff6609",
+                "sha256:c21ec24e51c4b2ff92e9e51c1d9c93b93fbdedaa3f99268ae2c879256ef391f5"
             ],
             "index": "pypi",
-            "version": "==3.0.0.dev3"
+            "version": "==3.0.0.dev4"
         },
         "six": {
             "hashes": [
