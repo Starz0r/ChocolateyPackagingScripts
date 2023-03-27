@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dotnet-all</id>
+    <version>2.0.5</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>Microsoft .NET - all versions</title>
+    <authors>Microsoft, .NET Foundation</authors>
+    <projectUrl>https://dot.net</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/dotnetcore-chocolatey/dotnetcore-chocolateypackages/5a90ffc61572e8403cb88c325f88cf6989de8c79/icons/dotnetcore.png</iconUrl>
+    <copyright>© 2002-2022 Microsoft &amp; .NET Foundation</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/dotnet</docsUrl>
+    <tags>microsoft .net core framework runtime redistributable desktop c# f#</tags>
+    <summary>Runtime components that are required to run some C#, F#, and related applications that are built using the .NET CLR.</summary>
+    <description>Microsoft .NET Framework is a general purpose development platform maintained by Microsoft and the .NET community on GitHub. It is cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.
+
+This is a *metapackage*, that installs all redistributable runtimes, to run desktop and command line applications that use the .NET CLR.</description>
+    <dependencies>
+      <!-- <dependency id="" version="__MINIMUM_VERSION__" /> -->
+    </dependencies>
+  </metadata>
+</package>
