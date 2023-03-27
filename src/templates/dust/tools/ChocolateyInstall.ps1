@@ -2,6 +2,8 @@ $PackageName = 'dust';
 $ToolsPath   = Split-Path -Parent $MyInvocation.MyCommand.Definition;
 $PkgParams   = Get-PackageParameters;
 
+$PrevInstallations = Get-ChildItem $ToolsPath;
+
 if ($PkgParams.GNU) {
 	$PackageArgs = @{
 		PackageName    = $PackageName
@@ -19,4 +21,11 @@ if ($PkgParams.GNU) {
 };
 
 Get-ChocolateyUnzip @PackageArgs;
+
+# cleanup
+ForEach ($Installation in $PrevInstallations) {
+	if (Test-Path -Path $Installation.FullName -PathType Container) {
+		Remove-Item -Recurse -Force $Installation.FullName -EA 0;
+	};
+};
 Remove-Item ($ToolsPath + '\*.' + 'zip');
