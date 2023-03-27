@@ -1,3 +1,3 @@
-$InstallDir = Join-Path $env:ChocolateyToolsLocation "flutter";
+$InstallDir = Join-Path Get-ToolsLocation "flutter";
 
 Remove-Item -Path $InstallDir -Force -Recurse;
