@@ -1,13 +1,7 @@
 $PackageName = 'ludusavi';
 $ToolsPath   = Split-Path -Parent $MyInvocation.MyCommand.Definition;
-$PkgParams   = Get-PackageParameters;
 
-$PackageArgs = @{
-		PackageName    = $PackageName
-		FileFullPath   = Get-Item $(Join-Path $ToolsPath '$fname')
-		FileFullPath64 = Get-Item $(Join-Path $ToolsPath '$fname64')
-		Destination    = $ToolsPath
+If (Test-Path -Path $ToolsPath\"ludusavi.exe" -PathType Leaf) {
+	Remove-Item -Path $ToolsPath\"ludusavi.exe" | Out-Null;
+	Write-Warning "Ludusavi from previous version detected, deleting...";
 };
-
-Get-ChocolateyUnzip @PackageArgs;
-Remove-Item ($ToolsPath + '\*.' + 'zip');
