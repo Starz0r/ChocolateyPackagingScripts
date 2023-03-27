@@ -16,7 +16,7 @@ $PackageArgs = @{
   ChecksumType  = 'sha512'
   
   SilentArgs   = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-  ValidExitCodes= @(0)
+  ValidExitCodes= @(0, 1223)
 }
 
 Install-ChocolateyPackage @PackageArgs
