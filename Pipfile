@@ -9,6 +9,8 @@ verify_ssl = true
 pygithub = "==1.51"
 checksum = "==1.0.4"
 mypy     = "==0.770"
+semver = "==3.0.0.dev3"
+jenkinsapi = "==0.3.13"
 
 [requires]
 python_version = "3.9"
