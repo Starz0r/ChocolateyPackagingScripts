@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>jwtinfo</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>JWT Info</title>
+    <authors>Luciano Mammino
+Tim McNamara
+Stefano Abalsamo
+Stjepan Golemac</authors>
+    <projectUrl>https://github.com/lmammino/jwtinfo</projectUrl>
+    <copyright>Copyright © 2019 - 2022 Luciano Mammino &amp; Stefano Abalsamo</copyright>
+    <licenseUrl>https://github.com/lmammino/jwtinfo/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/lmammino/jwtinfo</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/lmammino/jwtinfo/issues</bugTrackerUrl>
+    <tags>foss utility cli jwt helper inspector token info json-web-tokens</tags>
+    <summary>A command-line tool to get information about JWTs (Json Web Tokens).</summary>
+    <description>
+[![build badge](https://github.com/lmammino/jwtinfo/workflows/Rust/badge.svg)](https://github.com/lmammino/jwtinfo/actions?query=workflow%3ARust)
+[![codecov](https://codecov.io/gh/lmammino/jwtinfo/branch/master/graph/badge.svg)](https://codecov.io/gh/lmammino/jwtinfo)
+[![crates.io badge](https://img.shields.io/crates/v/jwtinfo.svg)](https://crates.io/crates/jwtinfo)
+[![Documentation](https://docs.rs/jwtinfo/badge.svg)](https://docs.rs/jwtinfo)
+[![rustc badge](https://img.shields.io/badge/rustc-1.40+-lightgray.svg)](https://blog.rust-lang.org/2019/12/19/Rust-1.40.0.html)
+[![Clippy Linting Result](https://img.shields.io/badge/clippy-&lt;3-yellowgreen)](https://github.com/rust-lang/rust-clippy)
+[![License: MIT OR Apache-2.0](https://img.shields.io/crates/l/jwtinfo.svg)](#license)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/lmammino/jwtinfo) 
+
+
+A command line tool to get information about [JWTs](https://tools.ietf.org/html/rfc7519) (Json Web Tokens).
+
+## Usage
+
+`jwtinfo` is a command line interface that allows you to inspect a given JWT. The tool currently allows to see the body of the token in JSON format. It accepts a single command line argument which should be a valid JWT.
+
+Here's an example:
+
+```bash
+jwtinfo eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+Which will print:
+
+```json
+{"sub":"1234567890","name":"John Doe","iat":1516239022}
+```
+
+If you want to visualize the token header (rather than the body), you can do that by passing the `--header` flag:
+
+```bash
+jwtinfo --header eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+Which will print:
+
+```json
+{"alg":"HS256","typ":"JWT"}
+```
+
+You can combine the tool with other command line utilities, for instance [`jq`](https://stedolan.github.io/jq/):
+
+```bash
+jwtinfo eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | jq .
+```
+
+## Credits
+
+A special thank you goes to the [Rust Reddit community](https://www.reddit.com/r/rust/) for providing a lot of useful suggestions on how to improve this project. A special thanks goes to: [mardiros](https://www.reddit.com/user/mardiros/), [matthieum](https://www.reddit.com/user/matthieum/), [steveklabnik1](https://www.reddit.com/user/steveklabnik1/), [ESBDB](https://www.reddit.com/user/ESBDB/), [Dushistov](https://www.reddit.com/user/Dushistov/), [Doddzilla7](https://www.reddit.com/user/Doddzilla7/). Another huge thank you goes to the [Rust stackoverflow community](https://chat.stackoverflow.com/rooms/62927/rust), especially to [Denys Séguret](https://chat.stackoverflow.com/users/263525).
+
+Big thanks also go to [Tim McNamara](https://twitter.com/timClicks) for conducting a [live code review](https://loige.co/learning-rust-through-open-source-and-live-code-reviews) of this codebase.
+
+
+## Contributing
+
+Everyone is very welcome to contribute to this project.
+You can contribute just by submitting bugs or suggesting improvements by
+[opening an issue on GitHub](https://github.com/lmammino/jwtinfo/issues).</description>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+        <dependency id="vcredist140" version="14.20.27508.1" />
+    </dependencies>
+  </metadata>
+</package>
