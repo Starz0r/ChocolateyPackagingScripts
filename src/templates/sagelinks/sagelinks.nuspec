@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>sagelinks</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>SageLinks</title>
+    <authors>Nikolay Raspopov</authors>
+    <projectUrl>https://github.com/raspopov/SageLinks</projectUrl>
+    <iconUrl>https://cdn.statically.io/gh/raspopov/SageLinks/0445e66a/SageLinks/res/SageLinks.ico</iconUrl>
+    <copyright>Copyright © 2015-2022 Nikolay Raspopov</copyright>
+    <licenseUrl>https://github.com/raspopov/SageLinks/blob/$tag/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/raspopov/SageLinks/tree/$tag</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/raspopov/SageLinks/issues</bugTrackerUrl>
+    <tags>sagelinks windows symbolic-links shortcut hard-links soft-links junctions</tags>
+    <summary>Shows and checks Windows NTFS junctions, symbolic links and shortcuts.</summary>
+    <description>[![Build status](https://ci.appveyor.com/api/projects/status/xetag3g94r0rqk7m?svg=true)](https://ci.appveyor.com/project/raspopov/sagelinks)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ab525a50b4604c9eb262df5376208773)](https://www.codacy.com/manual/raspopov/SageLinks?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=raspopov/SageLinks&amp;utm_campaign=Badge_Grade)
+[![GitHub All Releases](https://img.shields.io/github/downloads/raspopov/SageLinks/total)](https://github.com/raspopov/SageLinks/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/raspopov/SageLinks)](https://github.com/raspopov/SageLinks/releases)
+
+Shows and checks Windows NTFS junctions, symbolic links and shortcuts.
+
+Can be used to find, test and delete broken (orphaned) links.
+
+ System requirements
+---------------------
+
+Windows XP, Windows Vista, Windows 7, Windows 8, Windows 10 32/64-bit.</description>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+		<dependency id="vcredist140" version="14.20.27508.1" />
+    </dependencies>
+  </metadata>
+</package>
