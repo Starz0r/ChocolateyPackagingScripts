@@ -3,6 +3,8 @@
 
 ### Statefiles ###
 *.ghstate
+*.ghtstate
+*.gasstate
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -69,9 +71,6 @@ docs/_build/
 
 # PyBuilder
 target/
-
-# pyenv
-.python-version
 
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
