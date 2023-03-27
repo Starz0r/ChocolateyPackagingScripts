@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>neochat.install</id>
+    <version>$version</version>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <owners>Starz0r</owners>
+    <title>NeoChat (Install)</title>
+    <authors>KDE Community
+Black Hat &amp; the Spectral IM Team</authors>
+    <projectUrl>https://apps.kde.org/neochat/</projectUrl>
+    <iconUrl>https://invent.kde.org/network/neochat/-/raw/$tag/org.kde.neochat.svg</iconUrl>
+    <copyright>2023 © KDE e.V.</copyright>
+    <licenseUrl>https://invent.kde.org/network/neochat/-/blob/$tag/LICENSES/GPL-3.0-or-later.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://invent.kde.org/network/neochat</projectSourceUrl>
+    <mailingListUrl>https://matrix.to/#/#neochat:kde.org</mailingListUrl>
+    <bugTrackerUrl>https://bugs.kde.org/buglist.cgi?component=General&amp;product=NeoChat</bugTrackerUrl>
+    <tags>neochat matrix chat communication qt</tags>
+    <summary>A client for matrix, the decentralized communication protocol</summary>
+    <description>NeoChat is a Matrix client. It allows you to send text messages, videos and audio files to your family, colleagues and friends using the Matrix protocol.
+
+Matrix is a decentralized communication protocol, putting the user back in control. Currently NeoChat implements large part of the protocol with the exception of encrypted chats and video chat.
+
+NeoChat works both on mobile and desktop while providing a consistent user experience.
+
+![Application](https://cdn.kde.org/screenshots/neochat/application.png)
+
+## Features
+
+* Sending messages
+* Sending files from clipboard and filesystem
+* Reply to message (right-click on a message to access menu)
+* Start a private chat (but not encrypted)
+* Show notifications, for the moment there is only a global switch
+to disable it. We plan to implement the configuration part of the
+specification soon.
+* Autocompletion of usernames in chat
+* Emoji picker
+* Basic room setting page
+* Send and accept invitations
+* /rainbow &lt;message&gt; (very important)
+* /me &lt;message&gt;
+
+NeoChat is still missing a few features to become a full-featured
+Matrix client (most notably encryption support and video chat support).
+We welcome contributions in this direction.
+
+## Acknowledgement
+
+This program utilizes [libQuotient](https://github.com/quotient-im/libQuotient/)
+library and some C++ models from [Quaternion](https://github.com/quotient-im/Quaternion/).
+
+This program is a fork of [Spectral](https://gitlab.com/spectral-im/spectral/).</description>
+    <releaseNotes>$notes</releaseNotes>
+  </metadata>
+</package>

@@ -1,0 +1,1 @@
+﻿Get-AppxPackage -Name "KDEe.V.NeoChat" | Remove-AppxPackage;
