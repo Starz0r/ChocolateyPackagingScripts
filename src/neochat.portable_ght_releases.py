@@ -46,7 +46,7 @@ def main():
         info = json.loads(req.read().decode(
             req.info().get_param("charset") or "utf-8"))
         relnotes = (
-            info["currentReleaseDescription"]
+            (info["currentReleaseDescription"] or "")
             .replace("<p>", "# ")
             .replace("</p>", "\n")
             .replace("<ul>", "")

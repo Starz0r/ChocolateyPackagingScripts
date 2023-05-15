@@ -35,7 +35,7 @@ def main():
         # retrieve and format release notes
         req = urllib.request.urlopen("https://flathub.org/api/v1/apps/org.kde.neochat")
         info = json.loads(req.read().decode(req.info().get_param("charset") or "utf-8"))
-        relnotes = info["currentReleaseDescription"].replace("<p>", "# ").replace("</p>", "\n").replace("<ul>", "").replace("<li>", "  - ").replace("</li>", '\n').replace("</ul>", "")
+        relnotes = (info["currentReleaseDescription"] or "").replace("<p>", "# ").replace("</p>", "\n").replace("<ul>", "").replace("<li>", "  - ").replace("</li>", '\n').replace("</ul>", "")
         
         version = tag.name.replace("v", "")
         gittag = tag.name
