@@ -18,7 +18,7 @@ def main():
 
     for rel in on_new_git_release("neovide.install", "kethku/neovide"):
         # correlate assets
-        asset = get_correct_release_asset(rel.get_assets(), "neovide-windows-installer",
+        asset = get_correct_release_asset(rel.get_assets(), "neovide.msi",
                                           ".tar.gz")
 
         if asset is None:

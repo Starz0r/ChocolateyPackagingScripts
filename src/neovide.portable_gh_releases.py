@@ -1,25 +1,25 @@
 import logging
-import subprocess
-import checksum
-import tempfile
 import os
+import subprocess
+import tempfile
 import zipfile
 from pathlib import Path
 
-from common.common import abort_on_nonzero
+import checksum
+
+from common.common import (abort_on_nonzero, find_and_replace_templates_new,
+                           get_correct_release_asset)
 from common.events import on_new_git_release
-from common.common import get_correct_release_asset
-from common.common import find_and_replace_templates_new
 
 
 def main():
-    logger = logging.getLogger('Neovide GitHub Releases')
+    logger = logging.getLogger("Neovide GitHub Releases")
     logger.setLevel(logging.DEBUG)
 
     for rel in on_new_git_release("neovide.portable", "kethku/neovide"):
         # correlate assets
-        asset = get_correct_release_asset(rel.get_assets(), "neovide-windows",
-                                          "installer")
+        asset = get_correct_release_asset(
+            rel.get_assets(), "neovide.exe", "installer")
 
         if asset is None:
             logger.warn(
@@ -30,8 +30,8 @@ def main():
         # download and hash
         url = asset.browser_download_url
         fname = asset.name
-        abort_on_nonzero(
-            subprocess.call(["wget", url, "--output-document", fname]))
+        abort_on_nonzero(subprocess.call(
+            ["wget", url, "--output-document", fname]))
         f = zipfile.ZipFile(fname)
         f.extractall()
         fname = f.namelist()[0]
@@ -44,18 +44,22 @@ def main():
         if rel.body is None:
             relnotes = ""
         else:
-            relnotes = relnotes.replace("<", "&lt;").replace(
-                ">", "&gt;").replace("&",
-                                     "&amp;").replace("\u200b",
-                                                      "")  # zero-width space
+            relnotes = (
+                relnotes.replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace("&", "&amp;")
+                .replace("\u200b", "")
+            )  # zero-width space
         version = rel.tag_name.replace("v", "")
         gittag = rel.tag_name
-        d = dict(version=version,
-                 tag=gittag,
-                 checksum=chksum,
-                 fname=fname,
-                 url=url,
-                 notes=relnotes)
+        d = {
+            "version": version,
+            "tag": gittag,
+            "checksum": chksum,
+            "fname": fname,
+            "url": url,
+            "notes": relnotes,
+        }
 
         # template and pack
         tmpdir = tempfile.mkdtemp()
@@ -63,8 +67,9 @@ def main():
         os.mkdir(Path(tmpdir) / "tools/x64")
         os.rename(fname, os.path.join(tmpdir, "tools/x64", fname))
         abort_on_nonzero(
-            subprocess.call(["choco", "pack",
-                             Path(tmpdir) / "neovide.portable.nuspec"]))
+            subprocess.call(["choco", "pack", Path(
+                tmpdir) / "neovide.portable.nuspec"])
+        )
 
 
 if __name__ == "__main__":
