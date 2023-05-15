@@ -2,14 +2,14 @@ $PackageName = 'lsd';
 $ToolsPath   = Split-Path -Parent $MyInvocation.MyCommand.Definition;
 $PkgParams   = Get-PackageParameters;
 
-if ($PkgParams.GNU) {
+If ($PkgParams.GNU) {
 	$PackageArgs = @{
 		PackageName    = $PackageName
 		FileFullPath   = Get-Item $(Join-Path $ToolsPath '$altfname')
 		FileFullPath64 = Get-Item $(Join-Path $ToolsPath '$altfname64')
 		Destination    = $ToolsPath
 	};
-} else {
+} Else {
 	$PackageArgs = @{
 		PackageName    = $PackageName
 		FileFullPath   = Get-Item $(Join-Path $ToolsPath '$fname')
@@ -18,5 +18,9 @@ if ($PkgParams.GNU) {
 	};
 };
 
+# Remove Previous Installations
+Get-ChildItem $ToolsPath\* | Where-Object { $_.PSISContainer } | ForEach-Object {
+	Remove-Item $_ -Recurse -Force -EA 0 | Out-Null;
+};
 Get-ChocolateyUnzip @PackageArgs;
 Remove-Item ($ToolsPath + '\*.' + 'zip');
