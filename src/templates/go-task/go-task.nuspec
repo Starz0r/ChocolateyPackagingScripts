@@ -9,7 +9,7 @@
     <authors>Andrey Nering</authors>
     <projectUrl>https://taskfile.dev/</projectUrl>
     <iconUrl>https://cdn.statically.io/gh/go-task/task/6c73ab82/docs/Logo.png</iconUrl>
-    <copyright>Copyright © 2016 - 2021 Andrey Nering</copyright>
+    <copyright>Copyright © 2016 - 2023 Andrey Nering</copyright>
     <licenseUrl>https://github.com/go-task/task/blob/$tag/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/go-task/task</projectSourceUrl>

@@ -82,7 +82,7 @@ Special thanks to:
         <dependency id="chocolatey-core.extension" version="1.3.5.1" />
 		<dependency id="vcredist140" version="14.20.27508.1" />
     </dependencies> 
-    <copyright>Copyright © 2018 - 2021 Pierre Peltier</copyright>
+    <copyright>Copyright © 2018 - 2023 Pierre Peltier</copyright>
     <tags>gnu exa foss cli terminal coreutils directory list folder rainbow</tags>
   </metadata>
 </package>

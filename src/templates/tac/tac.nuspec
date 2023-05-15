@@ -8,8 +8,8 @@
     <title>tac - Reverse Cat</title>
     <authors>NeoSmart Technologies
 Mahmoud Al-Qudsi</authors>
-    <copyright>Copyright © 2017 - 2021 Mahmoud Al-Qudsi
-Copyright © 2017 - 2021 NeoSmart Technologies</copyright>
+    <copyright>Copyright © 2017 - 2023 Mahmoud Al-Qudsi
+Copyright © 2017 - 2023 NeoSmart Technologies</copyright>
 	<projectUrl>https://github.com/neosmart/tac</projectUrl>
     <licenseUrl>https://github.com/neosmart/tac/blob/$tag/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

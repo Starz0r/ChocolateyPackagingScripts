@@ -25,7 +25,7 @@ TweetDuck is an open source Windows client for Twitter utilizing TweetDeck.
 	<dependencies>
 		<dependency id="tweetduck.install" version="[$version]" />
 	</dependencies>
-	<copyright>Copyright © 2016 - 2021 chylex; Copyright © 2006 - 2021 Twitter, Inc</copyright>
+	<copyright>Copyright © 2016 - 2023 chylex; Copyright © 2006 - 2023 Twitter, Inc</copyright>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

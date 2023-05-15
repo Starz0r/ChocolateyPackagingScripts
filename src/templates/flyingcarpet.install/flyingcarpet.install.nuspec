@@ -51,7 +51,7 @@ Don't have a flash drive? Don't have access to a wireless network or don't trust
 Licenses for third-party tools and libraries used can be found in the "3rd_party_licenses" folder.</description>
     <summary>Encrypted file transfer over ad hoc WiFi. No network infrastructure required, just two laptops in close range. Linux, Mac, and Windows.</summary>
     <releaseNotes>$notes</releaseNotes>
-    <copyright>Copyright © 2017 - 2021 Theron Spiegl</copyright>
+    <copyright>Copyright © 2017 - 2023 Theron Spiegl</copyright>
     <tags>foss cli admin linux mac macos windows encrypted wifi ad-hoc go qt cross-platform wireless file-transfer</tags>
   </metadata>
 </package>

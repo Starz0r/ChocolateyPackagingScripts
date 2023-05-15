@@ -18,8 +18,8 @@
     <dependencies>
         <dependency id="chocolatey-core.extension" version="1.3.5.1" />
     </dependencies> 
-    <copyright>Copyright © 2019 - 2021 Julio Sueiras
-	Copyright © 2014 - 2021 HashiCorp</copyright>
+    <copyright>Copyright © 2019 - 2023 Julio Sueiras
+	Copyright © 2014 - 2023 HashiCorp</copyright>
     <tags>hcl tf configuration k8s langserver intellisense editor code foss development cli</tags>
   </metadata>
 </package>

@@ -114,7 +114,7 @@ Configuration is done almost completely via global neovide variables in your vim
 		<dependency id="neovim" version="0.8.0" />
 		<dependency id="vcredist140" version="14.20.27508.1" />
     </dependencies>
-    <copyright>Copyright © 2019 - 2022 Keith Simmons</copyright>
+    <copyright>Copyright © 2019 - 2023 Keith Simmons</copyright>
     <tags>neovim vim rust vulkan skia gpu neovim-guis</tags>
   </metadata>
 </package>

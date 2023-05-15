@@ -54,7 +54,7 @@ Licenses for third-party tools and libraries used can be found in the "3rd_party
     <dependencies>
         <dependency id="flyingcarpet.install" version="[$version]" />
     </dependencies> 
-    <copyright>Copyright © 2017 - 2021 Theron Spiegl</copyright>
+    <copyright>Copyright © 2017 - 2023 Theron Spiegl</copyright>
     <tags>foss cli admin linux mac macos windows encrypted wifi ad-hoc go qt cross-platform wireless file-transfer</tags>
   </metadata>
 </package>

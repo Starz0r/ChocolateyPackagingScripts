@@ -8,7 +8,7 @@
     <title>Go Disk Usage</title>
     <authors>Daniel Milde</authors>
     <projectUrl>https://github.com/dundee/gdu</projectUrl>
-    <copyright>Copyright © 2020 - 2021 Daniel Milde</copyright>
+    <copyright>Copyright © 2020 - 2023 Daniel Milde</copyright>
     <licenseUrl>https://github.com/dundee/gdu/blob/$tag/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/dundee/gdu/tree/$tag</projectSourceUrl>

@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Threema GmbH</authors>
     <projectUrl>https://threema.ch/</projectUrl>
     <iconUrl>https://cdn.statically.io/gh/threema-ch/threema-web-electron/81c4ce5/app/assets/icons/threema-app-icon_neutral.min.svg</iconUrl>
-    <copyright>Copyright © 2012-2021 Threema GmbH</copyright>
+    <copyright>Copyright © 2012-2023 Threema GmbH</copyright>
     <licenseUrl>https://github.com/threema-ch/threema-web-electron/blob/$tag/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/threema-ch/threema-web-electron</projectSourceUrl>

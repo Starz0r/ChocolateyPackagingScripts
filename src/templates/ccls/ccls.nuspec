@@ -8,7 +8,7 @@
     <title>ccls - C &amp; C++ Language Server</title>
     <authors>Fangrui Song, Jacob Dufault</authors>
     <projectUrl>https://github.com/MaskRay/ccls/blob/$tag/README.md</projectUrl>
-    <copyright>Copyright © 2017 - 2018 Jacob Dufault, Copyright © 2017 - 2021 Fangrui Song</copyright>
+    <copyright>Copyright © 2017 - 2018 Jacob Dufault, Copyright © 2017 - 2023 Fangrui Song</copyright>
     <licenseUrl>https://github.com/MaskRay/ccls/blob/$tag/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/MaskRay/ccls/tree/$tag</projectSourceUrl>

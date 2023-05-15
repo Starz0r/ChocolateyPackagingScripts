@@ -75,6 +75,6 @@ Tokei is a program that displays statistics about your code. Tokei will show the
 	<dependencies>
 		<dependency id="vcredist140" version="14.20.27508.1" />
 	</dependencies>
-	<copyright>Copyright © 2015 - 2021 Erin Power and contributors</copyright>
+	<copyright>Copyright © 2015 - 2023 Erin Power and contributors</copyright>
   </metadata>
 </package>

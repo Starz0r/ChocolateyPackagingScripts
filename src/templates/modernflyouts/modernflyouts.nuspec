@@ -89,7 +89,7 @@ This application will replace the default audio/airplane/brightness flyouts foun
         <dependency id="dotnet" version="6.0.0-rc2214805" />
 		<dependency id="dotnet-6.0-runtime" version="6.0.0-rc2214805" />
     </dependencies> 
-    <copyright>Copyright © 2020-2021 ShankarBUS</copyright>
+    <copyright>Copyright © 2020-2023 ShankarBUS</copyright>
     <language>en-US</language>
     <tags>uwp fluent-design xaml winui modern flyouts replacement foss audio metro media brightness airplane-mode fluent lock-keys</tags>
   </metadata>
