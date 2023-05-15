@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>mpd</id>
+    <version>$version</version>
+    <title>Music Player Daemon</title>
+    <authors>Max Kellermann</authors>
+    <owners>Starz0r</owners>
+    <licenseUrl>https://github.com/MusicPlayerDaemon/MPD/blob/$tag/COPYING</licenseUrl>
+    <projectUrl>https://www.musicpd.org/</projectUrl>
+    <iconUrl>https://cdn.statically.io/gh/MusicPlayerDaemon/MPD/$tag/mpd.min.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A daemon for playing music of various formats.  Music is played through the 
+server's audio device.  The daemon stores info about all available music, 
+and this info can be easily searched and retrieved.  Player control, info
+retrieval, and playlist management can all be managed remotely.
+
+For basic installation instructions
+[read the manual](https://www.musicpd.org/doc/user/install.html).
+
+# Users
+
+- [Manual](https://www.musicpd.org/doc/user/)
+- [Forum](https://forum.musicpd.org/)
+- [IRC](ircs://irc.libera.chat:6697/#mpd)
+
+# Developers
+
+- [Protocol specification](https://www.musicpd.org/doc/protocol/)
+- [Developer manual](https://www.musicpd.org/doc/developer/)
+
+# Legal
+
+MPD is released under the
+[GNU General Public License version 2](https://www.gnu.org/licenses/gpl-2.0.txt),
+which is distributed in the COPYING file.</description>
+    <summary>Music Player Daemon is a flexible, powerful, server-side application for playing music.</summary>
+    <releaseNotes>$notes</releaseNotes>
+    <copyright>2003-2023 © Max Kellermann</copyright>
+    <tags>music player daemon mpd foss audio oss audio-player music-player headless</tags>
+    <projectSourceUrl>https://github.com/MusicPlayerDaemon/MPD</projectSourceUrl>
+    <packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
+    <docsUrl>https://mpd.readthedocs.io/en/stable/user.html</docsUrl>
+    <mailingListUrl>https://github.com/MusicPlayerDaemon/MPD/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/MusicPlayerDaemon/MPD/issues</bugTrackerUrl>
+  </metadata>
+</package>
