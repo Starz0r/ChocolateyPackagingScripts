@@ -39,7 +39,7 @@ This project is supported by the [.NET Foundation](http://www.dotnetfoundation.o
     <summary>C# Language Server based on Roslyn.</summary>
 	<dependencies>
 		<dependency id="nuget.commandline" version="5.7.0" />
-		<dependency id="dotnet4.7.2" version="4.7.2.20180712" />
+		<dependency id="netfx-4.7.2" version="4.7.2.0" />
 	</dependencies>
     <releaseNotes>$notes</releaseNotes>
     <copyright>Copyright © 2015 - 2023 OmniSharp
