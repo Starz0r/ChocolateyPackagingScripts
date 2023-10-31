@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>$id</id>
+    <version>$version</version>
+    <packageSourceUrl>$pkgSrcUrl</packageSourceUrl>
+    <owners>$owners</owners>
+    <title>$title</title>
+    <authors>$authors</authors>
+    <projectUrl>$project</projectUrl>
+    <iconUrl>$icon</iconUrl>
+    <copyright>$copyright</copyright>
+    <licenseUrl>$licenseUrl</licenseUrl>
+    <requireLicenseAcceptance>$requireLicenseAcceptance</requireLicenseAcceptance>
+    <projectSourceUrl>$src</projectSourceUrl>
+    <docsUrl>$docs</docsUrl>
+    <mailingListUrl>$mailingList</mailingListUrl>
+    <bugTrackerUrl>$bugtracker</bugTrackerUrl>
+    <tags>$tags</tags>
+    <summary>$summary</summary>
+    <description>$desc</description>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+      $deps
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
