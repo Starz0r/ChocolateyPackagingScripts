@@ -10,6 +10,10 @@ pygithub = "==1.52"
 checksum = "==1.0.4"
 semver = "==3.0.0.dev4"
 jenkinsapi = "==0.3.13"
+certifi = "==2022.12.7"
+requests = "==2.28.2"
+urllib3 = "==1.26.16"
+structlog = "==22.3.0"
 
 [requires]
 python_version = "3.9"
