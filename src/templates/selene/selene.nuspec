@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>$id</id>
+    <version>$version</version>
+    <packageSourceUrl>$pkgSrcUrl</packageSourceUrl>
+    <owners>$owners</owners>
+    <title>$title</title>
+    <authors>$authors</authors>
+    <projectUrl>$project</projectUrl>
+    <copyright>$copyright</copyright>
+    <licenseUrl>$licenseUrl</licenseUrl>
+    <requireLicenseAcceptance>$requireLicenseAcceptance</requireLicenseAcceptance>
+    <projectSourceUrl>$src</projectSourceUrl>
+    <docsUrl>$docs</docsUrl>
+    <bugTrackerUrl>$bugtracker</bugTrackerUrl>
+    <tags>$tags</tags>
+    <summary>$summary</summary>
+    <description>selene is a blazing-fast modern Lua linter written in Rust.
+
+Priorities:
+- It's okay to not diagnose every problem, as long as the diagnostics that are made are never wrong
+- Easy to extend and modify
+- Easy to configure
+- ...but the user should need to configure as little as possible</description>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+      $deps
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
