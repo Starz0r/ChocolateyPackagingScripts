@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>$id</id>
+    <version>$version</version>
+    <packageSourceUrl>$pkgSrcUrl</packageSourceUrl>
+    <owners>$owners</owners>
+    <title>$title</title>
+    <authors>$authors</authors>
+    <projectUrl>$project</projectUrl>
+    <copyright>$copyright</copyright>
+    <licenseUrl>$licenseUrl</licenseUrl>
+    <requireLicenseAcceptance>$requireLicenseAcceptance</requireLicenseAcceptance>
+    <projectSourceUrl>$src</projectSourceUrl>
+    <docsUrl>$docs</docsUrl>
+    <bugTrackerUrl>$bugtracker</bugTrackerUrl>
+    <tags>$tags</tags>
+    <summary>$summary</summary>
+    <description>[![CI](https://github.com/JohnnyMorganz/StyLua/actions/workflows/ci.yml/badge.svg)](https://github.com/JohnnyMorganz/StyLua/actions/workflows/ci.yml)
+[![CI](https://codecov.io/gh/JohnnyMorganz/StyLua/branch/main/graph/badge.svg)](https://codecov.io/gh/JohnnyMorganz/StyLua)
+
+An opinionated code formatter for Lua 5.1, 5.2, 5.3, 5.4 and [Luau](https://roblox.github.io/luau/), built using [full-moon](https://github.com/Kampfkarren/full-moon).
+StyLua is inspired by the likes of [prettier](https://github.com/prettier/prettier), it parses your Lua codebase, and prints it back out from scratch,
+enforcing a consistent code style.</description>
+    <releaseNotes>$notes</releaseNotes>
+    <dependencies>
+      $deps
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
