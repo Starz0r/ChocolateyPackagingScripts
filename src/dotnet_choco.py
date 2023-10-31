@@ -23,7 +23,7 @@ def main():
     # check chocolatey to see if any of them are updated
     for pkg, ver in dotnets.items():
         proc = subprocess.run(
-            ["choco", "list", "--limit-output", "--exact", pkg], capture_output=True
+            ["choco", "info", "--limit-output", pkg], capture_output=True
         )
         ver_query = proc.stdout.decode().rstrip().split("|")[1]
         if ver != ver_query:
