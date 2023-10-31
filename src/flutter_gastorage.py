@@ -37,35 +37,12 @@ def main():
             chksum = rel["sha256"]
             tempdir = tempfile.mkdtemp()
             version = rel["version"].replace("v", "")
-            version = version.replace("-de", "-dev")
-            version = version.replace("+hotfix", "")
-            version = version.replace("-hotfix", "")
-            version = version.replace(".pre", "")
-            versions = version.replace("dev.", "").split("-")
-            version = versions[0]
             if "-dev" in version:
                 version = version.replace("-dev", "")
             if "-beta" in version:
                 version = version.replace("-beta", "")
             if "-stable" in version:
                 version = version.replace("-stable", "")
-
-            print(versions)
-            version = version.split("-")[0]
-            try:
-                minorminor = str(versions[1].split(".")[0])
-                version = version+"."+minorminor
-            except:
-                pass
-            if rel["channel"] == "beta":
-                version = version+"-beta"
-            if rel["channel"] == "dev":
-                version = version+"-dev"
-            # version = version+"."+str(versions[1].split(".")[1])
-            try:
-                version = version + "-" + str(versions[1].split(".")[1])
-            except:
-                pass
             find_and_replace_templates(pkgname,
                                        tempdir,
                                        version,
