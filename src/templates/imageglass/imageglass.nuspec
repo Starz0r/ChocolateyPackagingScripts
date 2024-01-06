@@ -11,7 +11,7 @@
     <projectUrl>https://imageglass.org/support</projectUrl>
 	<projectSourceUrl>https://github.com/d2phap/ImageGlass/tree/$tag</projectSourceUrl>
 	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
-    <iconUrl>https://cdn.statically.io/gh/d2phap/ImageGlass/develop/Assets/Logo/2023%20-%20Maroon/256.min.svg</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/d2phap/ImageGlass/30b33f8ad741a44fb94e46ae1dfc3a78516f9810/Assets/Logo/2023/Logo.min.svg</iconUrl>
     <description>
 	[![Website](https://img.shields.io/badge/www-imageglass.org-0099BC.svg?maxAge=3600)](https://imageglass.org)
 	[![GPL Licence](https://img.shields.io/badge/license-GPLv3-green.svg?maxAge=3600)](https://github.com/d2phap/ImageGlass/blob/master/LICENSE)
@@ -30,12 +30,15 @@
 * [Discord](https://imageglass.org/docs/ui-shortcuts-reference)</description>
     <summary>⛰ A lightweight, versatile image viewer</summary>
     <releaseNotes>$notes</releaseNotes>
-    <copyright>Copyright (C) 2010 - 2023 Duong Dieu Phap</copyright>
+    <copyright>Copyright © 2010 - 2023 Duong Dieu Phap</copyright>
     <tags>image viewer admin foss photo picture image-processing photo-browser image-viewer photo-viewer</tags>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="dotnetfx" version="4.8.0.20190930" />
-	  <dependency id="exiftool" version="12.11" />
+      <dependency id="dotnet" version="8.0.0" />
+	  <dependency id="dotnet-8.0-runtime" version="8.0.0" />
+	  <dependency id="dotnet-8.0-desktopruntime" version="8.0.0" />
+	  <dependency id="exiftool" version="12.70.0" />
+	  <dependency id="webview2-runtime" version="120.0.2210.61" />
     </dependencies>
   </metadata>
 </package>

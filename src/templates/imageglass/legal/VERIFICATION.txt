@@ -7,7 +7,6 @@ Package can be verified like this:
 1. Go to https://github.com/d2phap/ImageGlass, enter to releases and download from there.
 
    x86_64:        $url64
-     i686:        $url
 
    to download the zip files. You may wish to rename one of the files.
 
@@ -15,7 +14,6 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
    
-     checksum:        $checksum
    checksum64:        $checksum64
 
 File 'LICENSE.txt' obtained from:
