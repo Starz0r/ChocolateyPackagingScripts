@@ -6,8 +6,8 @@ $Version         = "$version";
 $AppxPackageName = "32669SamG.ModernFlyouts";
 $WindowsVersion  = [Environment]::OSVersion.Version;
 
-if ($WindowsVersion.Major -ne "10") {
-  throw "This package requires Windows 10.";
+if ($WindowsVersion.Major -lt "10") {
+  throw "This package requires at least Windows 10 or higher.";
 };
 #The .msixbundle format is not supported on Windows 10 version 1709 and 1803. https://docs.microsoft.com/en-us/windows/msix/msix-1709-and-1803-support
 $IsCorrectBuild=[Environment]::OSVersion.Version.Build;
