@@ -1,6 +1,5 @@
 import logging
 import subprocess
-import zipfile
 import checksum
 import tempfile
 import os
@@ -19,7 +18,7 @@ def main():
     for rel in on_new_git_release("flyingcarpet.install", "spieglt/FlyingCarpet"):
         # correlate assets
         asset = get_correct_release_asset(
-            rel.get_assets(), "FlyingCarpetWindows.zip", None
+            rel.get_assets(), ".msi", ".exe"
         )
 
         if asset is None:
@@ -29,16 +28,10 @@ def main():
             continue
 
         # download, and hash
-        unpackdir = tempfile.mkdtemp()
         url = asset.browser_download_url
         fname = asset.name
         abort_on_nonzero(subprocess.call(["wget", url, "--output-document", fname]))
-        archive = zipfile.ZipFile(fname)
-        archive.extractall(unpackdir)
-        archive.close()
         chksum = checksum.get_for_file(fname, "sha512")
-        os.remove(fname)
-        os.rename(unpackdir + "/flyingcarpet.exe", unpackdir + "/flyingcarpetw.exe")
 
         # assemble information
         relnotes = rel.body
@@ -65,9 +58,7 @@ def main():
         # template and pack
         tmpdir = tempfile.mkdtemp()
         find_and_replace_templates_new("flyingcarpet.install", tmpdir, d)
-        # HACK: Python is dumb and won't recursively create directories sometimes, why...
-        # os.mkdir(Path(tmpdir) / "tools")
-        os.rename(unpackdir, os.path.join(tmpdir, "tools", "x64"))
+        os.rename(fname, os.path.join(tmpdir, "tools", fname))
         abort_on_nonzero(
             subprocess.call(
                 ["choco", "pack", Path(tmpdir) / "flyingcarpet.install.nuspec"]

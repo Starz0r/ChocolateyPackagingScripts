@@ -19,7 +19,7 @@ def main():
     for rel in on_new_git_release("flyingcarpet.portable", "spieglt/FlyingCarpet"):
         # correlate assets
         asset = get_correct_release_asset(
-            rel.get_assets(), "flyingCarpetWindowsCLI.exe", None
+            rel.get_assets(), "FlyingCarpet.exe", None
         )
 
         if asset is None:

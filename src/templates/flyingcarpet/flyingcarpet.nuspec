@@ -7,7 +7,7 @@
     <authors>Theron Spiegl</authors>
     <owners>Starz0r</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://github.com/spieglt/FlyingCarpet/blob/$tag/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/spieglt/FlyingCarpet/blob/$tag/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/spieglt/FlyingCarpet</projectUrl>
     <iconUrl>https://cdn.statically.io/gh/Starz0r/ChocolateyPackagingScripts/527a15a/assets/flyingcarpet.png</iconUrl>
 	<packageSourceUrl>https://github.com/Starz0r/ChocolateyPackagingScripts</packageSourceUrl>
