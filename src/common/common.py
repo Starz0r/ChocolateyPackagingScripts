@@ -7,6 +7,8 @@ from pathlib import Path
 from string import Template
 from typing import TYPE_CHECKING, Dict, Iterable, List, Optional, Union
 
+import requests
+
 if TYPE_CHECKING:
     from _typeshed import StrPath
 
@@ -218,6 +220,12 @@ def escape_text(text: str) -> str:
     )
 
 
+def dl_file(url: str, fname: str):
+    with requests.get(url, stream=True) as r:
+        r.raise_for_status()
+        with open(fname, "wb") as f:
+            for chunk in r.iter_content(chunk_size=8192):
+                f.write(chunk)
 class TempDir:
     td: str = ""
 
