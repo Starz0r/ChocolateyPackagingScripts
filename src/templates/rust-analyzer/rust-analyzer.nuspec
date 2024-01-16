@@ -16,7 +16,9 @@
     <bugTrackerUrl>https://github.com/rust-analyzer/rust-analyzer/issues</bugTrackerUrl>
     <tags>rust programming language server protocol code analyzer linter ide rls</tags>
     <description>
-rust-analyzer is an experimental modular compiler frontend for the Rust language. It is a part of a larger rls-2.0 effort to create excellent IDE support for Rust. 
+	![Rust Analyzer Logo](https://cdn.statically.io/gh/rust-analyzer/rust-analyzer/9d9b343/assets/logo-wide.min.svg)
+	
+	rust-analyzer is an modular compiler frontend for the Rust language. It is a part of a larger rls-2.0 effort to create excellent IDE support for Rust. 
 	</description>
 	<summary>
 	Language Server Protocol compatible compiler front-end for Rust.
