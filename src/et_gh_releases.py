@@ -1,25 +1,24 @@
 import logging
-import subprocess
-import urllib.request
-import checksum
-import tempfile
 import os
+import subprocess
+import tempfile
+import urllib.request
 from pathlib import Path
 
-from common.common import abort_on_nonzero
+import checksum
+
+from common.common import (abort_on_nonzero, find_and_replace_templates_new,
+                           get_correct_release_asset)
 from common.events import on_new_git_release
-from common.common import get_correct_release_asset
-from common.common import find_and_replace_templates_new
 
 
 def main():
-    logger = logging.getLogger('et GitHub Releases')
+    logger = logging.getLogger("et GitHub Releases")
     logger.setLevel(logging.DEBUG)
 
     for rel in on_new_git_release("et", "solidiquis/erdtree"):
         # correlate assets
-        asset = get_correct_release_asset(rel.get_assets(), ".exe",
-                                          ".tar.gz")
+        asset = get_correct_release_asset(rel.get_assets(), ".exe", ".tar.gz")
 
         if asset is None:
             logger.warn(
@@ -40,18 +39,23 @@ def main():
         if rel.body is None:
             relnotes = ""
         else:
-            relnotes = relnotes.replace("<", "&lt;").replace(
-                ">", "&gt;").replace("&",
-                                     "&amp;").replace("\u200b",
-                                                      "")  # zero-width space
+            relnotes = (
+                relnotes.replace("@gmail", "(at)gmail")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace("&", "&amp;")
+                .replace("\u200b", "")
+            )  # zero-width space
         version = rel.tag_name.replace("v", "")
         gittag = rel.tag_name
-        d = dict(version=version,
-                 tag=gittag,
-                 checksum=chksum,
-                 fname=fname,
-                 url=url,
-                 notes=relnotes)
+        d = {
+            "version": version,
+            "tag": gittag,
+            "checksum": chksum,
+            "fname": fname,
+            "url": url,
+            "notes": relnotes,
+        }
 
         # template and pack
         tmpdir = tempfile.mkdtemp()
@@ -59,9 +63,8 @@ def main():
         # HACK: Python is dumb and won't recursively create directories sometimes, why...
         os.mkdir(Path(tmpdir) / "tools/x64")
         os.rename(fname, os.path.join(tmpdir, "tools", "x64", fname))
-        abort_on_nonzero(
-            subprocess.call(["choco", "pack",
-                             Path(tmpdir) / "et.nuspec"]))
+        abort_on_nonzero(subprocess.call(
+            ["choco", "pack", Path(tmpdir) / "et.nuspec"]))
 
 
 if __name__ == "__main__":
