@@ -1,13 +1,19 @@
 import json
 import logging
-from pathlib import Path
 import subprocess
-import tempfile
-from jenkinsapi.jenkins import Jenkins
 import urllib.request
+from pathlib import Path
 
-from common.common import abort_on_nonzero, find_and_replace_templates_new, get_correct_release_artifact
+from jenkinsapi.jenkins import Jenkins
+
+from common.common import (
+    TempDir,
+    abort_on_nonzero,
+    find_and_replace_templates_new,
+    get_correct_release_artifact,
+)
 from common.events import on_each_git_tag
+
 
 def main():
     logger = logging.getLogger("neochat GitHub Tag Releases")
@@ -21,23 +27,35 @@ def main():
         artifact = get_correct_release_artifact(artifacts.values(), ".appx", "upload")
 
         if artifact is None:
-            logger.warn("Versioned release missing require assets, therefore, ineligible for packaging, skipping.")
+            logger.warn(
+                "Versioned release missing require assets, therefore, ineligible for packaging, skipping."
+            )
             continue
 
         # retrieve and format release notes
         req = urllib.request.urlopen("https://flathub.org/api/v1/apps/org.kde.neochat")
         info = json.loads(req.read().decode(req.info().get_param("charset") or "utf-8"))
-        relnotes = (info["currentReleaseDescription"] or "").replace("<p>", "# ").replace("</p>", "\n").replace("<ul>", "").replace("<li>", "  - ").replace("</li>", '\n').replace("</ul>", "")
-        
+        relnotes = (
+            (info["currentReleaseDescription"] or "")
+            .replace("<p>", "# ")
+            .replace("</p>", "\n")
+            .replace("<ul>", "")
+            .replace("<li>", "  - ")
+            .replace("</li>", "\n")
+            .replace("</ul>", "")
+        )
+
         version = tag.name.replace("v", "")
         gittag = tag.name
 
         d = dict(version=version, tag=gittag, notes=relnotes)
 
         # template and package
-        tmpdir = tempfile.mkdtemp()
-        find_and_replace_templates_new("neochat", tmpdir, d)
-        abort_on_nonzero(subprocess.call(["choco", "pack", Path(tmpdir) / "neochat.nuspec"]))
+        with TempDir() as tmpdir:
+            find_and_replace_templates_new("neochat", tmpdir, d)
+            abort_on_nonzero(
+                subprocess.call(["choco", "pack", Path(tmpdir) / "neochat.nuspec"])
+            )
 
 
 if __name__ == "__main__":

@@ -9,7 +9,8 @@ from pathlib import Path
 import checksum
 from jenkinsapi.jenkins import Jenkins
 
-from common.common import (abort_on_nonzero, find_and_replace_templates_new,
+from common.common import (TempDir, abort_on_nonzero,
+                           find_and_replace_templates_new,
                            get_correct_release_artifact_exclist)
 from common.events import on_each_git_tag
 
@@ -22,8 +23,7 @@ def main():
         # get the last good build from the release channel
         J = Jenkins("https://binary-factory.kde.org")
         build_id = J["NeoChat_Release_win64"].get_last_good_buildnumber()
-        artifacts = J["NeoChat_Release_win64"].get_build(
-            build_id).get_artifact_dict()
+        artifacts = J["NeoChat_Release_win64"].get_build(build_id).get_artifact_dict()
         artifact = get_correct_release_artifact_exclist(
             artifacts.values(), ".7z", ["-dbg", "sha256"]
         )
@@ -41,10 +41,8 @@ def main():
         chksum = checksum.get_for_file(fname, "sha512")
 
         # retrieve and format release notes
-        req = urllib.request.urlopen(
-            "https://flathub.org/api/v1/apps/org.kde.neochat")
-        info = json.loads(req.read().decode(
-            req.info().get_param("charset") or "utf-8"))
+        req = urllib.request.urlopen("https://flathub.org/api/v1/apps/org.kde.neochat")
+        info = json.loads(req.read().decode(req.info().get_param("charset") or "utf-8"))
         relnotes = (
             (info["currentReleaseDescription"] or "")
             .replace("<p>", "# ")
@@ -68,13 +66,14 @@ def main():
         }
 
         # template and package
-        tmpdir = tempfile.mkdtemp()
-        find_and_replace_templates_new("neochat.portable", tmpdir, d)
-        os.rename(fname, os.path.join(tmpdir, "tools", fname))
-        abort_on_nonzero(
-            subprocess.call(["choco", "pack", Path(
-                tmpdir) / "neochat.portable.nuspec"])
-        )
+        with TempDir() as tmpdir:
+            find_and_replace_templates_new("neochat.portable", tmpdir, d)
+            os.rename(fname, os.path.join(tmpdir, "tools", fname))
+            abort_on_nonzero(
+                subprocess.call(
+                    ["choco", "pack", Path(tmpdir) / "neochat.portable.nuspec"]
+                )
+            )
 
 
 if __name__ == "__main__":

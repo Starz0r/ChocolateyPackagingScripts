@@ -10,7 +10,7 @@
 Black Hat &amp; the Spectral IM Team</authors>
     <projectUrl>https://apps.kde.org/neochat/</projectUrl>
     <iconUrl>https://invent.kde.org/network/neochat/-/raw/$tag/org.kde.neochat.svg</iconUrl>
-    <copyright>2023 © KDE e.V.</copyright>
+    <copyright>2023-2024 © KDE e.V.</copyright>
     <licenseUrl>https://invent.kde.org/network/neochat/-/blob/$tag/LICENSES/GPL-3.0-or-later.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://invent.kde.org/network/neochat</projectSourceUrl>
