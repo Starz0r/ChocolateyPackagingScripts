@@ -226,6 +226,12 @@ def dl_file(url: str, fname: str):
         with open(fname, "wb") as f:
             for chunk in r.iter_content(chunk_size=8192):
                 f.write(chunk)
+
+
+def safe_delete(path: Union["StrPath", str]) -> int:
+    return subprocess.run(["rrr", path]).returncode
+
+
 class TempDir:
     td: str = ""
 
