@@ -8,8 +8,6 @@ Package can be verified like this:
 
    x32:     $url
    x64:     $url64
-   x32-gnu: $alturl
-   x64-gnu: $alturl64
 
    to download the zip files. You may wish to rename one of the files.
 
@@ -19,8 +17,6 @@ Package can be verified like this:
 
    checksum:       $checksum
    checksum64:     $checksum64
-   checksumgnu:    $altchecksum
-   checksumgnu64:  $altchecksum64
 
 File 'LICENSE.txt' obtained from:
    https://github.com/Peltoche/lsd/blob/$tag/LICENSE
